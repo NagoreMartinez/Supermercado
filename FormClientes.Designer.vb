@@ -23,8 +23,8 @@ Partial Class FormClientes
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormClientes))
         Dim BindingNavigatorPositionItem As System.Windows.Forms.ToolStripTextBox
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormClientes))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -48,6 +48,15 @@ Partial Class FormClientes
         CType(Me.BindingNavigatorUsuarios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigatorUsuarios.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'BindingNavigatorPositionItem
+        '
+        BindingNavigatorPositionItem.AccessibleName = "Posición"
+        BindingNavigatorPositionItem.AutoSize = False
+        BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
+        BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
+        BindingNavigatorPositionItem.Text = "0"
+        BindingNavigatorPositionItem.ToolTipText = "Posición actual"
         '
         'Label1
         '
@@ -92,7 +101,7 @@ Partial Class FormClientes
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(191, 243)
+        Me.TextBox3.Location = New System.Drawing.Point(201, 243)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(100, 20)
         Me.TextBox3.TabIndex = 5
@@ -163,15 +172,6 @@ Partial Class FormClientes
         '
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
         Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorPositionItem
-        '
-        BindingNavigatorPositionItem.AccessibleName = "Posición"
-        BindingNavigatorPositionItem.AutoSize = False
-        BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
-        BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
-        BindingNavigatorPositionItem.Text = "0"
-        BindingNavigatorPositionItem.ToolTipText = "Posición actual"
         '
         'BindingNavigatorSeparator1
         '
