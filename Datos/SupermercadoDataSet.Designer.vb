@@ -4753,7 +4753,7 @@ Namespace SupermercadoDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection()
-            Me._connection.ConnectionString = Global.Supermercado.My.MySettings.Default.SupermercadoConnectionString
+            Me._connection.ConnectionString = Global.Datos.My.MySettings.Default.SupermercadoConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5099,7 +5099,7 @@ Namespace SupermercadoDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection()
-            Me._connection.ConnectionString = Global.Supermercado.My.MySettings.Default.SupermercadoConnectionString
+            Me._connection.ConnectionString = Global.Datos.My.MySettings.Default.SupermercadoConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5469,7 +5469,7 @@ Namespace SupermercadoDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection()
-            Me._connection.ConnectionString = Global.Supermercado.My.MySettings.Default.SupermercadoConnectionString
+            Me._connection.ConnectionString = Global.Datos.My.MySettings.Default.SupermercadoConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5875,7 +5875,7 @@ Namespace SupermercadoDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection()
-            Me._connection.ConnectionString = Global.Supermercado.My.MySettings.Default.SupermercadoConnectionString
+            Me._connection.ConnectionString = Global.Datos.My.MySettings.Default.SupermercadoConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6361,7 +6361,7 @@ Namespace SupermercadoDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection()
-            Me._connection.ConnectionString = Global.Supermercado.My.MySettings.Default.SupermercadoConnectionString
+            Me._connection.ConnectionString = Global.Datos.My.MySettings.Default.SupermercadoConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6798,7 +6798,7 @@ Namespace SupermercadoDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection()
-            Me._connection.ConnectionString = Global.Supermercado.My.MySettings.Default.SupermercadoConnectionString
+            Me._connection.ConnectionString = Global.Datos.My.MySettings.Default.SupermercadoConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7244,7 +7244,7 @@ Namespace SupermercadoDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection()
-            Me._connection.ConnectionString = Global.Supermercado.My.MySettings.Default.SupermercadoConnectionString
+            Me._connection.ConnectionString = Global.Datos.My.MySettings.Default.SupermercadoConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7678,7 +7678,7 @@ Namespace SupermercadoDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection()
-            Me._connection.ConnectionString = Global.Supermercado.My.MySettings.Default.SupermercadoConnectionString
+            Me._connection.ConnectionString = Global.Datos.My.MySettings.Default.SupermercadoConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7993,7 +7993,7 @@ Namespace SupermercadoDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection()
-            Me._connection.ConnectionString = Global.Supermercado.My.MySettings.Default.SupermercadoConnectionString
+            Me._connection.ConnectionString = Global.Datos.My.MySettings.Default.SupermercadoConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _

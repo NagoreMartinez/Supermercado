@@ -57,8 +57,7 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\BBDD\Supermercado.a"& _ 
-            "ccdb")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Supermercado.accdb")>  _
         Public ReadOnly Property SupermercadoConnectionString() As String
             Get
                 Return CType(Me("SupermercadoConnectionString"),String)
@@ -75,9 +74,9 @@ Namespace My
     Friend Module MySettingsProperty
         
         <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")>  _
-        Friend ReadOnly Property Settings() As Global.Supermercado.My.MySettings
+        Friend ReadOnly Property Settings() As Global.Datos.My.MySettings
             Get
-                Return Global.Supermercado.My.MySettings.Default
+                Return Global.Datos.My.MySettings.Default
             End Get
         End Property
     End Module
