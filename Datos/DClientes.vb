@@ -29,11 +29,11 @@ Public Class DClientes
             cmd.CommandText = "INSERT INTO CLIENTES 
                  (IDCLIENTE, DNI, NOMBRE, TELEFONO, IDSUPER) VALUES 
                  (@idCliente, @dni, @nombre, @telefono, @idSuper)"
-            cmd.Parameters.AddWithValue("@idCliente", c.idcliente)
-            cmd.Parameters.AddWithValue("@dni", c.nombre)
-            cmd.Parameters.AddWithValue("@nombre", c.direccion)
-            cmd.Parameters.AddWithValue("@telefono", c.poblacion)
-            cmd.Parameters.AddWithValue("@idSuper", c.poblacion)
+            cmd.Parameters.AddWithValue("@idCliente", c.idCliente)
+            cmd.Parameters.AddWithValue("@dni", c.d)
+            cmd.Parameters.AddWithValue("@nombre", c.nom)
+            cmd.Parameters.AddWithValue("@telefono", c.tel)
+            cmd.Parameters.AddWithValue("@idSup", c.idS)
             cmd.ExecuteNonQuery()
             ok = True
         Catch ex As Exception
@@ -61,11 +61,11 @@ Public Class DClientes
                 IDSUPER = @idSuper,
                 TELEFONO = @telefono,
                 WHERE IDCLIENTE = @id"
-            cmd.Parameters.AddWithValue("@idCliente", c.idcliente)
-            cmd.Parameters.AddWithValue("@dni", c.nombre)
-            cmd.Parameters.AddWithValue("@nombre", c.direccion)
-            cmd.Parameters.AddWithValue("@telefono", c.poblacion)
-            cmd.Parameters.AddWithValue("@idSuper", c.poblacion)
+            cmd.Parameters.AddWithValue("@idCliente", c.idCliente)
+            cmd.Parameters.AddWithValue("@dni", c.dni)
+            cmd.Parameters.AddWithValue("@nombre", c.nombre)
+            cmd.Parameters.AddWithValue("@telefono", c.telefono)
+            cmd.Parameters.AddWithValue("@idSuper", c.idSuper)
             cmd.ExecuteNonQuery()
             ok = True
         Catch ex As Exception
@@ -84,8 +84,8 @@ Public Class DClientes
         conn.Open()
         Try
             Dim cmd = conn.CreateCommand
-            cmd.CommandText = "DELETE FROM CLIENTES WHERE IDCLIENTE = @id"
-            cmd.Parameters.AddWithValue("@id", id)
+            cmd.CommandText = "DELETE FROM CLIENTES WHERE IDCLIENTE = @idCliente"
+            cmd.Parameters.AddWithValue("@idCliente", id)
             cmd.ExecuteNonQuery()
             ok = True
         Catch ex As Exception

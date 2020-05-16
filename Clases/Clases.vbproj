@@ -74,6 +74,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CCliente.vb" />
+    <Compile Include="CEmpleado.vb" />
+    <Compile Include="CProducto.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>

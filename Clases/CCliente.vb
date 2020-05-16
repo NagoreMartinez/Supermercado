@@ -1,61 +1,61 @@
 ﻿Public Class CCliente
 
     ' Declaramos los atributos
-    Private idCliente As String
-    Private dni As String
-    Private nombre As String
-    Private telefono As String
-    Private idSuper As String
+    Private idC As String
+    Private d As String
+    Private nom As String
+    Private tel As String
+    Private idS As String
 
     ' Constructora
     Public Sub New()
 
     End Sub
 
-    Public Sub New(idC As String, d As String, nom As String, tel As String, idS As String)
-        idCliente = idC
-        dni = d
-        nombre = nom
-        telefono = tel
-        idSuper = idS
+    Public Sub New(idCliente As String, dni As String, nombre As String, telefono As String, idSuper As String)
+        idC = idCliente
+        d = dni
+        nom = nombre
+        tel = telefono
+        idS = idSuper
     End Sub
 
     Public Sub New(row As DataRow)
-        idCliente = row("IDCLIENTE")
-        dni = row("DNI")
-        nombre = row("NOMBRE")
-        telefono = row("TELEFONO")
-        idSuper = row("IDSUPER")
+        idC = row("IDCLIENTE")
+        d = row("DNI")
+        nom = row("NOMBRE")
+        tel = row("TELEFONO")
+        idS = row("IDSUPER")
     End Sub
 
     ' Getters
-    Public ReadOnly Property idC As String
+    Public ReadOnly Property idCliente As String
         Get
-            Return idCliente
+            Return idC
         End Get
     End Property
 
-    Public ReadOnly Property d As String
+    Public ReadOnly Property dni As String
         Get
-            Return dni
+            Return d
         End Get
     End Property
 
-    Public ReadOnly Property nom As String
+    Public ReadOnly Property nombre As String
         Get
-            Return nombre
+            Return nom
         End Get
     End Property
 
-    Public ReadOnly Property tel As String
+    Public ReadOnly Property telefono As String
         Get
-            Return telefono
+            Return tel
         End Get
     End Property
 
-    Public ReadOnly Property idS As String
+    Public ReadOnly Property idSuper As String
         Get
-            Return idSuper
+            Return idS
         End Get
     End Property
 
