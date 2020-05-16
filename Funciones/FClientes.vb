@@ -6,16 +6,11 @@ Public Class FClientes
     Dim objDatos As New DClientes
 
     ' Funcion que devuelve la lista de clientes
-    Public Function ObtenerClientes() As DataTable
+    Public Function ListaClientes() As DataTable
         Return objDatos.QryListarClientes()
     End Function
 
-    ' Funcion que devuelve la lista de clientes segun parametro de entrada
-    Public Function ObtenerClientesFiltro(filtro As String) As DataTable
-        Return objDatos.QryListarClientesFiltro(filtro)
-    End Function
-
-    ' Función para insertar un tipo de cliente en la BD
+    ' Insertar un cliente
     Public Function insertCliente(idCliente As String, dni As String, nombre As String, telefono As String, idSuper As String)
         Dim cliente As New CCliente(idCliente, dni, nombre, telefono, idSuper)
 
@@ -23,7 +18,7 @@ Public Class FClientes
         Return ok
     End Function
 
-    ' Funcion para actualizar un cliente en la BD
+    ' Actualizar un cliente en la BD
     Public Function updateCliente(idCliente As String, dni As String, nombre As String, telefono As String, idSuper As String)
         Dim cliente As New CCliente(idCliente, dni, nombre, telefono, idSuper)
 
@@ -31,31 +26,15 @@ Public Class FClientes
         Return ok
     End Function
 
-    ' Funcion para eliminar un cliente de la BD
+    ' Borrar un cliente de la BD
     Public Function deleteCliente(id As String)
         Dim ok = objDatos.CmdDelete(id)
         Return ok
     End Function
 
-    'Función para obtener RE
-    Public Function reSeleccionado(cb As Boolean)
 
-        If cb Then
-            Return -1
-        Else
-            Return 0
-        End If
-    End Function
-
-    ' Funcion para obtener el ultimo registro de clientes
-    Public Function idUltCliente()
-        Dim row = objDatos.QryUltimoCliente
-        Dim ultimo As New CCliente(row)
-        Return ultimo.idcliente
-    End Function
-
-    ' Funcion para obtener el id de un nuevo cliente
-    Public Function nuevoID()
+    ' Crear id de un nuevo cliente
+    Public Function crearId()
         Dim ultID As String = idUltCliente()
         Dim letra As Char = ultID.Substring(0, 1)
         Dim num As Integer = ultID.Substring(1, ultID.Length - 1)
@@ -71,7 +50,7 @@ Public Class FClientes
         Return newID
     End Function
 
-    ' Funcion para generar una instancia de un cliente
+    ' Generar una instancia de un cliente
     Public Function generarCliente(row As DataRow)
         Dim cliente As New CCliente(row)
         Return cliente

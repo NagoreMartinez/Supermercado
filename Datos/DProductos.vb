@@ -33,7 +33,7 @@ Public Class DProductos
             cmd.Parameters.AddWithValue("@idProducto", p.idProducto)
             cmd.Parameters.AddWithValue("@nombre", p.nombre)
             cmd.Parameters.AddWithValue("@precio", p.precio)
-            cmd.Parameters.AddWithValue("@fechaCad", p.fechaCad)
+            cmd.Parameters.AddWithValue("@fechaCad", p.fechaCaducidad)
             cmd.ExecuteNonQuery()
             ok = True
         Catch ex As Exception
@@ -62,7 +62,7 @@ Public Class DProductos
             cmd.Parameters.AddWithValue("@idProducto", p.idProducto)
             cmd.Parameters.AddWithValue("@nombre", p.nombre)
             cmd.Parameters.AddWithValue("@precio", p.precio)
-            cmd.Parameters.AddWithValue("@fechaCad", p.fechaCad)
+            cmd.Parameters.AddWithValue("@fechaCad", p.fechaCaducidad)
             cmd.ExecuteNonQuery()
             ok = True
         Catch ex As Exception
