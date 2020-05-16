@@ -33,7 +33,7 @@ Public Class DClientes
             cmd.Parameters.AddWithValue("@dni", c.d)
             cmd.Parameters.AddWithValue("@nombre", c.nom)
             cmd.Parameters.AddWithValue("@telefono", c.tel)
-            cmd.Parameters.AddWithValue("@idSup", c.idS)
+            cmd.Parameters.AddWithValue("@idSuper", c.idS)
             cmd.ExecuteNonQuery()
             ok = True
         Catch ex As Exception
@@ -55,12 +55,11 @@ Public Class DClientes
             cmd.CommandText = "UPDATE CLIENTES 
                 SET 
                 IDCLIENTE =@idCliente,
-                DNI = @dni
+                DNI = @dni,
                 NOMBRE = @nombre,
                 TELEFONO = @telefono,
-                IDSUPER = @idSuper,
-                TELEFONO = @telefono,
-                WHERE IDCLIENTE = @id"
+                IDSUPER = @idSuper
+                WHERE IDCLIENTE = @idCliente"
             cmd.Parameters.AddWithValue("@idCliente", c.idCliente)
             cmd.Parameters.AddWithValue("@dni", c.dni)
             cmd.Parameters.AddWithValue("@nombre", c.nombre)

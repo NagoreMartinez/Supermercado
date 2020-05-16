@@ -6,7 +6,7 @@
     Private nom As String
     Private e As Integer
     Private idS As String
-    Private pos As String
+    Private idT As String
     Private hora As String
     Private sal As Double
 
@@ -16,13 +16,13 @@
     End Sub
 
     Public Sub New(idEmpleado As String, dni As String, nombre As String, edad As Integer, idSuper As String,
-                   posicion As String, horario As String, salario As Double)
+                   idTipo As String, horario As String, salario As Double)
         idE = idEmpleado
         d = dni
         nom = nombre
         e = edad
         idS = idSuper
-        pos = posicion
+        idT = idTipo
         hora = horario
         sal = salario
     End Sub
@@ -33,7 +33,7 @@
         nom = row("NOMBRE")
         e = row("EDAD")
         idS = row("IDSUPER")
-        pos = row("IDTIPO")
+        idT = row("IDTIPO")
         hora = row("HORARIO")
         sal = row("SALARIO")
     End Sub
@@ -69,9 +69,9 @@
         End Get
     End Property
 
-    Public ReadOnly Property posicion As String
+    Public ReadOnly Property idTipo As String
         Get
-            Return pos
+            Return idT
         End Get
     End Property
 
