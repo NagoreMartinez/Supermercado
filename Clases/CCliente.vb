@@ -1,17 +1,18 @@
 ﻿Public Class CCliente
 
-    ' Declaramos los atributos
+    ' Atributos
     Private idC As String
     Private d As String
     Private nom As String
     Private tel As String
     Private idS As String
 
-    ' Constructora
+    ' Constructora por defecto
     Public Sub New()
 
     End Sub
 
+    ' Constructora
     Public Sub New(idCliente As String, dni As String, nombre As String, telefono As String, idSuper As String)
         idC = idCliente
         d = dni

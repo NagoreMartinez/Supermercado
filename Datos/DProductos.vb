@@ -6,7 +6,7 @@ Public Class DProductos
 
     Dim conectadoProducto As New DConexion
 
-    ' Listar los empleados
+    ' Lista de productos
     Function ListarProductos() As DataTable
         Dim query = "SELECT * FROM PRODUCTOS"
         Dim conn = conectadoProducto.getConnection()
@@ -21,7 +21,7 @@ Public Class DProductos
     End Function
 
     'Insertar nuevo producto
-    Public Function InsertarPProducto(p As CProducto)
+    Public Function InsertarProducto(p As CProducto)
         Dim ok = False
         Dim conn = conectadoProducto.getConnection()
         conn.Open()
@@ -45,7 +45,7 @@ Public Class DProductos
         Return ok
     End Function
 
-    ' Actualizar informacion
+    ' Actualizar informacion del producto
     Public Function ActualizarProducto(p As CProducto)
         Dim ok = False
         Dim conn = conectadoProducto.getConnection()
@@ -74,14 +74,14 @@ Public Class DProductos
         Return ok
     End Function
 
-    ' Borrar a un producto
+    ' Borrar un producto
     Public Function BorrarProducto(id As String)
         Dim ok = False
         Dim conn = conectadoProducto.getConnection()
         conn.Open()
         Try
             Dim cmd = conn.CreateCommand
-            cmd.CommandText = "DELETE FROM EMPLEADOS WHERE IDEMPLEADO = @idEmpleado"
+            cmd.CommandText = "DELETE FROM PRODUCTOS WHERE IDPRODUCTO = @idProducto"
             cmd.Parameters.AddWithValue("@idEmpleado", id)
             cmd.ExecuteNonQuery()
             ok = True

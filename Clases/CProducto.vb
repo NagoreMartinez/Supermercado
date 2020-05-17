@@ -1,16 +1,17 @@
 ﻿Public Class CProducto
 
-    ' Declaramos los atributos
+    ' Atributos
     Private idP As String
     Private nom As String
     Private p As Double
     Private fCad As String
 
-    ' Constructora
+    ' Constructora por defecto
     Public Sub New()
 
     End Sub
 
+    ' Constructora
     Public Sub New(idProducto As String, nombre As String, precio As Double, fechaCaducidad As String)
         idP = idProducto
         nom = nombre
@@ -49,6 +50,5 @@
             Return fCad
         End Get
     End Property
-
 
 End Class

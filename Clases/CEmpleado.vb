@@ -1,6 +1,6 @@
 ﻿Public Class CEmpleado
 
-    ' Declaramos los atributos
+    ' Atributos
     Private idE As String
     Private d As String
     Private nom As String
@@ -10,11 +10,12 @@
     Private hora As String
     Private sal As Double
 
-    ' Constructora
+    ' Constructora por defecto
     Public Sub New()
 
     End Sub
 
+    ' Constructoar
     Public Sub New(idEmpleado As String, dni As String, nombre As String, edad As Integer, idSuper As String,
                    idTipo As String, horario As String, salario As Double)
         idE = idEmpleado
