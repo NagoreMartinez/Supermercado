@@ -30,10 +30,10 @@ Public Class DClientes
                  (IDCLIENTE, DNI, NOMBRE, TELEFONO, IDSUPER) VALUES 
                  (@idCliente, @dni, @nombre, @telefono, @idSuper)"
             cmd.Parameters.AddWithValue("@idCliente", c.idCliente)
-            cmd.Parameters.AddWithValue("@dni", c.d)
-            cmd.Parameters.AddWithValue("@nombre", c.nom)
-            cmd.Parameters.AddWithValue("@telefono", c.tel)
-            cmd.Parameters.AddWithValue("@idSuper", c.idS)
+            cmd.Parameters.AddWithValue("@dni", c.dni)
+            cmd.Parameters.AddWithValue("@nombre", c.nombre)
+            cmd.Parameters.AddWithValue("@telefono", c.telefono)
+            cmd.Parameters.AddWithValue("@idSuper", c.idSuper)
             cmd.ExecuteNonQuery()
             ok = True
         Catch ex As Exception
