@@ -1,15 +1,14 @@
 ﻿Imports System.Data
 Imports System.Data.OleDb
-Imports Clases
 
 Public Class DProductos
 
-    Dim conectadoProducto As New DConexion
+    Dim conectado As New DConexion
 
     ' Lista de productos
     Function ListarProductos() As DataTable
         Dim query = "SELECT * FROM PRODUCTOS"
-        Dim conn = conectadoProducto.getConnection()
+        Dim conn = conectado.getConnection()
         conn.Open()
         Dim sqlCommand = New OleDbCommand(query, conn)
         Dim table = New DataTable()
@@ -20,10 +19,27 @@ Public Class DProductos
         Return table
     End Function
 
+    'Buscar por filtro
+    Public Function QryByFiltro(filtro As String) As DataTable
+        Dim query = "SELECT * FROM PRODUCTOS
+                        WHERE NOMBRE LIKE @nombre"
+        Dim conn = conectado.getConnection()
+        conn.Open()
+        Dim sqlCommand = New OleDbCommand(query, conn)
+        sqlCommand.Parameters.AddWithValue("@nombre", filtro + "%")
+        Dim table = New DataTable()
+        Dim executeReader = sqlCommand.ExecuteReader()
+        table.Load(executeReader)
+        sqlCommand.Dispose()
+        conn.Close()
+        Return table
+    End Function
+
+
     'Insertar nuevo producto
-    Public Function InsertarProducto(p As CProducto)
+    Public Function CmdInsert(p As Clases.CProducto)
         Dim ok = False
-        Dim conn = conectadoProducto.getConnection()
+        Dim conn = conectado.getConnection()
         conn.Open()
         Try
             Dim cmd = conn.CreateCommand
@@ -46,9 +62,9 @@ Public Class DProductos
     End Function
 
     ' Actualizar informacion del producto
-    Public Function ActualizarProducto(p As CProducto)
+    Public Function CmdUpdate(p As Clases.CProducto)
         Dim ok = False
-        Dim conn = conectadoProducto.getConnection()
+        Dim conn = conectado.getConnection()
         conn.Open()
         Try
             Dim cmd = conn.CreateCommand
@@ -75,9 +91,9 @@ Public Class DProductos
     End Function
 
     ' Borrar un producto
-    Public Function BorrarProducto(id As String)
+    Public Function CmdDelete(id As String)
         Dim ok = False
-        Dim conn = conectadoProducto.getConnection()
+        Dim conn = conectado.getConnection()
         conn.Open()
         Try
             Dim cmd = conn.CreateCommand

@@ -1,15 +1,14 @@
 ﻿Imports System.Data
 Imports System.Data.OleDb
-Imports Clases
 
 Public Class DEmpleados
 
-    Dim conectadoEmpleado As New DConexion
+    Dim conectado As New DConexion
 
     ' Listar los empleados
     Function ListarEmpleados() As DataTable
         Dim query = "SELECT * FROM EMPLEADOS"
-        Dim conn = conectadoEmpleado.getConnection()
+        Dim conn = conectado.getConnection()
         conn.Open()
         Dim sqlCommand = New OleDbCommand(query, conn)
         Dim table = New DataTable()
@@ -20,10 +19,28 @@ Public Class DEmpleados
         Return table
     End Function
 
+    'Buscar por filtro
+    Public Function QryByFiltro(filtro As String) As DataTable
+        Dim query = "SELECT * FROM EMPLEADOS
+                        WHERE NOMBRE LIKE @nombre OR DNI LIKE @dni"
+        Dim conn = conectado.getConnection()
+        conn.Open()
+        Dim sqlCommand = New OleDbCommand(query, conn)
+        sqlCommand.Parameters.AddWithValue("@nombre", filtro + "%")
+        sqlCommand.Parameters.AddWithValue("@dni", "%" + filtro + "%")
+        Dim table = New DataTable()
+        Dim executeReader = sqlCommand.ExecuteReader()
+        table.Load(executeReader)
+        sqlCommand.Dispose()
+        conn.Close()
+        Return table
+    End Function
+
+
     'Insertar nuevo empleado
-    Public Function InsertarEmpleado(e As CEmpleado)
+    Public Function CmdInsert(e As Clases.CEmpleado)
         Dim ok = False
-        Dim conn = conectadoEmpleado.getConnection()
+        Dim conn = conectado.getConnection()
         conn.Open()
         Try
             Dim cmd = conn.CreateCommand
@@ -50,9 +67,9 @@ Public Class DEmpleados
     End Function
 
     ' Actualizar informacion
-    Public Function ActualizarEmpleado(e As CEmpleado)
+    Public Function CmdUpdate(e As Clases.CEmpleado)
         Dim ok = False
-        Dim conn = conectadoEmpleado.getConnection()
+        Dim conn = conectado.getConnection()
         conn.Open()
         Try
             Dim cmd = conn.CreateCommand
@@ -87,9 +104,9 @@ Public Class DEmpleados
     End Function
 
     ' Borrar a un empleado
-    Public Function BorrarEmpleado(id As String)
+    Public Function CmdDelete(id As String)
         Dim ok = False
-        Dim conn = conectadoEmpleado.getConnection()
+        Dim conn = conectado.getConnection()
         conn.Open()
         Try
             Dim cmd = conn.CreateCommand

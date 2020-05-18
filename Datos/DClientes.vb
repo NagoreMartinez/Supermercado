@@ -3,12 +3,12 @@ Imports System.Data.OleDb
 Imports Clases
 
 Public Class DClientes
-    Dim conectadoCliente As New DConexion
+    Dim conectado As New DConexion
 
     ' Listar los clientes
     Function ListarClientes() As DataTable
         Dim query = "SELECT * FROM CLIENTES"
-        Dim conn = conectadoCliente.getConnection()
+        Dim conn = conectado.getConnection()
         conn.Open()
         Dim sqlCommand = New OleDbCommand(query, conn)
         Dim table = New DataTable()
@@ -19,10 +19,27 @@ Public Class DClientes
         Return table
     End Function
 
+    'Buscar por filtro
+    Public Function QryByFiltro(filtro As String) As DataTable
+        Dim query = "SELECT * FROM CLIENTES
+                        WHERE NOMBRE LIKE @nombre OR DNI LIKE @dni"
+        Dim conn = conectado.getConnection()
+        conn.Open()
+        Dim sqlCommand = New OleDbCommand(query, conn)
+        sqlCommand.Parameters.AddWithValue("@nombre", filtro + "%")
+        sqlCommand.Parameters.AddWithValue("@dni", "%" + filtro + "%")
+        Dim table = New DataTable()
+        Dim executeReader = sqlCommand.ExecuteReader()
+        table.Load(executeReader)
+        sqlCommand.Dispose()
+        conn.Close()
+        Return table
+    End Function
+
     'Insertar nuevo cliente
-    Public Function InsertarCliente(c As CCliente)
+    Public Function CmdInsert(c As CCliente)
         Dim ok = False
-        Dim conn = conectadoCliente.getConnection()
+        Dim conn = conectado.getConnection()
         conn.Open()
         Try
             Dim cmd = conn.CreateCommand
@@ -46,9 +63,9 @@ Public Class DClientes
     End Function
 
     ' Actualizar informacion
-    Public Function ActualizarCliente(c As CCliente)
+    Public Function CmdUpdate(c As CCliente)
         Dim ok = False
-        Dim conn = conectadoCliente.getConnection()
+        Dim conn = conectado.getConnection()
         conn.Open()
         Try
             Dim cmd = conn.CreateCommand
@@ -77,9 +94,9 @@ Public Class DClientes
     End Function
 
     ' Borrar a un cliente
-    Public Function BorrarCliente(id As String)
+    Public Function CmdDelete(id As String)
         Dim ok = False
-        Dim conn = conectadoCliente.getConnection()
+        Dim conn = conectado.getConnection()
         conn.Open()
         Try
             Dim cmd = conn.CreateCommand
