@@ -1,12 +1,11 @@
 ﻿Imports System.Data
 Imports System.Data.OleDb
-Imports Clases
 
-Public Class DClientes
+Public Module DClientes
     Dim conectado As New DConexion
 
     ' Listar los clientes
-    Function ListarClientes() As DataTable
+    Function QryListarClientes() As DataTable
         Dim query = "SELECT * FROM CLIENTES"
         Dim conn = conectado.getConnection()
         conn.Open()
@@ -37,7 +36,7 @@ Public Class DClientes
     End Function
 
     'Insertar nuevo cliente
-    Public Function CmdInsert(c As CCliente)
+    Public Function CmdInsert(c As Clases.CCliente)
         Dim ok = False
         Dim conn = conectado.getConnection()
         conn.Open()
@@ -63,7 +62,7 @@ Public Class DClientes
     End Function
 
     ' Actualizar informacion
-    Public Function CmdUpdate(c As CCliente)
+    Public Function CmdUpdate(c As Clases.CCliente)
         Dim ok = False
         Dim conn = conectado.getConnection()
         conn.Open()
@@ -113,4 +112,5 @@ Public Class DClientes
         Return ok
     End Function
 
-End Class
+End Module
+

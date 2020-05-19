@@ -1,11 +1,11 @@
 ﻿Public Class CCliente
 
     ' Atributos
-    Private idC As String
-    Private d As String
-    Private nom As String
-    Private tel As String
-    Private idS As String
+    Public idCliente As String
+    Public dni As String
+    Public nombre As String
+    Public telefono As String
+    Public idSuper As String
 
     ' Constructora por defecto
     Public Sub New()
@@ -14,50 +14,20 @@
 
     ' Constructora
     Public Sub New(idCliente As String, dni As String, nombre As String, telefono As String, idSuper As String)
-        idC = idCliente
-        d = dni
-        nom = nombre
-        tel = telefono
-        idS = idSuper
+        idCliente = idCliente
+        dni = dni
+        nombre = nombre
+        telefono = telefono
+        idSuper = idSuper
     End Sub
 
     Public Sub New(row As DataRow)
-        idC = row("IDCLIENTE")
-        d = row("DNI")
-        nom = row("NOMBRE")
-        tel = row("TELEFONO")
-        idS = row("IDSUPER")
+        idCliente = row("IDCLIENTE")
+        dni = row("DNI")
+        nombre = row("NOMBRE")
+        telefono = row("TELEFONO")
+        idSuper = row("IDSUPER")
     End Sub
 
-    ' Getters
-    Public ReadOnly Property idCliente As String
-        Get
-            Return idC
-        End Get
-    End Property
-
-    Public ReadOnly Property dni As String
-        Get
-            Return d
-        End Get
-    End Property
-
-    Public ReadOnly Property nombre As String
-        Get
-            Return nom
-        End Get
-    End Property
-
-    Public ReadOnly Property telefono As String
-        Get
-            Return tel
-        End Get
-    End Property
-
-    Public ReadOnly Property idSuper As String
-        Get
-            Return idS
-        End Get
-    End Property
 
 End Class

@@ -17,17 +17,15 @@ EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Datos", "Datos\Datos.vbproj", "{4B3A549C-7849-4604-90B0-8B78208A69B9}"
 	ProjectSection(ProjectDependencies) = postProject
 		{B581F636-09FC-42A6-B6B0-5764769C1972} = {B581F636-09FC-42A6-B6B0-5764769C1972}
-		{DABA7648-3A6C-43DC-8DE2-B93FC765F141} = {DABA7648-3A6C-43DC-8DE2-B93FC765F141}
-		{AF26017A-BB0D-4C54-B3DD-266F29EBE6D9} = {AF26017A-BB0D-4C54-B3DD-266F29EBE6D9}
 	EndProjectSection
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Clases", "Clases\Clases.vbproj", "{B581F636-09FC-42A6-B6B0-5764769C1972}"
-	ProjectSection(ProjectDependencies) = postProject
-		{DABA7648-3A6C-43DC-8DE2-B93FC765F141} = {DABA7648-3A6C-43DC-8DE2-B93FC765F141}
-		{AF26017A-BB0D-4C54-B3DD-266F29EBE6D9} = {AF26017A-BB0D-4C54-B3DD-266F29EBE6D9}
-	EndProjectSection
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Funciones", "Funciones\Funciones.vbproj", "{AF26017A-BB0D-4C54-B3DD-266F29EBE6D9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B581F636-09FC-42A6-B6B0-5764769C1972} = {B581F636-09FC-42A6-B6B0-5764769C1972}
+		{4B3A549C-7849-4604-90B0-8B78208A69B9} = {4B3A549C-7849-4604-90B0-8B78208A69B9}
+	EndProjectSection
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Formularios", "Formularios\Formularios.vbproj", "{DABA7648-3A6C-43DC-8DE2-B93FC765F141}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -35,6 +33,9 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Formularios", "Formularios\
 	EndProjectSection
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "PruebasConsola", "PruebasConsola\PruebasConsola.vbproj", "{9BC5B221-1533-4E5B-97BF-3233C790B906}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AF26017A-BB0D-4C54-B3DD-266F29EBE6D9} = {AF26017A-BB0D-4C54-B3DD-266F29EBE6D9}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

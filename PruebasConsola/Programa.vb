@@ -1,6 +1,6 @@
 ﻿Imports System.Data
 Imports Datos
-Imports Dominio
+Imports Clases
 
 
 Module Programa
@@ -10,48 +10,24 @@ Module Programa
         Console.WriteLine("PRUEBAS DE ACCESO A DATOS")
 
         'INSERT
-        Dim u = New Modelos.Usuario()
-        u.nombre = "Us#" + CStr(CInt(1000 * Rnd()))
-        u.notas = "notas"
-        u.email = "email"
-        u.map = CInt(10000 * Rnd()) \ 100
-        u.fnac = Today
-        u.id = DAM.Usuarios.CmdInsert(u)
+        Dim c = New Clases.CCliente()
+        c.nombre = "Us#" + CStr(CInt(1000 * Rnd()))
+        c.dni = "DNI"
+        c.telefono = "TELEFONO"
+        c.idSuper = "IDSUPER"
+        c.idCliente = DClientes.CmdInsert(c)
         'u.id = UseCase.CrearUsuario(u)
-        Console.WriteLine($"ID insertado {u.id}")
+        Console.WriteLine($"ID insertado {c.idCliente}")
 
         'UPDATE
-        u.nombre = "CAMBIO#" + CStr(CInt(1000 * Rnd()))
-        Console.WriteLine($"#actualizados {DAM.Usuarios.CmdUpdate(u)}")
+        c.nombre = "CAMBIO#" + CStr(CInt(1000 * Rnd()))
+        Console.WriteLine($"#actualizados {DClientes.CmdUpdate(c)}")
 
         'SELECT
-        Dim tab = DAM.Usuarios.QryGetAll()
-        For Each row In tab.Rows
-            Console.WriteLine($"{row("ID")}: {row("NOMBRE")} {row("MAP")}")
+        Dim list = DClientes.ListarClientes()
+        For Each row In list.Rows
+            Console.WriteLine($"{row("IDCLIENTE")}: {row("DNI")} {row("NOMBRE")} {row("DNI")}{row("TELEFONO")}{row("IDSUPER")}")
         Next
 
-        'DELETE
-        Console.WriteLine($"#actualizados {DAM.Usuarios.CmdDelete(u)}")
-
-        'SELECT
-        For Each row In DAM.Usuarios.QryGetAll().Rows
-            Console.WriteLine($"{row("ID")}: {row("NOMBRE")} {row("MAP")}")
-        Next
-
-        Console.WriteLine("PRUEBAS DE CASOS DE USO")
-        u = New Modelos.Usuario()
-        u.nombre = "CU#" + CStr(CInt(1000 * Rnd()))
-        u.notas = "CUnotas"
-        u.email = "CUemail"
-        u.map = CInt(10000 * Rnd()) \ 100
-        u.fnac = Today
-        u.id = UseCase.CrearUsuario(u)
-
-        tab = UseCase.ObtenerUsuarios()
-        For Each row In tab.Rows
-            Console.WriteLine($"{row("ID")}: {row("NOMBRE")} {row("MAP")}")
-        Next
-        Console.WriteLine("FIN")
-        Console.ReadLine()
     End Sub
 End Module

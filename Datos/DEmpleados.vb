@@ -1,12 +1,12 @@
 ﻿Imports System.Data
 Imports System.Data.OleDb
 
-Public Class DEmpleados
+Public Module DEmpleados
 
     Dim conectado As New DConexion
 
     ' Listar los empleados
-    Function ListarEmpleados() As DataTable
+    Function QryListarEmpleados() As DataTable
         Dim query = "SELECT * FROM EMPLEADOS"
         Dim conn = conectado.getConnection()
         conn.Open()
@@ -35,7 +35,6 @@ Public Class DEmpleados
         conn.Close()
         Return table
     End Function
-
 
     'Insertar nuevo empleado
     Public Function CmdInsert(e As Clases.CEmpleado)
@@ -123,4 +122,4 @@ Public Class DEmpleados
         Return ok
     End Function
 
-End Class
+End Module

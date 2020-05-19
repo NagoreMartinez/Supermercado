@@ -1,12 +1,12 @@
 ﻿Imports System.Data
 Imports System.Data.OleDb
 
-Public Class DProductos
+Public Module DProductos
 
     Dim conectado As New DConexion
 
     ' Lista de productos
-    Function ListarProductos() As DataTable
+    Function QryListarProductos() As DataTable
         Dim query = "SELECT * FROM PRODUCTOS"
         Dim conn = conectado.getConnection()
         conn.Open()
@@ -111,4 +111,4 @@ Public Class DProductos
     End Function
 
 
-End Class
+End Module
