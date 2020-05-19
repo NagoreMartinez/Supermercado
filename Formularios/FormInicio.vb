@@ -14,6 +14,6 @@
     End Sub
 
     Private Sub ButtonProductos_Click(sender As Object, e As EventArgs) Handles ButtonProductos.Click
-
+        FormProductos.showDialog()
     End Sub
 End Class

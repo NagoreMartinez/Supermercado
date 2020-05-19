@@ -6,13 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProyectoSupermercado", "ProyectoSupermercado", "{CE974ECF-B10B-4421-B286-FE8D93A2F76B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BBDD", "BBDD", "{4BA0EB15-0967-4CF7-8ABC-54A7845AA590}"
-	ProjectSection(SolutionItems) = preProject
-		Datos\Supermercado.accdb = Datos\Supermercado.accdb
-		Datos\SupermercadoDataSet.Designer.vb = Datos\SupermercadoDataSet.Designer.vb
-		Datos\SupermercadoDataSet.xsc = Datos\SupermercadoDataSet.xsc
-		Datos\SupermercadoDataSet.xsd = Datos\SupermercadoDataSet.xsd
-		Datos\SupermercadoDataSet.xss = Datos\SupermercadoDataSet.xss
-	EndProjectSection
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Datos", "Datos\Datos.vbproj", "{4B3A549C-7849-4604-90B0-8B78208A69B9}"
 	ProjectSection(ProjectDependencies) = postProject
