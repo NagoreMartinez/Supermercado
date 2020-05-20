@@ -73,16 +73,22 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormClientes.Designer.vb">
-      <DependentUpon>FormClientes.vb</DependentUpon>
+    <Compile Include="Empleados\OpcionesEmpleados.Designer.vb">
+      <DependentUpon>OpcionesEmpleados.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormClientes.vb">
+    <Compile Include="Empleados\OpcionesEmpleados.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormEmpleados.Designer.vb">
+    <Compile Include="Clientes\FormClientes.Designer.vb">
+      <DependentUpon>FormClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\FormClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleados\FormEmpleados.Designer.vb">
       <DependentUpon>FormEmpleados.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormEmpleados.vb">
+    <Compile Include="Empleados\FormEmpleados.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormLogin.Designer.vb">
@@ -97,10 +103,16 @@
     <Compile Include="FormInicio.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormProductos.Designer.vb">
+    <Compile Include="Productos\OpcionesProductos.Designer.vb">
+      <DependentUpon>OpcionesProductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\OpcionesProductos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\FormProductos.Designer.vb">
       <DependentUpon>FormProductos.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormProductos.vb">
+    <Compile Include="Productos\FormProductos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -121,10 +133,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FormClientes.resx">
+    <EmbeddedResource Include="Empleados\OpcionesEmpleados.resx">
+      <DependentUpon>OpcionesEmpleados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\FormClientes.resx">
       <DependentUpon>FormClientes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormEmpleados.resx">
+    <EmbeddedResource Include="Empleados\FormEmpleados.resx">
       <DependentUpon>FormEmpleados.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
@@ -133,7 +148,10 @@
     <EmbeddedResource Include="FormInicio.resx">
       <DependentUpon>FormInicio.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormProductos.resx">
+    <EmbeddedResource Include="Productos\OpcionesProductos.resx">
+      <DependentUpon>OpcionesProductos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\FormProductos.resx">
       <DependentUpon>FormProductos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
