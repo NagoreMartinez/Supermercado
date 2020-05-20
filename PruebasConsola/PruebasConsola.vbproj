@@ -5,12 +5,12 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{9BC5B221-1533-4E5B-97BF-3233C790B906}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <StartupObject>PruebasConsola.My.MyApplication</StartupObject>
+    <OutputType>Exe</OutputType>
+    <StartupObject>PruebasConsola.Programa</StartupObject>
     <RootNamespace>PruebasConsola</RootNamespace>
     <AssemblyName>PruebasConsola</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>WindowsForms</MyType>
+    <MyType>Console</MyType>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -77,6 +77,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
