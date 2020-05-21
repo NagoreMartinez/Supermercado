@@ -44,14 +44,14 @@ Public Module DEmpleados
         Try
             Dim cmd = conn.CreateCommand
             cmd.CommandText = "INSERT INTO EMPLEADOS 
-                 (IDEMPLEADO, DNI, NOMBRE, EDAD, IDSUPER, IDTIPO, HORARIO, SALARIO) VALUES 
-                 (@idEmpleado, @dni, @nombre, @edad, @idSuper, @idTipo, @horario, @salario)"
+                 (IDEMPLEADO, IDTIPO, IDSUPER DNI, NOMBRE, EDAD, , HORARIO, SALARIO) VALUES 
+                 (@idEmpleado,@idTipo,  @dni, @idSuper, @nombre, @edad, @horario, @salario)"
             cmd.Parameters.AddWithValue("@idEmpleado", e.idEmpleado)
+            cmd.Parameters.AddWithValue("@idTipo", e.idTipo)
+            cmd.Parameters.AddWithValue("@idSuper", e.idSuper)
             cmd.Parameters.AddWithValue("@dni", e.dni)
             cmd.Parameters.AddWithValue("@nombre", e.nombre)
             cmd.Parameters.AddWithValue("@edad", e.edad)
-            cmd.Parameters.AddWithValue("@idSuper", e.idSuper)
-            cmd.Parameters.AddWithValue("@idTipo", e.idTipo)
             cmd.Parameters.AddWithValue("@horario", e.horario)
             cmd.Parameters.AddWithValue("@salario", e.salario)
             cmd.ExecuteNonQuery()
@@ -75,20 +75,20 @@ Public Module DEmpleados
             cmd.CommandText = "UPDATE EMPLEADOS 
                 SET 
                 IDEMPLEADO =@idEmpleado,
+                IDTIPO = @idTipo,
+                IDSUPER = @idSuper,
                 DNI = @dni,
                 NOMBRE = @nombre,
                 EDAD = @edad,
-                IDSUPER = @idSuper,
-                IDTIPO = @idTipo,
                 HORARIO = @horario, 
                 SALARIO = @salario
                 WHERE IDEMPLEADO = @idEmpleado"
             cmd.Parameters.AddWithValue("@idEmpleado", e.idEmpleado)
+            cmd.Parameters.AddWithValue("@idTipo", e.idTipo)
+            cmd.Parameters.AddWithValue("@idSuper", e.idSuper)
             cmd.Parameters.AddWithValue("@dni", e.dni)
             cmd.Parameters.AddWithValue("@nombre", e.nombre)
             cmd.Parameters.AddWithValue("@edad", e.edad)
-            cmd.Parameters.AddWithValue("@idSuper", e.idSuper)
-            cmd.Parameters.AddWithValue("@idTipo", e.idTipo)
             cmd.Parameters.AddWithValue("@horario", e.horario)
             cmd.Parameters.AddWithValue("@salario", e.salario)
             cmd.ExecuteNonQuery()

@@ -85,6 +85,42 @@
     <Compile Include="Empleados\FormEmpleados.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Clientes\FormEditarCliente.Designer.vb">
+      <DependentUpon>FormEditarCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\FormEditarCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\FormEliminarCliente.Designer.vb">
+      <DependentUpon>FormEliminarCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\FormEliminarCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleados\FormEditarEmpleado.Designer.vb">
+      <DependentUpon>FormEditarEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Empleados\FormEditarEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleados\FormEliminarEmpleado.Designer.vb">
+      <DependentUpon>FormEliminarEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Empleados\FormEliminarEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\FormEditarProductos.Designer.vb">
+      <DependentUpon>FormEditarProductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\FormEditarProductos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\FormEliminarProducto.Designer.vb">
+      <DependentUpon>FormEliminarProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\FormEliminarProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormLogin.Designer.vb">
       <DependentUpon>FormLogin.vb</DependentUpon>
     </Compile>
@@ -95,12 +131,6 @@
       <DependentUpon>FormInicio.vb</DependentUpon>
     </Compile>
     <Compile Include="FormInicio.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Productos\OpcionesProductos.Designer.vb">
-      <DependentUpon>OpcionesProductos.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Productos\OpcionesProductos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Productos\FormProductos.Designer.vb">
@@ -138,14 +168,14 @@
     <EmbeddedResource Include="Empleados\FormEmpleados.resx">
       <DependentUpon>FormEmpleados.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\FormEditarCliente.resx">
+      <DependentUpon>FormEditarCliente.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormInicio.resx">
       <DependentUpon>FormInicio.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Productos\OpcionesProductos.resx">
-      <DependentUpon>OpcionesProductos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Productos\FormProductos.resx">
       <DependentUpon>FormProductos.vb</DependentUpon>
@@ -181,6 +211,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Clases\Clases.vbproj">
+      <Project>{b581f636-09fc-42a6-b6b0-5764769c1972}</Project>
+      <Name>Clases</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Datos\Datos.vbproj">
       <Project>{4b3a549c-7849-4604-90b0-8b78208a69b9}</Project>
       <Name>Datos</Name>

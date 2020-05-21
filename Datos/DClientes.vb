@@ -43,13 +43,14 @@ Public Module DClientes
         Try
             Dim cmd = conn.CreateCommand
             cmd.CommandText = "INSERT INTO CLIENTES 
-                 (IDCLIENTE, DNI, NOMBRE, TELEFONO, IDSUPER) VALUES 
-                 (@idCliente, @dni, @nombre, @telefono, @idSuper)"
+                 (IDCLIENTE, IDSUPER, DNI, NOMBRE, TELEFONO) VALUES 
+                 (@idCliente,@idSuper,  @dni, @nombre, @telefono)"
             cmd.Parameters.AddWithValue("@idCliente", c.idCliente)
+            cmd.Parameters.AddWithValue("@idSuper", c.idSuper)
             cmd.Parameters.AddWithValue("@dni", c.dni)
             cmd.Parameters.AddWithValue("@nombre", c.nombre)
             cmd.Parameters.AddWithValue("@telefono", c.telefono)
-            cmd.Parameters.AddWithValue("@idSuper", c.idSuper)
+
             cmd.ExecuteNonQuery()
             ok = True
         Catch ex As Exception

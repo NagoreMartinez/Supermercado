@@ -15,8 +15,8 @@ Public Class FClientes
     End Function
 
     ' Insertar un cliente
-    Public Function InsertarCliente(idCliente As String, dni As String, nombre As String, telefono As String, idSuper As String)
-        Dim c As New CCliente(idCliente, dni, nombre, telefono, idSuper)
+    Public Function InsertarCliente(idCliente As String, idSuper As String, dni As String, nombre As String, telefono As String)
+        Dim c As New CCliente(idCliente, idSuper, dni, nombre, telefono)
 
         Dim ins = DClientes.CmdInsert(c)
         Return ins

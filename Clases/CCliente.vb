@@ -2,10 +2,10 @@
 
     ' Atributos
     Public idCliente As String
+    Public idSuper As String
     Public dni As String
     Public nombre As String
     Public telefono As String
-    Public idSuper As String
 
     ' Constructora por defecto
     Public Sub New()
@@ -13,12 +13,12 @@
     End Sub
 
     ' Constructora
-    Public Sub New(idCliente As String, dni As String, nombre As String, telefono As String, idSuper As String)
+    Public Sub New(idCliente As String, idSuper As String, dni As String, nombre As String, telefono As String)
         idCliente = idCliente
+        idSuper = idSuper
         dni = dni
         nombre = nombre
         telefono = telefono
-        idSuper = idSuper
     End Sub
 
     Public Sub New(row As DataRow)
