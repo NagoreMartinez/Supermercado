@@ -480,7 +480,7 @@ Partial Class FormInicio
         '
         Me.EditarPProducto.BackColor = System.Drawing.SystemColors.ButtonShadow
         Me.EditarPProducto.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EditarPProducto.Location = New System.Drawing.Point(297, 343)
+        Me.EditarPProducto.Location = New System.Drawing.Point(307, 343)
         Me.EditarPProducto.Name = "EditarPProducto"
         Me.EditarPProducto.Size = New System.Drawing.Size(196, 48)
         Me.EditarPProducto.TabIndex = 12
@@ -491,7 +491,7 @@ Partial Class FormInicio
         '
         Me.NuevoProducto.BackColor = System.Drawing.SystemColors.ButtonShadow
         Me.NuevoProducto.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NuevoProducto.Location = New System.Drawing.Point(36, 339)
+        Me.NuevoProducto.Location = New System.Drawing.Point(35, 341)
         Me.NuevoProducto.Name = "NuevoProducto"
         Me.NuevoProducto.Size = New System.Drawing.Size(196, 52)
         Me.NuevoProducto.TabIndex = 11
@@ -544,9 +544,9 @@ Partial Class FormInicio
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(825, 600)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.PanelEmpleados)
         Me.Controls.Add(Me.PanelProductos)
         Me.Controls.Add(Me.PanelClientes)
-        Me.Controls.Add(Me.PanelEmpleados)
         Me.Name = "FormInicio"
         Me.Text = "Inicio"
         Me.Panel1.ResumeLayout(False)

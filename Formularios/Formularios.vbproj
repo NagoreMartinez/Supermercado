@@ -165,6 +165,9 @@
     <EmbeddedResource Include="Clientes\FormClientes.resx">
       <DependentUpon>FormClientes.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Empleados\FormEditarEmpleado.resx">
+      <DependentUpon>FormEditarEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Empleados\FormEmpleados.resx">
       <DependentUpon>FormEmpleados.vb</DependentUpon>
     </EmbeddedResource>
@@ -176,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormInicio.resx">
       <DependentUpon>FormInicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\FormEditarProductos.resx">
+      <DependentUpon>FormEditarProductos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Productos\FormProductos.resx">
       <DependentUpon>FormProductos.vb</DependentUpon>
