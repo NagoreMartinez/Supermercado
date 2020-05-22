@@ -95,7 +95,7 @@ Public Class FormInicio
             Dim dni = row.Cells(3).Value.ToString
             Dim nombre = row.Cells(4).Value.ToString
 
-            Dim formBEmpleado As New FormEliminarEmpleado(dni, nombre)
+            Dim formBEmpleado As New s(dni, nombre)
             AddOwnedForm(formBEmpleado)
             formBEmpleado.ShowDialog()
 
