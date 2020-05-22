@@ -37,8 +37,8 @@ Public Class FEmpleados
     End Function
 
     ' Borrar un empleado 
-    Public Function EliminiarEmpleado(e As CEmpleado) As Integer
-        Return DEmpleados.CmdDelete(e.ToString)
+    Public Function EliminiarEmpleado(id As String)
+        Return DEmpleados.CmdDelete(id)
     End Function
 
 End Class

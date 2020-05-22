@@ -97,16 +97,16 @@
     <Compile Include="Empleados\FormEditarEmpleado.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Empleados\FormEliminarEmpleado.Designer.vb">
-      <DependentUpon>FormEliminarEmpleado.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Empleados\FormEliminarEmpleado.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Empleados\FormEmpleados.Designer.vb">
       <DependentUpon>FormEmpleados.vb</DependentUpon>
     </Compile>
     <Compile Include="Empleados\FormEmpleados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleados\FormEliminarEmpleado.Designer.vb">
+      <DependentUpon>FormEliminarEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Empleados\FormEliminarEmpleado.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Productos\FormEditarProductos.Designer.vb">

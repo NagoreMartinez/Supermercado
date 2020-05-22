@@ -36,8 +36,8 @@ Public Class FProductos
     End Function
 
     ' Borrar un producto 
-    Public Function EliminiarProducto(p As CProducto) As Integer
-        Return DProductos.CmdDelete(p.ToString)
+    Public Function EliminiarProducto(id As String)
+        Return DProductos.CmdDelete(id)
     End Function
 
 

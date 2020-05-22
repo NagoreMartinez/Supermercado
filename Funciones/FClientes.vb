@@ -35,8 +35,8 @@ Public Class FClientes
     End Function
 
     ' Borrar un cliente 
-    Public Function EliminiarCliente(c As CCliente) As Integer
-        Return DClientes.CmdDelete(c.ToString)
+    Public Function EliminiarCliente(id As String)
+        Return DClientes.CmdDelete(id)
     End Function
 
 End Class

@@ -1,7 +1,6 @@
 ﻿Imports Clases
 Imports Funciones
 
-
 Public Class FormEditarCliente
 
     Dim objC As New FClientes
@@ -24,10 +23,6 @@ Public Class FormEditarCliente
         txtDNI2.Text = c.dni
         txtNombre2.Text = c.nombre
         txtTel.Text = c.telefono
-
-    End Sub
-
-    Private Sub FormEditarCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 

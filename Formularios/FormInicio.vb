@@ -91,11 +91,11 @@ Public Class FormInicio
     ' Eliminar empleado
     Private Sub EliminarEmpleado_Click(sender As Object, e As EventArgs) Handles EliminarEmpleado.Click
         If dgvEmpleados.SelectedRows.Count = 0 Then
-            Dim row = dgvClientes.CurrentRow
-            Dim dni = row.Cells(3).Value.ToString
+            Dim row = dgvEmpleados.CurrentRow
+            Dim id = row.Cells(0).Value.ToString
             Dim nombre = row.Cells(4).Value.ToString
 
-            Dim formBEmpleado As New s(dni, nombre)
+            Dim formBEmpleado As New FormEliminarEmpleado(id, nombre)
             AddOwnedForm(formBEmpleado)
             formBEmpleado.ShowDialog()
 
@@ -151,10 +151,10 @@ Public Class FormInicio
     Private Sub EliminarCliente_Click(sender As Object, e As EventArgs) Handles EliminarCliente.Click
         If dgvClientes.SelectedRows.Count = 0 Then
             Dim row = dgvClientes.CurrentRow
-            Dim dni = row.Cells(2).Value.ToString
+            Dim id = row.Cells(0).Value.ToString
             Dim nombre = row.Cells(3).Value.ToString
 
-            Dim formBCliente As New FormEliminarCliente(dni, nombre)
+            Dim formBCliente As New FormEliminarCliente(id, nombre)
             AddOwnedForm(formBCliente)
             formBCliente.ShowDialog()
 
@@ -208,10 +208,11 @@ Public Class FormInicio
     ' Eliminar producto
     Private Sub EliminarProducto_Click(sender As Object, e As EventArgs) Handles EliminarProducto.Click
         If dgvProductos.SelectedRows.Count = 0 Then
-            Dim row = dgvClientes.CurrentRow
-            Dim nombre = row.Cells(2).Value.ToString
+            Dim row = dgvProductos.CurrentRow
+            Dim id = row.Cells(0).Value.ToString
+            Dim nombre = row.Cells(1).Value.ToString
 
-            Dim formBProducto As New FormEliminarProducto(nombre)
+            Dim formBProducto As New FormEliminarProducto(id, nombre)
             AddOwnedForm(formBProducto)
             formBProducto.ShowDialog()
 
