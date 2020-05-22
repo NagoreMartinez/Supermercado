@@ -79,12 +79,6 @@
     <Compile Include="Clientes\FormClientes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Empleados\FormEmpleados.Designer.vb">
-      <DependentUpon>FormEmpleados.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Empleados\FormEmpleados.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Clientes\FormEditarCliente.Designer.vb">
       <DependentUpon>FormEditarCliente.vb</DependentUpon>
     </Compile>
@@ -107,6 +101,12 @@
       <DependentUpon>FormEliminarEmpleado.vb</DependentUpon>
     </Compile>
     <Compile Include="Empleados\FormEliminarEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleados\FormEmpleados.Designer.vb">
+      <DependentUpon>FormEmpleados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Empleados\FormEmpleados.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Productos\FormEditarProductos.Designer.vb">
@@ -168,9 +168,6 @@
     <EmbeddedResource Include="Empleados\FormEditarEmpleado.resx">
       <DependentUpon>FormEditarEmpleado.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Empleados\FormEmpleados.resx">
-      <DependentUpon>FormEmpleados.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Clientes\FormEditarCliente.resx">
       <DependentUpon>FormEditarCliente.vb</DependentUpon>
     </EmbeddedResource>
@@ -179,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormInicio.resx">
       <DependentUpon>FormInicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleados\FormEmpleados.resx">
+      <DependentUpon>FormEmpleados.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Productos\FormEditarProductos.resx">
       <DependentUpon>FormEditarProductos.vb</DependentUpon>

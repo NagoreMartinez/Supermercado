@@ -3,10 +3,18 @@ Imports Funciones
 
 Public Class FormEditarEmpleado
     Dim Empleados As New FEmpleados
-    Public Sub New(e As CEmpleado)
+
+    Public Sub New()
 
         ' Esta llamada es exigida por el diseñador.
         InitializeComponent()
+
+        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
+
+    End Sub
+    Public Sub New(e As CEmpleado)
+
+        Me.New
 
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
         txtIDE.Text = e.idEmpleado
@@ -34,7 +42,7 @@ Public Class FormEditarEmpleado
         End If
 
         Dim formEmpleados As FormInicio = CType(Owner, FormInicio)
-        Empleados.ListaEmpleados()
+        formEmpleados.listarEmpleado()
         Close()
     End Sub
 

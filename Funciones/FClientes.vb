@@ -28,7 +28,7 @@ Public Class FClientes
     End Function
 
     ' Actualizar un cliente 
-    Public Function ActualizarCliente(idCliente As String, idSuper As String, dni As String, nombre As String, telefono As String) As Integer
+    Public Function ActualizarCliente(idCliente As String, idSuper As String, dni As String, nombre As String, telefono As String)
         Dim c As New CCliente(idCliente, idSuper, dni, nombre, telefono)
         Dim upC = DClientes.CmdUpdate(c)
         Return upC

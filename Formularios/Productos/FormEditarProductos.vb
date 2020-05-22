@@ -3,10 +3,19 @@ Imports Funciones
 
 Public Class FormEditarProductos
     Dim Productos As New FProductos
-    Public Sub New(p As CProducto)
+    Public Sub New()
 
         ' Esta llamada es exigida por el diseñador.
         InitializeComponent()
+
+        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
+
+    End Sub
+
+    Public Sub New(p As CProducto)
+
+        ' Esta llamada es exigida por el diseñador.
+        Me.New
 
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
         txtIDP.Text = p.idProducto
@@ -14,9 +23,7 @@ Public Class FormEditarProductos
         txtPrecio.Text = p.precio
         txtFCad.Text = p.fechaCaducidad
 
-
     End Sub
-
 
     ' Guardar cambios
     Private Sub buttonGuardar3_Click(sender As Object, e As EventArgs) Handles buttonGuardar3.Click
@@ -30,7 +37,7 @@ Public Class FormEditarProductos
         End If
 
         Dim formProductos As FormInicio = CType(Owner, FormInicio)
-        Productos.ListaProductos()
+        formProductos.listarProductos()
         Close()
     End Sub
 

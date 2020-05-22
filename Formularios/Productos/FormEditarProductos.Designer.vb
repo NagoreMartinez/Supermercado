@@ -159,7 +159,7 @@ Partial Class FormEditarProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(794, 450)
+        Me.ClientSize = New System.Drawing.Size(774, 450)
         Me.Controls.Add(Me.buttonGuardar3)
         Me.Controls.Add(Me.txtSalario)
         Me.Controls.Add(Me.Label9)
