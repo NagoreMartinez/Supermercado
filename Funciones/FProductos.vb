@@ -18,8 +18,8 @@ Public Class FProductos
     Public Function InsertProducto(idProducto As String, nombre As String, precio As Double, fechaCaducidad As String)
         Dim p As New CProducto(idProducto, nombre, precio, fechaCaducidad)
 
-        Dim ins = DProductos.CmdInsert(p)
-        Return ins
+        Dim insP = DProductos.CmdInsert(p)
+        Return insP
     End Function
 
     ' Obtener producto por filtro
@@ -28,8 +28,11 @@ Public Class FProductos
     End Function
 
     ' Actualizar un producto 
-    Public Function ActualizarProducto(p As CProducto) As Integer
-        Return DProductos.CmdUpdate(p)
+    Public Function ActualizarProducto(idProducto As String, nombre As String, precio As Double, fechaCaducidad As String) As Integer
+        Dim p As New CProducto(idProducto, nombre, precio, fechaCaducidad)
+
+        Dim upP = DProductos.CmdUpdate(p)
+        Return upP
     End Function
 
     ' Borrar un producto 

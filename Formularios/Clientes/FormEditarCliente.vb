@@ -12,10 +12,10 @@ Public Class FormEditarCliente
 
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
         txtIDC.Text = c.idCliente
-        txtIDS.Text = c.idSuper
-        txtDni.Text = c.dni
-        txtNombre.Text = c.nombre
-        txtTef.Text = c.telefono
+        txtIDS2.Text = c.idSuper
+        txtDNI2.Text = c.dni
+        txtNombre2.Text = c.nombre
+        txtTel.Text = c.telefono
 
     End Sub
 
@@ -26,7 +26,7 @@ Public Class FormEditarCliente
     ' Guardar cambios
     Private Sub buttonGuardar2_Click(sender As Object, e As EventArgs) Handles buttonGuardar2.Click
 
-        Dim c = Clientes.ActualizarCliente(txtIDC.Text, txtIDS.Text, txtDni.Text, txtNombre.Text, txtTef.Text)
+        Dim c = Clientes.ActualizarCliente(txtIDC.Text, txtIDS2.Text, txtDNI2.Text, txtNombre2.Text, txtTel.Text)
 
         If c Then
             MessageBox.Show("Se ha actualizado correctamente")

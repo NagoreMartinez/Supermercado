@@ -10,21 +10,18 @@ Public Class FormEditarProductos
 
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
         txtIDP.Text = p.idProducto
-        txtNombre.Text = p.nombre
+        txtNombre3.Text = p.nombre
         txtPrecio.Text = p.precio
         txtFCad.Text = p.fechaCaducidad
 
 
     End Sub
 
-    Private Sub FormEditarCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 
     ' Guardar cambios
     Private Sub buttonGuardar3_Click(sender As Object, e As EventArgs) Handles buttonGuardar3.Click
 
-        Dim p = Productos.ActualizarProducto(txtIDP.Text, txtNombre.Text, txtPrecio.Text, txtFCad.Text)
+        Dim p = Productos.ActualizarProducto(txtIDP.Text, txtNombre3.Text, txtPrecio.Text, txtFCad.Text)
 
         If p Then
             MessageBox.Show("Se ha actualizado correctamente")

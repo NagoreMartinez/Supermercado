@@ -20,9 +20,6 @@ Public Class FormEditarEmpleado
 
     End Sub
 
-    Private Sub FormEditarEmpleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 
     ' Guardar cambios
     Private Sub buttonGuardar1_Click(sender As Object, e As EventArgs) Handles buttonGuardar1.Click
@@ -40,5 +37,6 @@ Public Class FormEditarEmpleado
         Empleados.ListaEmpleados()
         Close()
     End Sub
+
 
 End Class
