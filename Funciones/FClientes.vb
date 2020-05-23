@@ -18,8 +18,8 @@ Public Class FClientes
     Public Function InsertarCliente(idCliente As String, idSuper As String, dni As String, nombre As String, telefono As String)
         Dim c As New CCliente(idCliente, idSuper, dni, nombre, telefono)
 
-        Dim ins = DClientes.CmdInsert(c)
-        Return ins
+        Dim insC = DClientes.CmdInsert(c)
+        Return insC
     End Function
 
     ' Obtener cliente por filtro

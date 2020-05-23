@@ -1,5 +1,6 @@
 ﻿Imports System.Data
 Imports System.Data.OleDb
+Imports Clases
 
 Public Module DClientes
     Dim conectado As New DConexion
@@ -36,7 +37,7 @@ Public Module DClientes
     End Function
 
     'Insertar nuevo cliente
-    Public Function CmdInsert(c As Clases.CCliente)
+    Public Function CmdInsert(c As CCliente)
         Dim ok = False
         Dim conn = conectado.getConnection()
         conn.Open()
@@ -44,13 +45,12 @@ Public Module DClientes
             Dim cmd = conn.CreateCommand
             cmd.CommandText = "INSERT INTO CLIENTES 
                  (IDCLIENTE, IDSUPER, DNI, NOMBRE, TELEFONO) VALUES 
-                 (@idCliente,@idSuper,  @dni, @nombre, @telefono)"
+                 (@idCliente, @idSuper, @dni, @nombre, @telefono)"
             cmd.Parameters.AddWithValue("@idCliente", c.idCliente)
             cmd.Parameters.AddWithValue("@idSuper", c.idSuper)
             cmd.Parameters.AddWithValue("@dni", c.dni)
             cmd.Parameters.AddWithValue("@nombre", c.nombre)
             cmd.Parameters.AddWithValue("@telefono", c.telefono)
-
             cmd.ExecuteNonQuery()
             ok = True
         Catch ex As Exception
@@ -63,7 +63,7 @@ Public Module DClientes
     End Function
 
     ' Actualizar informacion
-    Public Function CmdUpdate(c As Clases.CCliente)
+    Public Function CmdUpdate(c As CCliente)
         Dim ok = False
         Dim conn = conectado.getConnection()
         conn.Open()
@@ -71,17 +71,17 @@ Public Module DClientes
             Dim cmd = conn.CreateCommand
             cmd.CommandText = "UPDATE CLIENTES 
                 SET 
-                IDCLIENTE =@idCliente,
+                IDCLIENTE = @idCliente,
+                IDSUPER = @idSuper,
                 DNI = @dni,
                 NOMBRE = @nombre,
-                TELEFONO = @telefono,
-                IDSUPER = @idSuper
+                TELEFONO = @telefono 
                 WHERE IDCLIENTE = @idCliente"
             cmd.Parameters.AddWithValue("@idCliente", c.idCliente)
+            cmd.Parameters.AddWithValue("@idSuper", c.idSuper)
             cmd.Parameters.AddWithValue("@dni", c.dni)
             cmd.Parameters.AddWithValue("@nombre", c.nombre)
             cmd.Parameters.AddWithValue("@telefono", c.telefono)
-            cmd.Parameters.AddWithValue("@idSuper", c.idSuper)
             cmd.ExecuteNonQuery()
             ok = True
         Catch ex As Exception
