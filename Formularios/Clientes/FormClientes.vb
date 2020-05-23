@@ -3,10 +3,6 @@
 Public Class FormClientes
 
     Dim obC As New FClientes
-    Private Sub Label5_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
 
 
     Private Sub buttonGuardar2_Click(sender As Object, e As EventArgs) Handles buttonGuardar2.Click
@@ -19,7 +15,7 @@ Public Class FormClientes
         Dim insert = obC.InsertarCliente(idC, idS, dni, nombre, tel)
 
         If insert Then
-            MessageBox.Show("Se ha insertado correctamente.")
+            MessageBox.Show("Cliente agregado correctamente.")
         Else
             MessageBox.Show("Ha ocurrido un error.")
         End If

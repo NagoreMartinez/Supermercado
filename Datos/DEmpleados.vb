@@ -45,14 +45,14 @@ Public Module DEmpleados
         Try
             Dim cmd = conn.CreateCommand
             cmd.CommandText = "INSERT INTO EMPLEADOS 
-                 (IDEMPLEADO, IDTIPO, IDSUPER, DNI, NOMBRE, EDAD, , HORARIO, SALARIO) VALUES 
+                 (IDEMPLEADO, IDTIPO, IDSUPER, DNI, NOMBRE, EDAD, HORARIO, SALARIO) VALUES 
                  (@idEmpleado, @idTipo, @idSuper, @dni, @nombre, @edad, @horario, @salario)"
             cmd.Parameters.AddWithValue("@idEmpleado", e.idEmpleado)
-            cmd.Parameters.AddWithValue("@idTipo", e.idTipo)
             cmd.Parameters.AddWithValue("@idSuper", e.idSuper)
             cmd.Parameters.AddWithValue("@dni", e.dni)
             cmd.Parameters.AddWithValue("@nombre", e.nombre)
             cmd.Parameters.AddWithValue("@edad", e.edad)
+            cmd.Parameters.AddWithValue("@idTipo", e.idTipo)
             cmd.Parameters.AddWithValue("@horario", e.horario)
             cmd.Parameters.AddWithValue("@salario", e.salario)
             cmd.ExecuteNonQuery()

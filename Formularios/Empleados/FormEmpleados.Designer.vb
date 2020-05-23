@@ -212,7 +212,7 @@ Partial Class FormEmpleados
         Me.Label1.TabIndex = 31
         Me.Label1.Text = "ID Empleado"
         '
-        'FormNuevoEmpleado
+        'FormEmpleados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -235,7 +235,7 @@ Partial Class FormEmpleados
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "FormNuevoEmpleado"
+        Me.Name = "FormEmpleados"
         Me.Text = "Nuevo empleado"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
