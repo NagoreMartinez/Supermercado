@@ -1,6 +1,6 @@
 ﻿Imports Funciones
 
-Public Class FormEliminarCliente
+Public Class EliminarCliente
 
     Dim obC As New FClientes
 

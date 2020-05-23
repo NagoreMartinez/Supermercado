@@ -1,7 +1,7 @@
 ﻿Imports Clases
 Imports Funciones
 
-Public Class FormEditarEmpleado
+Public Class EditarEmpleado
     Dim Empleados As New FEmpleados
 
     Public Sub New()

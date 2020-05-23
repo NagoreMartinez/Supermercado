@@ -1,6 +1,6 @@
 ﻿Imports Funciones
 
-Public Class FormClientes
+Public Class Clientes
 
     Dim obC As New FClientes
 

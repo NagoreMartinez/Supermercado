@@ -1,37 +1,37 @@
 ﻿Imports Funciones
 
-Public Class FormEliminarProducto
+Public Class EliminarEmpleado
 
-    Dim obP As New FProductos
+    Dim obE As New FEmpleados
 
     Public Sub New(id As String, nombre As String)
 
         InitializeComponent()
 
-        txtIDP.Text = id
-        txtNombre3.Text = nombre
+        txtIDE.Text = id
+        txtNombre.Text = nombre
 
     End Sub
 
     Private Sub ButtonS_Click(sender As Object, e As EventArgs) Handles ButtonS.Click
 
-        Dim id As String = txtIDP.Text
-        Dim del = obP.EliminiarProducto(id)
+        Dim id As String = txtIDE.Text
+        Dim del = obE.EliminiarEmpleado(id)
 
         If del Then
-            MessageBox.Show("Se ha eliminado el producto correctamente")
+            MessageBox.Show("Se ha eliminado el perfil del empleado correctamente")
         Else
             MessageBox.Show("Ha ocurrido un error")
         End If
 
-        Dim formProductos As FormInicio = CType(Owner, FormInicio)
-        formProductos.listarProductos()
+        Dim formEmpleados As FormInicio = CType(Owner, FormInicio)
+        formEmpleados.listarEmpleado()
         Close()
+
     End Sub
 
     Private Sub ButtonN_Click(sender As Object, e As EventArgs) Handles ButtonN.Click
         Close()
     End Sub
-
 
 End Class

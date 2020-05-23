@@ -1,6 +1,6 @@
 ﻿Imports Funciones
 
-Public Class FormEmpleados
+Public Class Empleados
 
     Dim obE As New FEmpleados
 

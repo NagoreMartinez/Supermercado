@@ -1,7 +1,7 @@
 ﻿Imports Clases
 Imports Funciones
 
-Public Class FormEditarCliente
+Public Class EditarCliente
 
     Dim objC As New FClientes
 

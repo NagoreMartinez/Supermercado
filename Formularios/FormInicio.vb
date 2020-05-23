@@ -57,7 +57,7 @@ Public Class FormInicio
 
     ' Nuevo empleado
     Private Sub NuevoEmpleado_Click(sender As Object, e As EventArgs) Handles NuevoEmpleado.Click
-        Dim FormNEmpleado As New FormEmpleados()
+        Dim FormNEmpleado As New Empleados()
         AddOwnedForm(FormNEmpleado)
         FormNEmpleado.ShowDialog()
     End Sub
@@ -80,7 +80,7 @@ Public Class FormInicio
             Dim salario = row.Cells(7).Value.ToString
 
             Dim e As New CEmpleado(idEmpleado, idTipo, idSuper, dni, nombre, edad, horario, salario)
-            Dim formEEmpleado As New FormEditarEmpleado(e)
+            Dim formEEmpleado As New EditarEmpleado(e)
             AddOwnedForm(formEEmpleado)
             formEEmpleado.ShowDialog()
         Else
@@ -95,7 +95,7 @@ Public Class FormInicio
             Dim id = row.Cells(0).Value.ToString
             Dim nombre = row.Cells(4).Value.ToString
 
-            Dim formBEmpleado As New FormEliminarEmpleado(id, nombre)
+            Dim formBEmpleado As New EliminarEmpleado(id, nombre)
             AddOwnedForm(formBEmpleado)
             formBEmpleado.ShowDialog()
 
@@ -119,7 +119,7 @@ Public Class FormInicio
 
     ' Nuevo cliente
     Private Sub NuevoCliente_Click(sender As Object, e As EventArgs) Handles NuevoCliente.Click
-        Dim FormNCliente As New FormClientes()
+        Dim FormNCliente As New Clientes()
         AddOwnedForm(FormNCliente)
         FormNCliente.ShowDialog()
     End Sub
@@ -139,7 +139,7 @@ Public Class FormInicio
             Dim telefono = row.Cells(4).Value.ToString
 
             Dim c As New CCliente(idCliente, idSuper, dni, nombre, telefono)
-            Dim formECliente As New FormEditarCliente(c)
+            Dim formECliente As New EditarCliente(c)
             AddOwnedForm(formECliente)
             formECliente.ShowDialog()
         Else
@@ -154,7 +154,7 @@ Public Class FormInicio
             Dim id = row.Cells(0).Value.ToString
             Dim nombre = row.Cells(3).Value.ToString
 
-            Dim formBCliente As New FormEliminarCliente(id, nombre)
+            Dim formBCliente As New EliminarCliente(id, nombre)
             AddOwnedForm(formBCliente)
             formBCliente.ShowDialog()
 
@@ -178,7 +178,7 @@ Public Class FormInicio
 
     ' Nuevo producto
     Private Sub NuevoProducto_Click(sender As Object, e As EventArgs) Handles NuevoProducto.Click
-        Dim FormNProducto As New FormProductos()
+        Dim FormNProducto As New Productos()
         AddOwnedForm(FormNProducto)
         FormNProducto.ShowDialog()
     End Sub
@@ -197,7 +197,7 @@ Public Class FormInicio
             Dim fechaCaducidad = row.Cells(3).Value.ToString
 
             Dim p As New CProducto(idProducto, nombre, precio, fechaCaducidad)
-            Dim formEProducto As New FormEditarProductos(p)
+            Dim formEProducto As New EditarProductos(p)
             AddOwnedForm(formEProducto)
             formEProducto.ShowDialog()
         Else
@@ -212,7 +212,7 @@ Public Class FormInicio
             Dim id = row.Cells(0).Value.ToString
             Dim nombre = row.Cells(1).Value.ToString
 
-            Dim formBProducto As New FormEliminarProducto(id, nombre)
+            Dim formBProducto As New EliminarProducto(id, nombre)
             AddOwnedForm(formBProducto)
             formBProducto.ShowDialog()
 

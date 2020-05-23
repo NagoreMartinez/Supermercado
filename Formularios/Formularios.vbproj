@@ -73,52 +73,52 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clientes\FormClientes.Designer.vb">
-      <DependentUpon>FormClientes.vb</DependentUpon>
+    <Compile Include="Clientes\Clientes.Designer.vb">
+      <DependentUpon>Clientes.vb</DependentUpon>
     </Compile>
-    <Compile Include="Clientes\FormClientes.vb">
+    <Compile Include="Clientes\Clientes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Clientes\FormEditarCliente.Designer.vb">
-      <DependentUpon>FormEditarCliente.vb</DependentUpon>
+    <Compile Include="Clientes\EditarCliente.Designer.vb">
+      <DependentUpon>EditarCliente.vb</DependentUpon>
     </Compile>
-    <Compile Include="Clientes\FormEditarCliente.vb">
+    <Compile Include="Clientes\EditarCliente.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Clientes\FormEliminarCliente.Designer.vb">
-      <DependentUpon>FormEliminarCliente.vb</DependentUpon>
+    <Compile Include="Clientes\EliminarCliente.Designer.vb">
+      <DependentUpon>EliminarCliente.vb</DependentUpon>
     </Compile>
-    <Compile Include="Clientes\FormEliminarCliente.vb">
+    <Compile Include="Clientes\EliminarCliente.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Empleados\FormEditarEmpleado.Designer.vb">
-      <DependentUpon>FormEditarEmpleado.vb</DependentUpon>
+    <Compile Include="Empleados\EditarEmpleado.Designer.vb">
+      <DependentUpon>EditarEmpleado.vb</DependentUpon>
     </Compile>
-    <Compile Include="Empleados\FormEditarEmpleado.vb">
+    <Compile Include="Empleados\EditarEmpleado.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Empleados\FormEmpleados.Designer.vb">
-      <DependentUpon>FormEmpleados.vb</DependentUpon>
+    <Compile Include="Empleados\Empleados.Designer.vb">
+      <DependentUpon>Empleados.vb</DependentUpon>
     </Compile>
-    <Compile Include="Empleados\FormEmpleados.vb">
+    <Compile Include="Empleados\Empleados.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Empleados\FormEliminarEmpleado.Designer.vb">
-      <DependentUpon>FormEliminarEmpleado.vb</DependentUpon>
+    <Compile Include="Empleados\EliminarEmpleado.Designer.vb">
+      <DependentUpon>EliminarEmpleado.vb</DependentUpon>
     </Compile>
-    <Compile Include="Empleados\FormEliminarEmpleado.vb">
+    <Compile Include="Empleados\EliminarEmpleado.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Productos\FormEditarProductos.Designer.vb">
-      <DependentUpon>FormEditarProductos.vb</DependentUpon>
+    <Compile Include="Productos\EditarProductos.Designer.vb">
+      <DependentUpon>EditarProductos.vb</DependentUpon>
     </Compile>
-    <Compile Include="Productos\FormEditarProductos.vb">
+    <Compile Include="Productos\EditarProductos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Productos\FormEliminarProducto.Designer.vb">
-      <DependentUpon>FormEliminarProducto.vb</DependentUpon>
+    <Compile Include="Productos\EliminarProducto.Designer.vb">
+      <DependentUpon>EliminarProducto.vb</DependentUpon>
     </Compile>
-    <Compile Include="Productos\FormEliminarProducto.vb">
+    <Compile Include="Productos\EliminarProducto.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormLogin.Designer.vb">
@@ -133,10 +133,10 @@
     <Compile Include="FormInicio.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Productos\FormProductos.Designer.vb">
-      <DependentUpon>FormProductos.vb</DependentUpon>
+    <Compile Include="Productos\Productos.Designer.vb">
+      <DependentUpon>Productos.vb</DependentUpon>
     </Compile>
-    <Compile Include="Productos\FormProductos.vb">
+    <Compile Include="Productos\Productos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -162,20 +162,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Clientes\FormClientes.resx">
-      <DependentUpon>FormClientes.vb</DependentUpon>
+    <EmbeddedResource Include="Clientes\Clientes.resx">
+      <DependentUpon>Clientes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Clientes\FormEliminarCliente.resx">
-      <DependentUpon>FormEliminarCliente.vb</DependentUpon>
+    <EmbeddedResource Include="Clientes\EliminarCliente.resx">
+      <DependentUpon>EliminarCliente.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Empleados\FormEditarEmpleado.resx">
-      <DependentUpon>FormEditarEmpleado.vb</DependentUpon>
+    <EmbeddedResource Include="Empleados\EditarEmpleado.resx">
+      <DependentUpon>EditarEmpleado.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Clientes\FormEditarCliente.resx">
-      <DependentUpon>FormEditarCliente.vb</DependentUpon>
+    <EmbeddedResource Include="Clientes\EditarCliente.resx">
+      <DependentUpon>EditarCliente.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Empleados\FormEliminarEmpleado.resx">
-      <DependentUpon>FormEliminarEmpleado.vb</DependentUpon>
+    <EmbeddedResource Include="Empleados\EliminarEmpleado.resx">
+      <DependentUpon>EliminarEmpleado.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.vb</DependentUpon>
@@ -183,17 +183,17 @@
     <EmbeddedResource Include="FormInicio.resx">
       <DependentUpon>FormInicio.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Empleados\FormEmpleados.resx">
-      <DependentUpon>FormEmpleados.vb</DependentUpon>
+    <EmbeddedResource Include="Empleados\Empleados.resx">
+      <DependentUpon>Empleados.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Productos\FormEditarProductos.resx">
-      <DependentUpon>FormEditarProductos.vb</DependentUpon>
+    <EmbeddedResource Include="Productos\EditarProductos.resx">
+      <DependentUpon>EditarProductos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Productos\FormEliminarProducto.resx">
-      <DependentUpon>FormEliminarProducto.vb</DependentUpon>
+    <EmbeddedResource Include="Productos\EliminarProducto.resx">
+      <DependentUpon>EliminarProducto.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Productos\FormProductos.resx">
-      <DependentUpon>FormProductos.vb</DependentUpon>
+    <EmbeddedResource Include="Productos\Productos.resx">
+      <DependentUpon>Productos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

@@ -1,6 +1,6 @@
 ﻿Imports Funciones
 
-Public Class FormProductos
+Public Class Productos
 
     Dim obP As FProductos
 
