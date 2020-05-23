@@ -7,13 +7,14 @@ Public Class FormClientes
 
     End Sub
 
-    Dim idC = txtIDC.Text
-    Dim idS = txtIDS2.Text
-    Dim dni = txtDNI2.Text
-    Dim nombre = txtNombre2.Text
-    Dim tel = txtTel.Text
+
 
     Private Sub buttonGuardar2_Click(sender As Object, e As EventArgs) Handles buttonGuardar2.Click
+        Dim idC = txtIDC.Text
+        Dim idS = txtIDS2.Text
+        Dim dni = txtDNI2.Text
+        Dim nombre = txtNombre2.Text
+        Dim tel = txtTel.Text
 
         Dim insert = obC.InsertarCliente(idC, idS, dni, nombre, tel)
 
@@ -22,6 +23,9 @@ Public Class FormClientes
         Else
             MessageBox.Show("Ha ocurrido un error.")
         End If
+
+        Dim formClientes As FormInicio = CType(Owner, FormInicio)
+        formClientes.listarClientes()
 
         Close()
 

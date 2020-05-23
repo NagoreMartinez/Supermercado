@@ -1,5 +1,6 @@
 ﻿Imports System.Data
 Imports System.Data.OleDb
+Imports Clases
 
 Public Module DProductos
 
@@ -37,7 +38,7 @@ Public Module DProductos
 
 
     'Insertar nuevo producto
-    Public Function CmdInsert(p As Clases.CProducto)
+    Public Function CmdInsert(p As CProducto)
         Dim ok = False
         Dim conn = conectado.getConnection()
         conn.Open()
@@ -62,7 +63,7 @@ Public Module DProductos
     End Function
 
     ' Actualizar informacion del producto
-    Public Function CmdUpdate(p As Clases.CProducto)
+    Public Function CmdUpdate(p As CProducto)
         Dim ok = False
         Dim conn = conectado.getConnection()
         conn.Open()
@@ -98,7 +99,7 @@ Public Module DProductos
         Try
             Dim cmd = conn.CreateCommand
             cmd.CommandText = "DELETE FROM PRODUCTOS WHERE IDPRODUCTO = @idProducto"
-            cmd.Parameters.AddWithValue("@idEmpleado", id)
+            cmd.Parameters.AddWithValue("@idProducto", id)
             cmd.ExecuteNonQuery()
             ok = True
         Catch ex As Exception

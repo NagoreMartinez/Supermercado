@@ -1,5 +1,6 @@
 ﻿Imports System.Data
 Imports System.Data.OleDb
+Imports Clases
 
 Public Module DEmpleados
 
@@ -37,15 +38,15 @@ Public Module DEmpleados
     End Function
 
     'Insertar nuevo empleado
-    Public Function CmdInsert(e As Clases.CEmpleado)
+    Public Function CmdInsert(e As CEmpleado)
         Dim ok = False
         Dim conn = conectado.getConnection()
         conn.Open()
         Try
             Dim cmd = conn.CreateCommand
             cmd.CommandText = "INSERT INTO EMPLEADOS 
-                 (IDEMPLEADO, IDTIPO, IDSUPER DNI, NOMBRE, EDAD, , HORARIO, SALARIO) VALUES 
-                 (@idEmpleado,@idTipo,  @dni, @idSuper, @nombre, @edad, @horario, @salario)"
+                 (IDEMPLEADO, IDTIPO, IDSUPER, DNI, NOMBRE, EDAD, , HORARIO, SALARIO) VALUES 
+                 (@idEmpleado, @idTipo, @idSuper, @dni, @nombre, @edad, @horario, @salario)"
             cmd.Parameters.AddWithValue("@idEmpleado", e.idEmpleado)
             cmd.Parameters.AddWithValue("@idTipo", e.idTipo)
             cmd.Parameters.AddWithValue("@idSuper", e.idSuper)
@@ -66,7 +67,7 @@ Public Module DEmpleados
     End Function
 
     ' Actualizar informacion
-    Public Function CmdUpdate(e As Clases.CEmpleado)
+    Public Function CmdUpdate(e As CEmpleado)
         Dim ok = False
         Dim conn = conectado.getConnection()
         conn.Open()

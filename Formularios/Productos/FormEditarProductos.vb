@@ -41,4 +41,7 @@ Public Class FormEditarProductos
         Close()
     End Sub
 
+    Private Sub FormEditarProductos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

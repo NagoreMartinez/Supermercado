@@ -20,7 +20,7 @@ Public Class FormEditarEmpleado
         txtIDE.Text = e.idEmpleado
         txtIDT.Text = e.idTipo
         txtIDS.Text = e.idSuper
-        txtDni.Text = e.dni
+        txtDNI.Text = e.dni
         txtNombre.Text = e.nombre
         txtEdad.Text = e.edad
         txtHorario.Text = e.horario
@@ -32,7 +32,7 @@ Public Class FormEditarEmpleado
     ' Guardar cambios
     Private Sub buttonGuardar1_Click(sender As Object, e As EventArgs) Handles buttonGuardar1.Click
 
-        Dim em = Empleados.ActualizarEmpleado(txtIDE.Text, txtIDT.Text, txtIDS.Text, txtDni.Text,
+        Dim em = Empleados.ActualizarEmpleado(txtIDE.Text, txtIDT.Text, txtIDS.Text, txtDNI.Text,
                                              txtNombre.Text, txtEdad.Text, txtHorario.Text, txtSalario.Text)
 
         If em Then
