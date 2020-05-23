@@ -167,13 +167,13 @@ Partial Class EditarEmpleado
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(50, 392)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(159, 24)
+        Me.Label7.Size = New System.Drawing.Size(95, 24)
         Me.Label7.TabIndex = 25
-        Me.Label7.Text = "ID Puesto empleo"
+        Me.Label7.Text = "ID Puesto "
         '
         'txtIDT
         '
-        Me.txtIDT.Location = New System.Drawing.Point(229, 397)
+        Me.txtIDT.Location = New System.Drawing.Point(158, 397)
         Me.txtIDT.Name = "txtIDT"
         Me.txtIDT.Size = New System.Drawing.Size(88, 20)
         Me.txtIDT.TabIndex = 26
@@ -212,7 +212,7 @@ Partial Class EditarEmpleado
         Me.txtSalario.Size = New System.Drawing.Size(103, 20)
         Me.txtSalario.TabIndex = 30
         '
-        'FormEditarEmpleado
+        'EditarEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -235,7 +235,7 @@ Partial Class EditarEmpleado
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "FormEditarEmpleado"
+        Me.Name = "EditarEmpleado"
         Me.Text = "Editar empleado"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

@@ -2,7 +2,7 @@
 Imports Funciones
 
 Public Class EditarEmpleado
-    Dim Empleados As New FEmpleados
+    Dim obE As New FEmpleados
 
     Public Sub New()
 
@@ -32,7 +32,7 @@ Public Class EditarEmpleado
     ' Guardar cambios
     Private Sub buttonGuardar1_Click(sender As Object, e As EventArgs) Handles buttonGuardar1.Click
 
-        Dim em = Empleados.ActualizarEmpleado(txtIDE.Text, txtIDT.Text, txtIDS.Text, txtDNI.Text,
+        Dim em = obE.ActualizarEmpleado(txtIDE.Text, txtIDT.Text, txtIDS.Text, txtDNI.Text,
                                              txtNombre.Text, txtEdad.Text, txtHorario.Text, txtSalario.Text)
 
         If em Then
