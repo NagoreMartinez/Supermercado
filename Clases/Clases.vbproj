@@ -77,6 +77,7 @@
     <Compile Include="CCliente.vb" />
     <Compile Include="CEmpleado.vb" />
     <Compile Include="CProducto.vb" />
+    <Compile Include="CUsuario.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
