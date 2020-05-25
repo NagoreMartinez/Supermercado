@@ -22,14 +22,14 @@ Public Class EditarCliente
         txtIDS2.Text = c.idSuper
         txtDNI2.Text = c.dni
         txtNombre2.Text = c.nombre
-        txtTel.Text = c.telefono
+        txtTel2.Text = c.telefono
 
     End Sub
 
     ' Guardar cambios
     Private Sub buttonGuardar2_Click(sender As Object, e As EventArgs) Handles buttonGuardar2.Click
 
-        Dim c = objC.ActualizarCliente(txtIDC.Text, txtIDS2.Text, txtDNI2.Text, txtNombre2.Text, txtTel.Text)
+        Dim c = objC.ActualizarCliente(txtIDC.Text, txtIDS2.Text, txtDNI2.Text, txtNombre2.Text, txtTel2.Text)
 
         If c Then
             MessageBox.Show("Se ha actualizado correctamente")

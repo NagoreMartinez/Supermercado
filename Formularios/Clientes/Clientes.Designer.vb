@@ -25,7 +25,7 @@ Partial Class Clientes
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.buttonGuardar2 = New System.Windows.Forms.Button()
-        Me.txtTel = New System.Windows.Forms.TextBox()
+        Me.txtTel2 = New System.Windows.Forms.TextBox()
         Me.txtNombre2 = New System.Windows.Forms.TextBox()
         Me.txtDNI2 = New System.Windows.Forms.TextBox()
         Me.txtIDS2 = New System.Windows.Forms.TextBox()
@@ -70,12 +70,12 @@ Partial Class Clientes
         Me.buttonGuardar2.Text = "Guardar"
         Me.buttonGuardar2.UseVisualStyleBackColor = False
         '
-        'txtTel
+        'txtTel2
         '
-        Me.txtTel.Location = New System.Drawing.Point(159, 312)
-        Me.txtTel.Name = "txtTel"
-        Me.txtTel.Size = New System.Drawing.Size(148, 20)
-        Me.txtTel.TabIndex = 22
+        Me.txtTel2.Location = New System.Drawing.Point(159, 312)
+        Me.txtTel2.Name = "txtTel2"
+        Me.txtTel2.Size = New System.Drawing.Size(148, 20)
+        Me.txtTel2.TabIndex = 22
         '
         'txtNombre2
         '
@@ -155,14 +155,14 @@ Partial Class Clientes
         Me.Label1.TabIndex = 13
         Me.Label1.Text = "ID Cliente"
         '
-        'FormClientes
+        'Clientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(790, 450)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.buttonGuardar2)
-        Me.Controls.Add(Me.txtTel)
+        Me.Controls.Add(Me.txtTel2)
         Me.Controls.Add(Me.txtNombre2)
         Me.Controls.Add(Me.txtDNI2)
         Me.Controls.Add(Me.txtIDS2)
@@ -172,7 +172,7 @@ Partial Class Clientes
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "FormClientes"
+        Me.Name = "Clientes"
         Me.Text = "Nuevo cliente"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -184,7 +184,7 @@ Partial Class Clientes
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label3 As Label
     Friend WithEvents buttonGuardar2 As Button
-    Friend WithEvents txtTel As TextBox
+    Friend WithEvents txtTel2 As TextBox
     Friend WithEvents txtNombre2 As TextBox
     Friend WithEvents txtDNI2 As TextBox
     Friend WithEvents txtIDS2 As TextBox

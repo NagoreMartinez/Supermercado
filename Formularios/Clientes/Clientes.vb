@@ -10,7 +10,7 @@ Public Class Clientes
         Dim idS = txtIDS2.Text
         Dim dni = txtDNI2.Text
         Dim nombre = txtNombre2.Text
-        Dim tel = txtTel.Text
+        Dim tel = txtTel2.Text
 
         Dim insert = obC.InsertarCliente(idC, idS, dni, nombre, tel)
 
@@ -26,4 +26,6 @@ Public Class Clientes
         Close()
 
     End Sub
+
+
 End Class

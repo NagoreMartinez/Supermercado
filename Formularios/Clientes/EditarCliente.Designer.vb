@@ -32,7 +32,7 @@ Partial Class EditarCliente
         Me.txtIDS2 = New System.Windows.Forms.TextBox()
         Me.txtDNI2 = New System.Windows.Forms.TextBox()
         Me.txtNombre2 = New System.Windows.Forms.TextBox()
-        Me.txtTel = New System.Windows.Forms.TextBox()
+        Me.txtTel2 = New System.Windows.Forms.TextBox()
         Me.buttonGuardar2 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
@@ -128,12 +128,12 @@ Partial Class EditarCliente
         Me.txtNombre2.Size = New System.Drawing.Size(214, 20)
         Me.txtNombre2.TabIndex = 9
         '
-        'txtTel
+        'txtTel2
         '
-        Me.txtTel.Location = New System.Drawing.Point(159, 325)
-        Me.txtTel.Name = "txtTel"
-        Me.txtTel.Size = New System.Drawing.Size(148, 20)
-        Me.txtTel.TabIndex = 10
+        Me.txtTel2.Location = New System.Drawing.Point(159, 325)
+        Me.txtTel2.Name = "txtTel2"
+        Me.txtTel2.Size = New System.Drawing.Size(148, 20)
+        Me.txtTel2.TabIndex = 10
         '
         'buttonGuardar2
         '
@@ -155,14 +155,14 @@ Partial Class EditarCliente
         Me.Panel1.Size = New System.Drawing.Size(788, 51)
         Me.Panel1.TabIndex = 12
         '
-        'FormEditarCliente
+        'EditarCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(789, 450)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.buttonGuardar2)
-        Me.Controls.Add(Me.txtTel)
+        Me.Controls.Add(Me.txtTel2)
         Me.Controls.Add(Me.txtNombre2)
         Me.Controls.Add(Me.txtDNI2)
         Me.Controls.Add(Me.txtIDS2)
@@ -172,7 +172,7 @@ Partial Class EditarCliente
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "FormEditarCliente"
+        Me.Name = "EditarCliente"
         Me.Text = "Editar cliente"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -191,7 +191,7 @@ Partial Class EditarCliente
     Friend WithEvents txtIDS2 As TextBox
     Friend WithEvents txtDNI2 As TextBox
     Friend WithEvents txtNombre2 As TextBox
-    Friend WithEvents txtTel As TextBox
+    Friend WithEvents txtTel2 As TextBox
     Friend WithEvents buttonGuardar2 As Button
     Friend WithEvents Panel1 As Panel
 End Class

@@ -53,7 +53,7 @@ Partial Class Empleados
         '
         'txtHorario
         '
-        Me.txtHorario.Location = New System.Drawing.Point(500, 382)
+        Me.txtHorario.Location = New System.Drawing.Point(456, 472)
         Me.txtHorario.Name = "txtHorario"
         Me.txtHorario.Size = New System.Drawing.Size(108, 20)
         Me.txtHorario.TabIndex = 47
@@ -72,7 +72,7 @@ Partial Class Empleados
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(402, 377)
+        Me.Label8.Location = New System.Drawing.Point(358, 467)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(72, 24)
         Me.Label8.TabIndex = 45
@@ -80,7 +80,7 @@ Partial Class Empleados
         '
         'txtIDT
         '
-        Me.txtIDT.Location = New System.Drawing.Point(229, 382)
+        Me.txtIDT.Location = New System.Drawing.Point(614, 42)
         Me.txtIDT.Name = "txtIDT"
         Me.txtIDT.Size = New System.Drawing.Size(88, 20)
         Me.txtIDT.TabIndex = 44
@@ -89,7 +89,7 @@ Partial Class Empleados
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(50, 377)
+        Me.Label7.Location = New System.Drawing.Point(435, 37)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(159, 24)
         Me.Label7.TabIndex = 43
@@ -99,7 +99,7 @@ Partial Class Empleados
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Location = New System.Drawing.Point(0, 110)
+        Me.Panel1.Location = New System.Drawing.Point(0, 189)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(800, 51)
         Me.Panel1.TabIndex = 42
@@ -120,7 +120,7 @@ Partial Class Empleados
         '
         Me.buttonGuardar1.BackColor = System.Drawing.SystemColors.ButtonShadow
         Me.buttonGuardar1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.buttonGuardar1.Location = New System.Drawing.Point(607, 500)
+        Me.buttonGuardar1.Location = New System.Drawing.Point(607, 537)
         Me.buttonGuardar1.Name = "buttonGuardar1"
         Me.buttonGuardar1.Size = New System.Drawing.Size(115, 35)
         Me.buttonGuardar1.TabIndex = 41
@@ -129,28 +129,28 @@ Partial Class Empleados
         '
         'txtEdad
         '
-        Me.txtEdad.Location = New System.Drawing.Point(126, 300)
+        Me.txtEdad.Location = New System.Drawing.Point(126, 384)
         Me.txtEdad.Name = "txtEdad"
         Me.txtEdad.Size = New System.Drawing.Size(59, 20)
         Me.txtEdad.TabIndex = 40
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(427, 206)
+        Me.txtNombre.Location = New System.Drawing.Point(427, 290)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(226, 20)
         Me.txtNombre.TabIndex = 39
         '
         'txtDNI
         '
-        Me.txtDNI.Location = New System.Drawing.Point(111, 206)
+        Me.txtDNI.Location = New System.Drawing.Point(111, 290)
         Me.txtDNI.Name = "txtDNI"
         Me.txtDNI.Size = New System.Drawing.Size(135, 20)
         Me.txtDNI.TabIndex = 38
         '
         'txtIDS
         '
-        Me.txtIDS.Location = New System.Drawing.Point(562, 42)
+        Me.txtIDS.Location = New System.Drawing.Point(223, 122)
         Me.txtIDS.Name = "txtIDS"
         Me.txtIDS.Size = New System.Drawing.Size(160, 20)
         Me.txtIDS.TabIndex = 37
@@ -166,7 +166,7 @@ Partial Class Empleados
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(50, 295)
+        Me.Label6.Location = New System.Drawing.Point(50, 379)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(55, 24)
         Me.Label6.TabIndex = 35
@@ -176,7 +176,7 @@ Partial Class Empleados
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(322, 201)
+        Me.Label5.Location = New System.Drawing.Point(322, 285)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(79, 24)
         Me.Label5.TabIndex = 34
@@ -186,7 +186,7 @@ Partial Class Empleados
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(50, 201)
+        Me.Label4.Location = New System.Drawing.Point(50, 285)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(41, 24)
         Me.Label4.TabIndex = 33
@@ -196,7 +196,7 @@ Partial Class Empleados
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(389, 37)
+        Me.Label2.Location = New System.Drawing.Point(50, 117)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(158, 24)
         Me.Label2.TabIndex = 32
@@ -212,11 +212,11 @@ Partial Class Empleados
         Me.Label1.TabIndex = 31
         Me.Label1.Text = "ID Empleado"
         '
-        'FormEmpleados
+        'Empleados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 560)
+        Me.ClientSize = New System.Drawing.Size(800, 591)
         Me.Controls.Add(Me.txtSalario)
         Me.Controls.Add(Me.txtHorario)
         Me.Controls.Add(Me.Label9)
@@ -235,7 +235,7 @@ Partial Class Empleados
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "FormEmpleados"
+        Me.Name = "Empleados"
         Me.Text = "Nuevo empleado"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

@@ -48,7 +48,7 @@ Partial Class EditarEmpleado
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Location = New System.Drawing.Point(0, 125)
+        Me.Panel1.Location = New System.Drawing.Point(0, 199)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(800, 51)
         Me.Panel1.TabIndex = 24
@@ -69,7 +69,7 @@ Partial Class EditarEmpleado
         '
         Me.buttonGuardar1.BackColor = System.Drawing.SystemColors.ButtonShadow
         Me.buttonGuardar1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.buttonGuardar1.Location = New System.Drawing.Point(607, 515)
+        Me.buttonGuardar1.Location = New System.Drawing.Point(607, 545)
         Me.buttonGuardar1.Name = "buttonGuardar1"
         Me.buttonGuardar1.Size = New System.Drawing.Size(115, 35)
         Me.buttonGuardar1.TabIndex = 23
@@ -78,28 +78,28 @@ Partial Class EditarEmpleado
         '
         'txtEdad
         '
-        Me.txtEdad.Location = New System.Drawing.Point(126, 315)
+        Me.txtEdad.Location = New System.Drawing.Point(126, 394)
         Me.txtEdad.Name = "txtEdad"
         Me.txtEdad.Size = New System.Drawing.Size(59, 20)
         Me.txtEdad.TabIndex = 22
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(427, 221)
+        Me.txtNombre.Location = New System.Drawing.Point(465, 300)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(226, 20)
         Me.txtNombre.TabIndex = 21
         '
         'txtDNI
         '
-        Me.txtDNI.Location = New System.Drawing.Point(111, 221)
+        Me.txtDNI.Location = New System.Drawing.Point(111, 300)
         Me.txtDNI.Name = "txtDNI"
         Me.txtDNI.Size = New System.Drawing.Size(135, 20)
         Me.txtDNI.TabIndex = 20
         '
         'txtIDS
         '
-        Me.txtIDS.Location = New System.Drawing.Point(562, 57)
+        Me.txtIDS.Location = New System.Drawing.Point(223, 128)
         Me.txtIDS.Name = "txtIDS"
         Me.txtIDS.Size = New System.Drawing.Size(160, 20)
         Me.txtIDS.TabIndex = 19
@@ -115,7 +115,7 @@ Partial Class EditarEmpleado
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(50, 310)
+        Me.Label6.Location = New System.Drawing.Point(50, 389)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(55, 24)
         Me.Label6.TabIndex = 17
@@ -125,7 +125,7 @@ Partial Class EditarEmpleado
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(322, 216)
+        Me.Label5.Location = New System.Drawing.Point(360, 295)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(79, 24)
         Me.Label5.TabIndex = 16
@@ -135,7 +135,7 @@ Partial Class EditarEmpleado
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(50, 216)
+        Me.Label4.Location = New System.Drawing.Point(50, 295)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(41, 24)
         Me.Label4.TabIndex = 15
@@ -145,7 +145,7 @@ Partial Class EditarEmpleado
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(389, 52)
+        Me.Label2.Location = New System.Drawing.Point(50, 123)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(158, 24)
         Me.Label2.TabIndex = 14
@@ -165,7 +165,7 @@ Partial Class EditarEmpleado
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(50, 392)
+        Me.Label7.Location = New System.Drawing.Point(445, 51)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(95, 24)
         Me.Label7.TabIndex = 25
@@ -173,7 +173,7 @@ Partial Class EditarEmpleado
         '
         'txtIDT
         '
-        Me.txtIDT.Location = New System.Drawing.Point(158, 397)
+        Me.txtIDT.Location = New System.Drawing.Point(553, 56)
         Me.txtIDT.Name = "txtIDT"
         Me.txtIDT.Size = New System.Drawing.Size(88, 20)
         Me.txtIDT.TabIndex = 26
@@ -182,7 +182,7 @@ Partial Class EditarEmpleado
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(402, 392)
+        Me.Label8.Location = New System.Drawing.Point(367, 482)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(72, 24)
         Me.Label8.TabIndex = 27
@@ -200,7 +200,7 @@ Partial Class EditarEmpleado
         '
         'txtHorario
         '
-        Me.txtHorario.Location = New System.Drawing.Point(500, 397)
+        Me.txtHorario.Location = New System.Drawing.Point(465, 487)
         Me.txtHorario.Name = "txtHorario"
         Me.txtHorario.Size = New System.Drawing.Size(108, 20)
         Me.txtHorario.TabIndex = 29
@@ -216,7 +216,7 @@ Partial Class EditarEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 584)
+        Me.ClientSize = New System.Drawing.Size(800, 602)
         Me.Controls.Add(Me.txtSalario)
         Me.Controls.Add(Me.txtHorario)
         Me.Controls.Add(Me.Label9)
