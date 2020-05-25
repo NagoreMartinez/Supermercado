@@ -23,6 +23,7 @@ Public Class EditarEmpleado
         txtDNI.Text = e.dni
         txtNombre.Text = e.nombre
         txtEdad.Text = e.edad
+        txtTel.Text = e.telefono
         txtHorario.Text = e.horario
         txtSalario.Text = e.salario
 
@@ -33,7 +34,7 @@ Public Class EditarEmpleado
     Private Sub buttonGuardar1_Click(sender As Object, e As EventArgs) Handles buttonGuardar1.Click
 
         Dim em = obE.ActualizarEmpleado(txtIDE.Text, txtIDT.Text, txtIDS.Text, txtDNI.Text,
-                                             txtNombre.Text, txtEdad.Text, txtHorario.Text, txtSalario.Text)
+                                             txtNombre.Text, txtEdad.Text, txtTel.Text, txtHorario.Text, txtSalario.Text)
 
         If em Then
             MessageBox.Show("Se ha actualizado correctamente")

@@ -16,8 +16,8 @@ Public Class FEmpleados
 
     ' Insertar un empleado
     Public Function InsertEmpleado(idEmpleado As String, idTipo As String, idSuper As String, dni As String, nombre As String, edad As Integer,
-                                   horario As String, salario As Double)
-        Dim e As New CEmpleado(idEmpleado, idTipo, idSuper, dni, nombre, edad, horario, salario)
+                                   telefono As String, horario As String, salario As Double)
+        Dim e As New CEmpleado(idEmpleado, idTipo, idSuper, dni, nombre, edad, telefono, horario, salario)
 
         Dim ins = DEmpleados.CmdInsert(e)
         Return ins
@@ -30,8 +30,8 @@ Public Class FEmpleados
 
     ' Actualizar un empleado 
     Public Function ActualizarEmpleado(idEmpleado As String, idTipo As String, idSuper As String, dni As String,
-                                       nombre As String, edad As Integer, horario As String, salario As Double) As Integer
-        Dim e As New CEmpleado(idEmpleado, idTipo, idSuper, dni, nombre, edad, horario, salario)
+                                       nombre As String, edad As Integer, telefono As String, horario As String, salario As Double) As Integer
+        Dim e As New CEmpleado(idEmpleado, idTipo, idSuper, dni, nombre, edad, telefono, horario, salario)
         Dim upE = DEmpleados.CmdUpdate(e)
         Return upE
     End Function

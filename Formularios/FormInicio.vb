@@ -11,6 +11,8 @@ Public Class FormInicio
     Private Sub FormInicio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'SupermercadoDataSet.EMPLEADOS' Puede moverla o quitarla según sea necesario.
         Me.EMPLEADOSTableAdapter.Fill(Me.SupermercadoDataSet.EMPLEADOS)
+        'TODO: esta línea de código carga datos en la tabla 'SupermercadoDataSet.EMPLEADOS' Puede moverla o quitarla según sea necesario.
+        Me.EMPLEADOSTableAdapter.Fill(Me.SupermercadoDataSet.EMPLEADOS)
         'TODO: esta línea de código carga datos en la tabla 'SupermercadoDataSet.PRODUCTOS' Puede moverla o quitarla según sea necesario.
         Me.PRODUCTOSTableAdapter.Fill(Me.SupermercadoDataSet.PRODUCTOS)
         'TODO: esta línea de código carga datos en la tabla 'SupermercadoDataSet.CLIENTES' Puede moverla o quitarla según sea necesario.
@@ -76,10 +78,11 @@ Public Class FormInicio
             Dim dni = row.Cells(3).Value.ToString
             Dim nombre = row.Cells(4).Value.ToString
             Dim edad = row.Cells(5).Value.ToString
-            Dim horario = row.Cells(6).Value.ToString
-            Dim salario = row.Cells(7).Value.ToString
+            Dim telefono = row.Cells(6).Value.ToString
+            Dim horario = row.Cells(7).Value.ToString
+            Dim salario = row.Cells(8).Value.ToString
 
-            Dim e As New CEmpleado(idEmpleado, idTipo, idSuper, dni, nombre, edad, horario, salario)
+            Dim e As New CEmpleado(idEmpleado, idTipo, idSuper, dni, nombre, edad, telefono, horario, salario)
             Dim formEEmpleado As New EditarEmpleado(e)
             AddOwnedForm(formEEmpleado)
             formEEmpleado.ShowDialog()
@@ -221,6 +224,7 @@ Public Class FormInicio
         End If
     End Sub
 
+    Private Sub dgvEmpleados_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
 
-
+    End Sub
 End Class

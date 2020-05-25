@@ -11,10 +11,11 @@ Public Class Empleados
         Dim dni = txtDNI.Text
         Dim nombre = txtNombre.Text
         Dim edad = txtEdad.Text
+        Dim telefono = txtTel.Text
         Dim horario = txtHorario.Text
         Dim salario = txtSalario.Text
 
-        Dim insert = obE.InsertEmpleado(idE, idT, idS, dni, nombre, edad, horario, salario)
+        Dim insert = obE.InsertEmpleado(idE, idT, idS, dni, nombre, edad, telefono, horario, salario)
 
         If insert Then
             MessageBox.Show("Empleado agregado correctamente.")

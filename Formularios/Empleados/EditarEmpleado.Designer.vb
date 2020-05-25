@@ -41,6 +41,9 @@ Partial Class EditarEmpleado
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txtHorario = New System.Windows.Forms.TextBox()
         Me.txtSalario = New System.Windows.Forms.TextBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.txtTel = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -69,7 +72,7 @@ Partial Class EditarEmpleado
         '
         Me.buttonGuardar1.BackColor = System.Drawing.SystemColors.ButtonShadow
         Me.buttonGuardar1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.buttonGuardar1.Location = New System.Drawing.Point(607, 545)
+        Me.buttonGuardar1.Location = New System.Drawing.Point(607, 619)
         Me.buttonGuardar1.Name = "buttonGuardar1"
         Me.buttonGuardar1.Size = New System.Drawing.Size(115, 35)
         Me.buttonGuardar1.TabIndex = 23
@@ -182,7 +185,7 @@ Partial Class EditarEmpleado
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(367, 482)
+        Me.Label8.Location = New System.Drawing.Point(50, 559)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(72, 24)
         Me.Label8.TabIndex = 27
@@ -192,7 +195,7 @@ Partial Class EditarEmpleado
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(50, 482)
+        Me.Label9.Location = New System.Drawing.Point(360, 559)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(67, 24)
         Me.Label9.TabIndex = 28
@@ -200,23 +203,51 @@ Partial Class EditarEmpleado
         '
         'txtHorario
         '
-        Me.txtHorario.Location = New System.Drawing.Point(465, 487)
+        Me.txtHorario.Location = New System.Drawing.Point(148, 564)
         Me.txtHorario.Name = "txtHorario"
         Me.txtHorario.Size = New System.Drawing.Size(108, 20)
         Me.txtHorario.TabIndex = 29
         '
         'txtSalario
         '
-        Me.txtSalario.Location = New System.Drawing.Point(143, 487)
+        Me.txtSalario.Location = New System.Drawing.Point(453, 564)
         Me.txtSalario.Name = "txtSalario"
         Me.txtSalario.Size = New System.Drawing.Size(103, 20)
         Me.txtSalario.TabIndex = 30
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Panel2.Location = New System.Drawing.Point(0, 459)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(800, 51)
+        Me.Panel2.TabIndex = 31
+        '
+        'txtTel
+        '
+        Me.txtTel.Location = New System.Drawing.Point(468, 394)
+        Me.txtTel.Name = "txtTel"
+        Me.txtTel.Size = New System.Drawing.Size(148, 20)
+        Me.txtTel.TabIndex = 53
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(360, 389)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(85, 24)
+        Me.Label10.TabIndex = 52
+        Me.Label10.Text = "Teléfono"
         '
         'EditarEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 602)
+        Me.ClientSize = New System.Drawing.Size(800, 697)
+        Me.Controls.Add(Me.txtTel)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.txtSalario)
         Me.Controls.Add(Me.txtHorario)
         Me.Controls.Add(Me.Label9)
@@ -263,4 +294,7 @@ Partial Class EditarEmpleado
     Friend WithEvents Label9 As Label
     Friend WithEvents txtHorario As TextBox
     Friend WithEvents txtSalario As TextBox
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents txtTel As TextBox
+    Friend WithEvents Label10 As Label
 End Class
