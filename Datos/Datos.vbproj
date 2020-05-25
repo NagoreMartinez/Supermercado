@@ -78,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DClientes.vb" />
+    <Compile Include="DCompras.vb" />
     <Compile Include="DConexion.vb" />
     <Compile Include="DEmpleados.vb" />
     <Compile Include="DProductos.vb" />
