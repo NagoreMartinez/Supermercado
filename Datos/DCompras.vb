@@ -20,13 +20,13 @@ Public Class DCompras
         Return table
     End Function
 
-    'Buscar por fecha
+    'Buscar por fecha e idCliente
     Public Function QryByFiltro(filtro As String) As DataTable
-        Dim query = "SELECT * FROM COMPRAS 
-                        WHERE FECHA LIKE @fecha"
+        Dim query = "SELECT * FROM COMPRAS WHERE IDCLIENTE LIKE @idCliente OR FECHA LIKE @fecha"
         Dim conn = conectado.getConnection()
         conn.Open()
         Dim sqlCommand = New OleDbCommand(query, conn)
+        sqlCommand.Parameters.AddWithValue("@idCliente", filtro + "%")
         sqlCommand.Parameters.AddWithValue("@fecha", filtro + "%")
         Dim table = New DataTable()
         Dim executeReader = sqlCommand.ExecuteReader()

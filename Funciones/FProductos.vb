@@ -23,7 +23,6 @@ Public Class FProductos
         Return insP
     End Function
 
-
     ' Actualizar un producto 
     Public Function ActualizarProducto(idProducto As String, nombre As String, precio As Double, fechaCaducidad As String)
         Dim p As New CProducto(idProducto, nombre, precio, fechaCaducidad)

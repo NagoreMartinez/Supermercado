@@ -5,9 +5,14 @@ Public Class FormInicio
     Dim Clientes As New FClientes
     Dim Empleados As New FEmpleados
     Dim Productos As New FProductos
+    Dim Compras As New FCompras
 
 
     Private Sub FormInicio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'SupermercadoDataSet1.COMPRAS' Puede moverla o quitarla según sea necesario.
+        Me.COMPRASTableAdapter.Fill(Me.SupermercadoDataSet1.COMPRAS)
+        'TODO: esta línea de código carga datos en la tabla 'SupermercadoDataSet.COMPRAS' Puede moverla o quitarla según sea necesario.
+        Me.COMPRASTableAdapter.Fill(Me.SupermercadoDataSet.COMPRAS)
         'TODO: esta línea de código carga datos en la tabla 'SupermercadoDataSet.EMPLEADOS' Puede moverla o quitarla según sea necesario.
         Me.EMPLEADOSTableAdapter.Fill(Me.SupermercadoDataSet.EMPLEADOS)
         'TODO: esta línea de código carga datos en la tabla 'SupermercadoDataSet.PRODUCTOS' Puede moverla o quitarla según sea necesario.
@@ -18,9 +23,13 @@ Public Class FormInicio
         listarEmpleado()
         listarClientes()
         listarProductos()
+        listarCompras()
+
         PanelEmpleados.Show()
         PanelClientes.Hide()
         PanelProductos.Hide()
+        PanelCompras.Hide()
+
 
     End Sub
 
@@ -28,16 +37,26 @@ Public Class FormInicio
         PanelEmpleados.Show()
         PanelClientes.Hide()
         PanelProductos.Hide()
+        PanelCompras.Hide()
     End Sub
 
     Private Sub ButtonClientes_Click(sender As Object, e As EventArgs) Handles ButtonClientes.Click
         PanelClientes.Show()
         PanelEmpleados.Hide()
         PanelProductos.Hide()
+        PanelCompras.Hide()
     End Sub
 
     Private Sub ButtonProductos_Click(sender As Object, e As EventArgs) Handles ButtonProductos.Click
         PanelProductos.Show()
+        PanelEmpleados.Hide()
+        PanelClientes.Hide()
+        PanelCompras.Hide()
+    End Sub
+
+    Private Sub ButtonCompras_Click(sender As Object, e As EventArgs) Handles ButtonCompras.Click
+        PanelCompras.Show()
+        PanelProductos.Hide()
         PanelEmpleados.Hide()
         PanelClientes.Hide()
     End Sub
@@ -246,4 +265,18 @@ Public Class FormInicio
         End If
 
     End Sub
+
+    ' LISTENER DE COMPRAS
+
+    ' Lista de compras
+
+    Sub listarCompras()
+        dgvCompras.DataSource = Compras.ListaCompras
+    End Sub
+
+    ' Buscar producto
+    Private Sub BuscarCompras_TextChanged(sender As Object, e As EventArgs) Handles BuscarCompra.TextChanged
+        dgvCompras.DataSource = Compras.ObtenerComprasByFiltro(BuscarCompra.Text)
+    End Sub
+
 End Class

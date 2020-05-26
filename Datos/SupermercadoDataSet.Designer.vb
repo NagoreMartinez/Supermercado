@@ -31,9 +31,9 @@ Partial Public Class SupermercadoDataSet
     
     Private tableCOMPRAS As COMPRASDataTable
     
-    Private tableCOMPRASxPRODUCTOS As COMPRASxPRODUCTOSDataTable
-    
     Private tableEMPLEADOS As EMPLEADOSDataTable
+    
+    Private tableLINEAS As LINEASDataTable
     
     Private tablePRODUCTOS As PRODUCTOSDataTable
     
@@ -79,11 +79,11 @@ Partial Public Class SupermercadoDataSet
             If (Not (ds.Tables("COMPRAS")) Is Nothing) Then
                 MyBase.Tables.Add(New COMPRASDataTable(ds.Tables("COMPRAS")))
             End If
-            If (Not (ds.Tables("COMPRASxPRODUCTOS")) Is Nothing) Then
-                MyBase.Tables.Add(New COMPRASxPRODUCTOSDataTable(ds.Tables("COMPRASxPRODUCTOS")))
-            End If
             If (Not (ds.Tables("EMPLEADOS")) Is Nothing) Then
                 MyBase.Tables.Add(New EMPLEADOSDataTable(ds.Tables("EMPLEADOS")))
+            End If
+            If (Not (ds.Tables("LINEAS")) Is Nothing) Then
+                MyBase.Tables.Add(New LINEASDataTable(ds.Tables("LINEAS")))
             End If
             If (Not (ds.Tables("PRODUCTOS")) Is Nothing) Then
                 MyBase.Tables.Add(New PRODUCTOSDataTable(ds.Tables("PRODUCTOS")))
@@ -145,9 +145,9 @@ Partial Public Class SupermercadoDataSet
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
      Global.System.ComponentModel.Browsable(false),  _
      Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
-    Public ReadOnly Property COMPRASxPRODUCTOS() As COMPRASxPRODUCTOSDataTable
+    Public ReadOnly Property EMPLEADOS() As EMPLEADOSDataTable
         Get
-            Return Me.tableCOMPRASxPRODUCTOS
+            Return Me.tableEMPLEADOS
         End Get
     End Property
     
@@ -155,9 +155,9 @@ Partial Public Class SupermercadoDataSet
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
      Global.System.ComponentModel.Browsable(false),  _
      Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
-    Public ReadOnly Property EMPLEADOS() As EMPLEADOSDataTable
+    Public ReadOnly Property LINEAS() As LINEASDataTable
         Get
-            Return Me.tableEMPLEADOS
+            Return Me.tableLINEAS
         End Get
     End Property
     
@@ -267,11 +267,11 @@ Partial Public Class SupermercadoDataSet
             If (Not (ds.Tables("COMPRAS")) Is Nothing) Then
                 MyBase.Tables.Add(New COMPRASDataTable(ds.Tables("COMPRAS")))
             End If
-            If (Not (ds.Tables("COMPRASxPRODUCTOS")) Is Nothing) Then
-                MyBase.Tables.Add(New COMPRASxPRODUCTOSDataTable(ds.Tables("COMPRASxPRODUCTOS")))
-            End If
             If (Not (ds.Tables("EMPLEADOS")) Is Nothing) Then
                 MyBase.Tables.Add(New EMPLEADOSDataTable(ds.Tables("EMPLEADOS")))
+            End If
+            If (Not (ds.Tables("LINEAS")) Is Nothing) Then
+                MyBase.Tables.Add(New LINEASDataTable(ds.Tables("LINEAS")))
             End If
             If (Not (ds.Tables("PRODUCTOS")) Is Nothing) Then
                 MyBase.Tables.Add(New PRODUCTOSDataTable(ds.Tables("PRODUCTOS")))
@@ -332,16 +332,16 @@ Partial Public Class SupermercadoDataSet
                 Me.tableCOMPRAS.InitVars
             End If
         End If
-        Me.tableCOMPRASxPRODUCTOS = CType(MyBase.Tables("COMPRASxPRODUCTOS"),COMPRASxPRODUCTOSDataTable)
-        If (initTable = true) Then
-            If (Not (Me.tableCOMPRASxPRODUCTOS) Is Nothing) Then
-                Me.tableCOMPRASxPRODUCTOS.InitVars
-            End If
-        End If
         Me.tableEMPLEADOS = CType(MyBase.Tables("EMPLEADOS"),EMPLEADOSDataTable)
         If (initTable = true) Then
             If (Not (Me.tableEMPLEADOS) Is Nothing) Then
                 Me.tableEMPLEADOS.InitVars
+            End If
+        End If
+        Me.tableLINEAS = CType(MyBase.Tables("LINEAS"),LINEASDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tableLINEAS) Is Nothing) Then
+                Me.tableLINEAS.InitVars
             End If
         End If
         Me.tablePRODUCTOS = CType(MyBase.Tables("PRODUCTOS"),PRODUCTOSDataTable)
@@ -378,10 +378,10 @@ Partial Public Class SupermercadoDataSet
         MyBase.Tables.Add(Me.tableCLIENTES)
         Me.tableCOMPRAS = New COMPRASDataTable()
         MyBase.Tables.Add(Me.tableCOMPRAS)
-        Me.tableCOMPRASxPRODUCTOS = New COMPRASxPRODUCTOSDataTable()
-        MyBase.Tables.Add(Me.tableCOMPRASxPRODUCTOS)
         Me.tableEMPLEADOS = New EMPLEADOSDataTable()
         MyBase.Tables.Add(Me.tableEMPLEADOS)
+        Me.tableLINEAS = New LINEASDataTable()
+        MyBase.Tables.Add(Me.tableLINEAS)
         Me.tablePRODUCTOS = New PRODUCTOSDataTable()
         MyBase.Tables.Add(Me.tablePRODUCTOS)
         Me.tableSUPERMERCADO = New SUPERMERCADODataTable()
@@ -410,13 +410,13 @@ Partial Public Class SupermercadoDataSet
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-    Private Function ShouldSerializeCOMPRASxPRODUCTOS() As Boolean
+    Private Function ShouldSerializeEMPLEADOS() As Boolean
         Return false
     End Function
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-    Private Function ShouldSerializeEMPLEADOS() As Boolean
+    Private Function ShouldSerializeLINEAS() As Boolean
         Return false
     End Function
     
@@ -506,10 +506,10 @@ Partial Public Class SupermercadoDataSet
     Public Delegate Sub COMPRASRowChangeEventHandler(ByVal sender As Object, ByVal e As COMPRASRowChangeEvent)
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-    Public Delegate Sub COMPRASxPRODUCTOSRowChangeEventHandler(ByVal sender As Object, ByVal e As COMPRASxPRODUCTOSRowChangeEvent)
+    Public Delegate Sub EMPLEADOSRowChangeEventHandler(ByVal sender As Object, ByVal e As EMPLEADOSRowChangeEvent)
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-    Public Delegate Sub EMPLEADOSRowChangeEventHandler(ByVal sender As Object, ByVal e As EMPLEADOSRowChangeEvent)
+    Public Delegate Sub LINEASRowChangeEventHandler(ByVal sender As Object, ByVal e As LINEASRowChangeEvent)
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Public Delegate Sub PRODUCTOSRowChangeEventHandler(ByVal sender As Object, ByVal e As PRODUCTOSRowChangeEvent)
@@ -1130,6 +1130,8 @@ Partial Public Class SupermercadoDataSet
         
         Private columnIMPORTE As Global.System.Data.DataColumn
         
+        Private columnFECHA As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub New()
@@ -1198,6 +1200,14 @@ Partial Public Class SupermercadoDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property FECHAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFECHA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -1234,9 +1244,9 @@ Partial Public Class SupermercadoDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddCOMPRASRow(ByVal IDCOMPRA As String, ByVal IDCLIENTE As String, ByVal IDCAJA As String, ByVal IMPORTE As Decimal) As COMPRASRow
+        Public Overloads Function AddCOMPRASRow(ByVal IDCOMPRA As String, ByVal IDCLIENTE As String, ByVal IDCAJA As String, ByVal IMPORTE As Decimal, ByVal FECHA As String) As COMPRASRow
             Dim rowCOMPRASRow As COMPRASRow = CType(Me.NewRow,COMPRASRow)
-            Dim columnValuesArray() As Object = New Object() {IDCOMPRA, IDCLIENTE, IDCAJA, IMPORTE}
+            Dim columnValuesArray() As Object = New Object() {IDCOMPRA, IDCLIENTE, IDCAJA, IMPORTE, FECHA}
             rowCOMPRASRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowCOMPRASRow)
             Return rowCOMPRASRow
@@ -1269,6 +1279,7 @@ Partial Public Class SupermercadoDataSet
             Me.columnIDCLIENTE = MyBase.Columns("IDCLIENTE")
             Me.columnIDCAJA = MyBase.Columns("IDCAJA")
             Me.columnIMPORTE = MyBase.Columns("IMPORTE")
+            Me.columnFECHA = MyBase.Columns("FECHA")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1282,12 +1293,15 @@ Partial Public Class SupermercadoDataSet
             MyBase.Columns.Add(Me.columnIDCAJA)
             Me.columnIMPORTE = New Global.System.Data.DataColumn("IMPORTE", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnIMPORTE)
+            Me.columnFECHA = New Global.System.Data.DataColumn("FECHA", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFECHA)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnIDCOMPRA}, true))
             Me.columnIDCOMPRA.AllowDBNull = false
             Me.columnIDCOMPRA.Unique = true
             Me.columnIDCOMPRA.MaxLength = 255
             Me.columnIDCLIENTE.MaxLength = 255
             Me.columnIDCAJA.MaxLength = 255
+            Me.columnFECHA.MaxLength = 255
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1374,309 +1388,6 @@ Partial Public Class SupermercadoDataSet
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
             attribute2.FixedValue = "COMPRASDataTable"
-            type.Attributes.Add(attribute2)
-            type.Particle = sequence
-            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
-            If xs.Contains(dsSchema.TargetNamespace) Then
-                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
-                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
-                Try 
-                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
-                    dsSchema.Write(s1)
-                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
-                    Do While schemas.MoveNext
-                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
-                        s2.SetLength(0)
-                        schema.Write(s2)
-                        If (s1.Length = s2.Length) Then
-                            s1.Position = 0
-                            s2.Position = 0
-                            
-                            Do While ((s1.Position <> s1.Length)  _
-                                        AndAlso (s1.ReadByte = s2.ReadByte))
-                                
-                                
-                            Loop
-                            If (s1.Position = s1.Length) Then
-                                Return type
-                            End If
-                        End If
-                        
-                    Loop
-                Finally
-                    If (Not (s1) Is Nothing) Then
-                        s1.Close
-                    End If
-                    If (Not (s2) Is Nothing) Then
-                        s2.Close
-                    End If
-                End Try
-            End If
-            xs.Add(dsSchema)
-            Return type
-        End Function
-    End Class
-    
-    '''<summary>
-    '''Represents the strongly named DataTable class.
-    '''</summary>
-    <Global.System.Serializable(),  _
-     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
-    Partial Public Class COMPRASxPRODUCTOSDataTable
-        Inherits Global.System.Data.TypedTableBase(Of COMPRASxPRODUCTOSRow)
-        
-        Private columnIDCxP As Global.System.Data.DataColumn
-        
-        Private columnIDCOMPRA As Global.System.Data.DataColumn
-        
-        Private columnIDPRODUCTO As Global.System.Data.DataColumn
-        
-        Private columnCANTIDAD As Global.System.Data.DataColumn
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub New()
-            MyBase.New
-            Me.TableName = "COMPRASxPRODUCTOS"
-            Me.BeginInit
-            Me.InitClass
-            Me.EndInit
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Friend Sub New(ByVal table As Global.System.Data.DataTable)
-            MyBase.New
-            Me.TableName = table.TableName
-            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
-                Me.CaseSensitive = table.CaseSensitive
-            End If
-            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
-                Me.Locale = table.Locale
-            End If
-            If (table.Namespace <> table.DataSet.Namespace) Then
-                Me.Namespace = table.Namespace
-            End If
-            Me.Prefix = table.Prefix
-            Me.MinimumCapacity = table.MinimumCapacity
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
-            MyBase.New(info, context)
-            Me.InitVars
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property IDCxPColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnIDCxP
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property IDCOMPRAColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnIDCOMPRA
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property IDPRODUCTOColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnIDPRODUCTO
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property CANTIDADColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnCANTIDAD
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Browsable(false)>  _
-        Public ReadOnly Property Count() As Integer
-            Get
-                Return Me.Rows.Count
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Default ReadOnly Property Item(ByVal index As Integer) As COMPRASxPRODUCTOSRow
-            Get
-                Return CType(Me.Rows(index),COMPRASxPRODUCTOSRow)
-            End Get
-        End Property
-        
-        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event COMPRASxPRODUCTOSRowChanging As COMPRASxPRODUCTOSRowChangeEventHandler
-        
-        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event COMPRASxPRODUCTOSRowChanged As COMPRASxPRODUCTOSRowChangeEventHandler
-        
-        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event COMPRASxPRODUCTOSRowDeleting As COMPRASxPRODUCTOSRowChangeEventHandler
-        
-        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event COMPRASxPRODUCTOSRowDeleted As COMPRASxPRODUCTOSRowChangeEventHandler
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Sub AddCOMPRASxPRODUCTOSRow(ByVal row As COMPRASxPRODUCTOSRow)
-            Me.Rows.Add(row)
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddCOMPRASxPRODUCTOSRow(ByVal IDCxP As String, ByVal IDCOMPRA As String, ByVal IDPRODUCTO As String, ByVal CANTIDAD As Integer) As COMPRASxPRODUCTOSRow
-            Dim rowCOMPRASxPRODUCTOSRow As COMPRASxPRODUCTOSRow = CType(Me.NewRow,COMPRASxPRODUCTOSRow)
-            Dim columnValuesArray() As Object = New Object() {IDCxP, IDCOMPRA, IDPRODUCTO, CANTIDAD}
-            rowCOMPRASxPRODUCTOSRow.ItemArray = columnValuesArray
-            Me.Rows.Add(rowCOMPRASxPRODUCTOSRow)
-            Return rowCOMPRASxPRODUCTOSRow
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function FindByIDCxP(ByVal IDCxP As String) As COMPRASxPRODUCTOSRow
-            Return CType(Me.Rows.Find(New Object() {IDCxP}),COMPRASxPRODUCTOSRow)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overrides Function Clone() As Global.System.Data.DataTable
-            Dim cln As COMPRASxPRODUCTOSDataTable = CType(MyBase.Clone,COMPRASxPRODUCTOSDataTable)
-            cln.InitVars
-            Return cln
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
-            Return New COMPRASxPRODUCTOSDataTable()
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Friend Sub InitVars()
-            Me.columnIDCxP = MyBase.Columns("IDCxP")
-            Me.columnIDCOMPRA = MyBase.Columns("IDCOMPRA")
-            Me.columnIDPRODUCTO = MyBase.Columns("IDPRODUCTO")
-            Me.columnCANTIDAD = MyBase.Columns("CANTIDAD")
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Private Sub InitClass()
-            Me.columnIDCxP = New Global.System.Data.DataColumn("IDCxP", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnIDCxP)
-            Me.columnIDCOMPRA = New Global.System.Data.DataColumn("IDCOMPRA", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnIDCOMPRA)
-            Me.columnIDPRODUCTO = New Global.System.Data.DataColumn("IDPRODUCTO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnIDPRODUCTO)
-            Me.columnCANTIDAD = New Global.System.Data.DataColumn("CANTIDAD", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnCANTIDAD)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnIDCxP}, true))
-            Me.columnIDCxP.AllowDBNull = false
-            Me.columnIDCxP.Unique = true
-            Me.columnIDCxP.MaxLength = 255
-            Me.columnIDCOMPRA.MaxLength = 255
-            Me.columnIDPRODUCTO.MaxLength = 255
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function NewCOMPRASxPRODUCTOSRow() As COMPRASxPRODUCTOSRow
-            Return CType(Me.NewRow,COMPRASxPRODUCTOSRow)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
-            Return New COMPRASxPRODUCTOSRow(builder)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected Overrides Function GetRowType() As Global.System.Type
-            Return GetType(COMPRASxPRODUCTOSRow)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
-            MyBase.OnRowChanged(e)
-            If (Not (Me.COMPRASxPRODUCTOSRowChangedEvent) Is Nothing) Then
-                RaiseEvent COMPRASxPRODUCTOSRowChanged(Me, New COMPRASxPRODUCTOSRowChangeEvent(CType(e.Row,COMPRASxPRODUCTOSRow), e.Action))
-            End If
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
-            MyBase.OnRowChanging(e)
-            If (Not (Me.COMPRASxPRODUCTOSRowChangingEvent) Is Nothing) Then
-                RaiseEvent COMPRASxPRODUCTOSRowChanging(Me, New COMPRASxPRODUCTOSRowChangeEvent(CType(e.Row,COMPRASxPRODUCTOSRow), e.Action))
-            End If
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
-            MyBase.OnRowDeleted(e)
-            If (Not (Me.COMPRASxPRODUCTOSRowDeletedEvent) Is Nothing) Then
-                RaiseEvent COMPRASxPRODUCTOSRowDeleted(Me, New COMPRASxPRODUCTOSRowChangeEvent(CType(e.Row,COMPRASxPRODUCTOSRow), e.Action))
-            End If
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
-            MyBase.OnRowDeleting(e)
-            If (Not (Me.COMPRASxPRODUCTOSRowDeletingEvent) Is Nothing) Then
-                RaiseEvent COMPRASxPRODUCTOSRowDeleting(Me, New COMPRASxPRODUCTOSRowChangeEvent(CType(e.Row,COMPRASxPRODUCTOSRow), e.Action))
-            End If
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub RemoveCOMPRASxPRODUCTOSRow(ByVal row As COMPRASxPRODUCTOSRow)
-            Me.Rows.Remove(row)
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
-            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
-            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As SupermercadoDataSet = New SupermercadoDataSet()
-            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
-            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
-            any1.MinOccurs = New Decimal(0)
-            any1.MaxOccurs = Decimal.MaxValue
-            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
-            sequence.Items.Add(any1)
-            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
-            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
-            any2.MinOccurs = New Decimal(1)
-            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
-            sequence.Items.Add(any2)
-            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
-            attribute1.Name = "namespace"
-            attribute1.FixedValue = ds.Namespace
-            type.Attributes.Add(attribute1)
-            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
-            attribute2.Name = "tableTypeName"
-            attribute2.FixedValue = "COMPRASxPRODUCTOSDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -2051,6 +1762,286 @@ Partial Public Class SupermercadoDataSet
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
             attribute2.FixedValue = "EMPLEADOSDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class LINEASDataTable
+        Inherits Global.System.Data.TypedTableBase(Of LINEASRow)
+        
+        Private columnIDCOMPRA As Global.System.Data.DataColumn
+        
+        Private columnIDPRODUCTO As Global.System.Data.DataColumn
+        
+        Private columnCANTIDAD As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "LINEAS"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property IDCOMPRAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnIDCOMPRA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property IDPRODUCTOColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnIDPRODUCTO
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property CANTIDADColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCANTIDAD
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As LINEASRow
+            Get
+                Return CType(Me.Rows(index),LINEASRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Event LINEASRowChanging As LINEASRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Event LINEASRowChanged As LINEASRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Event LINEASRowDeleting As LINEASRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Event LINEASRowDeleted As LINEASRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Overloads Sub AddLINEASRow(ByVal row As LINEASRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Overloads Function AddLINEASRow(ByVal IDCOMPRA As String, ByVal IDPRODUCTO As String, ByVal CANTIDAD As Integer) As LINEASRow
+            Dim rowLINEASRow As LINEASRow = CType(Me.NewRow,LINEASRow)
+            Dim columnValuesArray() As Object = New Object() {IDCOMPRA, IDPRODUCTO, CANTIDAD}
+            rowLINEASRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowLINEASRow)
+            Return rowLINEASRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As LINEASDataTable = CType(MyBase.Clone,LINEASDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New LINEASDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnIDCOMPRA = MyBase.Columns("IDCOMPRA")
+            Me.columnIDPRODUCTO = MyBase.Columns("IDPRODUCTO")
+            Me.columnCANTIDAD = MyBase.Columns("CANTIDAD")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnIDCOMPRA = New Global.System.Data.DataColumn("IDCOMPRA", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnIDCOMPRA)
+            Me.columnIDPRODUCTO = New Global.System.Data.DataColumn("IDPRODUCTO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnIDPRODUCTO)
+            Me.columnCANTIDAD = New Global.System.Data.DataColumn("CANTIDAD", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCANTIDAD)
+            Me.columnIDCOMPRA.MaxLength = 255
+            Me.columnIDPRODUCTO.MaxLength = 255
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function NewLINEASRow() As LINEASRow
+            Return CType(Me.NewRow,LINEASRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New LINEASRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(LINEASRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.LINEASRowChangedEvent) Is Nothing) Then
+                RaiseEvent LINEASRowChanged(Me, New LINEASRowChangeEvent(CType(e.Row,LINEASRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.LINEASRowChangingEvent) Is Nothing) Then
+                RaiseEvent LINEASRowChanging(Me, New LINEASRowChangeEvent(CType(e.Row,LINEASRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.LINEASRowDeletedEvent) Is Nothing) Then
+                RaiseEvent LINEASRowDeleted(Me, New LINEASRowChangeEvent(CType(e.Row,LINEASRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.LINEASRowDeletingEvent) Is Nothing) Then
+                RaiseEvent LINEASRowDeleting(Me, New LINEASRowChangeEvent(CType(e.Row,LINEASRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub RemoveLINEASRow(ByVal row As LINEASRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As SupermercadoDataSet = New SupermercadoDataSet()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "LINEASDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -3253,6 +3244,21 @@ Partial Public Class SupermercadoDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property FECHA() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableCOMPRAS.FECHAColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FECHA' de la tabla 'COMPRAS' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableCOMPRAS.FECHAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function IsIDCLIENTENull() As Boolean
             Return Me.IsNull(Me.tableCOMPRAS.IDCLIENTEColumn)
         End Function
@@ -3286,113 +3292,17 @@ Partial Public Class SupermercadoDataSet
         Public Sub SetIMPORTENull()
             Me(Me.tableCOMPRAS.IMPORTEColumn) = Global.System.Convert.DBNull
         End Sub
-    End Class
-    
-    '''<summary>
-    '''Represents strongly named DataRow class.
-    '''</summary>
-    Partial Public Class COMPRASxPRODUCTOSRow
-        Inherits Global.System.Data.DataRow
-        
-        Private tableCOMPRASxPRODUCTOS As COMPRASxPRODUCTOSDataTable
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
-            MyBase.New(rb)
-            Me.tableCOMPRASxPRODUCTOS = CType(Me.Table,COMPRASxPRODUCTOSDataTable)
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property IDCxP() As String
-            Get
-                Return CType(Me(Me.tableCOMPRASxPRODUCTOS.IDCxPColumn),String)
-            End Get
-            Set
-                Me(Me.tableCOMPRASxPRODUCTOS.IDCxPColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property IDCOMPRA() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableCOMPRASxPRODUCTOS.IDCOMPRAColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'IDCOMPRA' de la tabla 'COMPRASxPRODUCTOS' es DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableCOMPRASxPRODUCTOS.IDCOMPRAColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property IDPRODUCTO() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableCOMPRASxPRODUCTOS.IDPRODUCTOColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'IDPRODUCTO' de la tabla 'COMPRASxPRODUCTOS' es DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableCOMPRASxPRODUCTOS.IDPRODUCTOColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property CANTIDAD() As Integer
-            Get
-                Try 
-                    Return CType(Me(Me.tableCOMPRASxPRODUCTOS.CANTIDADColumn),Integer)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CANTIDAD' de la tabla 'COMPRASxPRODUCTOS' es DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableCOMPRASxPRODUCTOS.CANTIDADColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsIDCOMPRANull() As Boolean
-            Return Me.IsNull(Me.tableCOMPRASxPRODUCTOS.IDCOMPRAColumn)
+        Public Function IsFECHANull() As Boolean
+            Return Me.IsNull(Me.tableCOMPRAS.FECHAColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetIDCOMPRANull()
-            Me(Me.tableCOMPRASxPRODUCTOS.IDCOMPRAColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsIDPRODUCTONull() As Boolean
-            Return Me.IsNull(Me.tableCOMPRASxPRODUCTOS.IDPRODUCTOColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetIDPRODUCTONull()
-            Me(Me.tableCOMPRASxPRODUCTOS.IDPRODUCTOColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsCANTIDADNull() As Boolean
-            Return Me.IsNull(Me.tableCOMPRASxPRODUCTOS.CANTIDADColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetCANTIDADNull()
-            Me(Me.tableCOMPRASxPRODUCTOS.CANTIDADColumn) = Global.System.Convert.DBNull
+        Public Sub SetFECHANull()
+            Me(Me.tableCOMPRAS.FECHAColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -3636,6 +3546,103 @@ Partial Public Class SupermercadoDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetSALARIO_MENSUALNull()
             Me(Me.tableEMPLEADOS.SALARIO_MENSUALColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class LINEASRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tableLINEAS As LINEASDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tableLINEAS = CType(Me.Table,LINEASDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property IDCOMPRA() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableLINEAS.IDCOMPRAColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'IDCOMPRA' de la tabla 'LINEAS' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableLINEAS.IDCOMPRAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property IDPRODUCTO() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableLINEAS.IDPRODUCTOColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'IDPRODUCTO' de la tabla 'LINEAS' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableLINEAS.IDPRODUCTOColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property CANTIDAD() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableLINEAS.CANTIDADColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CANTIDAD' de la tabla 'LINEAS' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableLINEAS.CANTIDADColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsIDCOMPRANull() As Boolean
+            Return Me.IsNull(Me.tableLINEAS.IDCOMPRAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetIDCOMPRANull()
+            Me(Me.tableLINEAS.IDCOMPRAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsIDPRODUCTONull() As Boolean
+            Return Me.IsNull(Me.tableLINEAS.IDPRODUCTOColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetIDPRODUCTONull()
+            Me(Me.tableLINEAS.IDPRODUCTOColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsCANTIDADNull() As Boolean
+            Return Me.IsNull(Me.tableLINEAS.CANTIDADColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetCANTIDADNull()
+            Me(Me.tableLINEAS.CANTIDADColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -4048,42 +4055,6 @@ Partial Public Class SupermercadoDataSet
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-    Public Class COMPRASxPRODUCTOSRowChangeEvent
-        Inherits Global.System.EventArgs
-        
-        Private eventRow As COMPRASxPRODUCTOSRow
-        
-        Private eventAction As Global.System.Data.DataRowAction
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub New(ByVal row As COMPRASxPRODUCTOSRow, ByVal action As Global.System.Data.DataRowAction)
-            MyBase.New
-            Me.eventRow = row
-            Me.eventAction = action
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property Row() As COMPRASxPRODUCTOSRow
-            Get
-                Return Me.eventRow
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
-            Get
-                Return Me.eventAction
-            End Get
-        End Property
-    End Class
-    
-    '''<summary>
-    '''Row event argument class
-    '''</summary>
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Public Class EMPLEADOSRowChangeEvent
         Inherits Global.System.EventArgs
         
@@ -4102,6 +4073,42 @@ Partial Public Class SupermercadoDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public ReadOnly Property Row() As EMPLEADOSRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+    Public Class LINEASRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As LINEASRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub New(ByVal row As LINEASRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property Row() As LINEASRow
             Get
                 Return Me.eventRow
             End Get
@@ -5133,12 +5140,14 @@ Namespace SupermercadoDataSetTableAdapters
             tableMapping.ColumnMappings.Add("IDCLIENTE", "IDCLIENTE")
             tableMapping.ColumnMappings.Add("IDCAJA", "IDCAJA")
             tableMapping.ColumnMappings.Add("IMPORTE", "IMPORTE")
+            tableMapping.ColumnMappings.Add("FECHA", "FECHA")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
             Me._adapter.DeleteCommand.CommandText = "DELETE FROM `COMPRAS` WHERE ((`IDCOMPRA` = ?) AND ((? = 1 AND `IDCLIENTE` IS NULL"& _ 
                 ") OR (`IDCLIENTE` = ?)) AND ((? = 1 AND `IDCAJA` IS NULL) OR (`IDCAJA` = ?)) AND"& _ 
-                " ((? = 1 AND `IMPORTE` IS NULL) OR (`IMPORTE` = ?)))"
+                " ((? = 1 AND `IMPORTE` IS NULL) OR (`IMPORTE` = ?)) AND ((? = 1 AND `FECHA` IS N"& _ 
+                "ULL) OR (`FECHA` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_IDCOMPRA", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IDCOMPRA", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_IDCLIENTE", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IDCLIENTE", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -5147,26 +5156,31 @@ Namespace SupermercadoDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_IDCAJA", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IDCAJA", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_IMPORTE", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IMPORTE", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_IMPORTE", Global.System.Data.OleDb.OleDbType.Currency, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IMPORTE", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FECHA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FECHA", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO `COMPRAS` (`IDCOMPRA`, `IDCLIENTE`, `IDCAJA`, `IMPORTE`) VALUES (?, ?"& _ 
-                ", ?, ?)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `COMPRAS` (`IDCOMPRA`, `IDCLIENTE`, `IDCAJA`, `IMPORTE`, `FECHA`) VAL"& _ 
+                "UES (?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IDCOMPRA", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IDCOMPRA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IDCLIENTE", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IDCLIENTE", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IDCAJA", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IDCAJA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IMPORTE", Global.System.Data.OleDb.OleDbType.Currency, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IMPORTE", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FECHA", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE `COMPRAS` SET `IDCOMPRA` = ?, `IDCLIENTE` = ?, `IDCAJA` = ?, `IMPORTE` = ?"& _ 
-                " WHERE ((`IDCOMPRA` = ?) AND ((? = 1 AND `IDCLIENTE` IS NULL) OR (`IDCLIENTE` = "& _ 
-                "?)) AND ((? = 1 AND `IDCAJA` IS NULL) OR (`IDCAJA` = ?)) AND ((? = 1 AND `IMPORT"& _ 
-                "E` IS NULL) OR (`IMPORTE` = ?)))"
+                ", `FECHA` = ? WHERE ((`IDCOMPRA` = ?) AND ((? = 1 AND `IDCLIENTE` IS NULL) OR (`"& _ 
+                "IDCLIENTE` = ?)) AND ((? = 1 AND `IDCAJA` IS NULL) OR (`IDCAJA` = ?)) AND ((? = "& _ 
+                "1 AND `IMPORTE` IS NULL) OR (`IMPORTE` = ?)) AND ((? = 1 AND `FECHA` IS NULL) OR"& _ 
+                " (`FECHA` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IDCOMPRA", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IDCOMPRA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IDCLIENTE", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IDCLIENTE", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IDCAJA", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IDCAJA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IMPORTE", Global.System.Data.OleDb.OleDbType.Currency, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IMPORTE", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FECHA", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_IDCOMPRA", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IDCOMPRA", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_IDCLIENTE", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IDCLIENTE", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_IDCLIENTE", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IDCLIENTE", Global.System.Data.DataRowVersion.Original, false, Nothing))
@@ -5174,6 +5188,8 @@ Namespace SupermercadoDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_IDCAJA", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IDCAJA", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_IMPORTE", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IMPORTE", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_IMPORTE", Global.System.Data.OleDb.OleDbType.Currency, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IMPORTE", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FECHA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FECHA", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5189,7 +5205,7 @@ Namespace SupermercadoDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT IDCOMPRA, IDCLIENTE, IDCAJA, IMPORTE FROM COMPRAS"
+            Me._commandCollection(0).CommandText = "SELECT IDCOMPRA, IDCLIENTE, IDCAJA, IMPORTE, FECHA FROM COMPRAS"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -5249,7 +5265,7 @@ Namespace SupermercadoDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_IDCOMPRA As String, ByVal Original_IDCLIENTE As String, ByVal Original_IDCAJA As String, ByVal Original_IMPORTE As Global.System.Nullable(Of Decimal)) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_IDCOMPRA As String, ByVal Original_IDCLIENTE As String, ByVal Original_IDCAJA As String, ByVal Original_IMPORTE As Global.System.Nullable(Of Decimal), ByVal Original_FECHA As String) As Integer
             If (Original_IDCOMPRA Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_IDCOMPRA")
             Else
@@ -5276,6 +5292,13 @@ Namespace SupermercadoDataSetTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(5).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(6).Value = Global.System.DBNull.Value
             End If
+            If (Original_FECHA Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_FECHA,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -5295,7 +5318,7 @@ Namespace SupermercadoDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal IDCOMPRA As String, ByVal IDCLIENTE As String, ByVal IDCAJA As String, ByVal IMPORTE As Global.System.Nullable(Of Decimal)) As Integer
+        Public Overloads Overridable Function Insert(ByVal IDCOMPRA As String, ByVal IDCLIENTE As String, ByVal IDCAJA As String, ByVal IMPORTE As Global.System.Nullable(Of Decimal), ByVal FECHA As String) As Integer
             If (IDCOMPRA Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("IDCOMPRA")
             Else
@@ -5316,6 +5339,11 @@ Namespace SupermercadoDataSetTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
             End If
+            If (FECHA Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(FECHA,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -5335,7 +5363,7 @@ Namespace SupermercadoDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal IDCOMPRA As String, ByVal IDCLIENTE As String, ByVal IDCAJA As String, ByVal IMPORTE As Global.System.Nullable(Of Decimal), ByVal Original_IDCOMPRA As String, ByVal Original_IDCLIENTE As String, ByVal Original_IDCAJA As String, ByVal Original_IMPORTE As Global.System.Nullable(Of Decimal)) As Integer
+        Public Overloads Overridable Function Update(ByVal IDCOMPRA As String, ByVal IDCLIENTE As String, ByVal IDCAJA As String, ByVal IMPORTE As Global.System.Nullable(Of Decimal), ByVal FECHA As String, ByVal Original_IDCOMPRA As String, ByVal Original_IDCLIENTE As String, ByVal Original_IDCAJA As String, ByVal Original_IMPORTE As Global.System.Nullable(Of Decimal), ByVal Original_FECHA As String) As Integer
             If (IDCOMPRA Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("IDCOMPRA")
             Else
@@ -5356,31 +5384,43 @@ Namespace SupermercadoDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
             End If
+            If (FECHA Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(FECHA,String)
+            End If
             If (Original_IDCOMPRA Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_IDCOMPRA")
             Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_IDCOMPRA,String)
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_IDCOMPRA,String)
             End If
             If (Original_IDCLIENTE Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_IDCLIENTE,String)
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_IDCLIENTE,String)
             End If
             If (Original_IDCAJA Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_IDCAJA,String)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_IDCAJA,String)
             End If
             If (Original_IMPORTE.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_IMPORTE.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_IMPORTE.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
+            End If
+            If (Original_FECHA Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_FECHA,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -5401,412 +5441,8 @@ Namespace SupermercadoDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal IDCLIENTE As String, ByVal IDCAJA As String, ByVal IMPORTE As Global.System.Nullable(Of Decimal), ByVal Original_IDCOMPRA As String, ByVal Original_IDCLIENTE As String, ByVal Original_IDCAJA As String, ByVal Original_IMPORTE As Global.System.Nullable(Of Decimal)) As Integer
-            Return Me.Update(Original_IDCOMPRA, IDCLIENTE, IDCAJA, IMPORTE, Original_IDCOMPRA, Original_IDCLIENTE, Original_IDCAJA, Original_IMPORTE)
-        End Function
-    End Class
-    
-    '''<summary>
-    '''Represents the connection and commands used to retrieve and save data.
-    '''</summary>
-    <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
-     Global.System.ComponentModel.ToolboxItem(true),  _
-     Global.System.ComponentModel.DataObjectAttribute(true),  _
-     Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
-     Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-    Partial Public Class COMPRASxPRODUCTOSTableAdapter
-        Inherits Global.System.ComponentModel.Component
-        
-        Private WithEvents _adapter As Global.System.Data.OleDb.OleDbDataAdapter
-        
-        Private _connection As Global.System.Data.OleDb.OleDbConnection
-        
-        Private _transaction As Global.System.Data.OleDb.OleDbTransaction
-        
-        Private _commandCollection() As Global.System.Data.OleDb.OleDbCommand
-        
-        Private _clearBeforeFill As Boolean
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub New()
-            MyBase.New
-            Me.ClearBeforeFill = true
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected Friend ReadOnly Property Adapter() As Global.System.Data.OleDb.OleDbDataAdapter
-            Get
-                If (Me._adapter Is Nothing) Then
-                    Me.InitAdapter
-                End If
-                Return Me._adapter
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Friend Property Connection() As Global.System.Data.OleDb.OleDbConnection
-            Get
-                If (Me._connection Is Nothing) Then
-                    Me.InitConnection
-                End If
-                Return Me._connection
-            End Get
-            Set
-                Me._connection = value
-                If (Not (Me.Adapter.InsertCommand) Is Nothing) Then
-                    Me.Adapter.InsertCommand.Connection = value
-                End If
-                If (Not (Me.Adapter.DeleteCommand) Is Nothing) Then
-                    Me.Adapter.DeleteCommand.Connection = value
-                End If
-                If (Not (Me.Adapter.UpdateCommand) Is Nothing) Then
-                    Me.Adapter.UpdateCommand.Connection = value
-                End If
-                Dim i As Integer = 0
-                Do While (i < Me.CommandCollection.Length)
-                    If (Not (Me.CommandCollection(i)) Is Nothing) Then
-                        CType(Me.CommandCollection(i),Global.System.Data.OleDb.OleDbCommand).Connection = value
-                    End If
-                    i = (i + 1)
-                Loop
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Friend Property Transaction() As Global.System.Data.OleDb.OleDbTransaction
-            Get
-                Return Me._transaction
-            End Get
-            Set
-                Me._transaction = value
-                Dim i As Integer = 0
-                Do While (i < Me.CommandCollection.Length)
-                    Me.CommandCollection(i).Transaction = Me._transaction
-                    i = (i + 1)
-                Loop
-                If ((Not (Me.Adapter) Is Nothing)  _
-                            AndAlso (Not (Me.Adapter.DeleteCommand) Is Nothing)) Then
-                    Me.Adapter.DeleteCommand.Transaction = Me._transaction
-                End If
-                If ((Not (Me.Adapter) Is Nothing)  _
-                            AndAlso (Not (Me.Adapter.InsertCommand) Is Nothing)) Then
-                    Me.Adapter.InsertCommand.Transaction = Me._transaction
-                End If
-                If ((Not (Me.Adapter) Is Nothing)  _
-                            AndAlso (Not (Me.Adapter.UpdateCommand) Is Nothing)) Then
-                    Me.Adapter.UpdateCommand.Transaction = Me._transaction
-                End If
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected ReadOnly Property CommandCollection() As Global.System.Data.OleDb.OleDbCommand()
-            Get
-                If (Me._commandCollection Is Nothing) Then
-                    Me.InitCommandCollection
-                End If
-                Return Me._commandCollection
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property ClearBeforeFill() As Boolean
-            Get
-                Return Me._clearBeforeFill
-            End Get
-            Set
-                Me._clearBeforeFill = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Private Sub InitAdapter()
-            Me._adapter = New Global.System.Data.OleDb.OleDbDataAdapter()
-            Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
-            tableMapping.SourceTable = "Table"
-            tableMapping.DataSetTable = "COMPRASxPRODUCTOS"
-            tableMapping.ColumnMappings.Add("IDCxP", "IDCxP")
-            tableMapping.ColumnMappings.Add("IDCOMPRA", "IDCOMPRA")
-            tableMapping.ColumnMappings.Add("IDPRODUCTO", "IDPRODUCTO")
-            tableMapping.ColumnMappings.Add("CANTIDAD", "CANTIDAD")
-            Me._adapter.TableMappings.Add(tableMapping)
-            Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
-            Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `COMPRASxPRODUCTOS` WHERE ((`IDCxP` = ?) AND ((? = 1 AND `IDCOMPRA` I"& _ 
-                "S NULL) OR (`IDCOMPRA` = ?)) AND ((? = 1 AND `IDPRODUCTO` IS NULL) OR (`IDPRODUC"& _ 
-                "TO` = ?)) AND ((? = 1 AND `CANTIDAD` IS NULL) OR (`CANTIDAD` = ?)))"
-            Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_IDCxP", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IDCxP", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_IDCOMPRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IDCOMPRA", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_IDCOMPRA", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IDCOMPRA", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_IDPRODUCTO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IDPRODUCTO", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_IDPRODUCTO", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IDPRODUCTO", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_CANTIDAD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CANTIDAD", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_CANTIDAD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CANTIDAD", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
-            Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO `COMPRASxPRODUCTOS` (`IDCxP`, `IDCOMPRA`, `IDPRODUCTO`, `CANTIDAD`) V"& _ 
-                "ALUES (?, ?, ?, ?)"
-            Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IDCxP", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IDCxP", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IDCOMPRA", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IDCOMPRA", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IDPRODUCTO", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IDPRODUCTO", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CANTIDAD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CANTIDAD", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
-            Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE `COMPRASxPRODUCTOS` SET `IDCxP` = ?, `IDCOMPRA` = ?, `IDPRODUCTO` = ?, `CA"& _ 
-                "NTIDAD` = ? WHERE ((`IDCxP` = ?) AND ((? = 1 AND `IDCOMPRA` IS NULL) OR (`IDCOMP"& _ 
-                "RA` = ?)) AND ((? = 1 AND `IDPRODUCTO` IS NULL) OR (`IDPRODUCTO` = ?)) AND ((? ="& _ 
-                " 1 AND `CANTIDAD` IS NULL) OR (`CANTIDAD` = ?)))"
-            Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IDCxP", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IDCxP", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IDCOMPRA", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IDCOMPRA", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IDPRODUCTO", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IDPRODUCTO", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CANTIDAD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CANTIDAD", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_IDCxP", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IDCxP", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_IDCOMPRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IDCOMPRA", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_IDCOMPRA", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IDCOMPRA", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_IDPRODUCTO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IDPRODUCTO", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_IDPRODUCTO", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IDPRODUCTO", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_CANTIDAD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CANTIDAD", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_CANTIDAD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CANTIDAD", Global.System.Data.DataRowVersion.Original, false, Nothing))
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Private Sub InitConnection()
-            Me._connection = New Global.System.Data.OleDb.OleDbConnection()
-            Me._connection.ConnectionString = Global.Datos.My.MySettings.Default.SupermercadoConnectionString
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
-            Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
-            Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT IDCxP, IDCOMPRA, IDPRODUCTO, CANTIDAD FROM COMPRASxPRODUCTOS"
-            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As SupermercadoDataSet.COMPRASxPRODUCTOSDataTable) As Integer
-            Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            If (Me.ClearBeforeFill = true) Then
-                dataTable.Clear
-            End If
-            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
-            Return returnValue
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As SupermercadoDataSet.COMPRASxPRODUCTOSDataTable
-            Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As SupermercadoDataSet.COMPRASxPRODUCTOSDataTable = New SupermercadoDataSet.COMPRASxPRODUCTOSDataTable()
-            Me.Adapter.Fill(dataTable)
-            Return dataTable
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As SupermercadoDataSet.COMPRASxPRODUCTOSDataTable) As Integer
-            Return Me.Adapter.Update(dataTable)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As SupermercadoDataSet) As Integer
-            Return Me.Adapter.Update(dataSet, "COMPRASxPRODUCTOS")
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataRow As Global.System.Data.DataRow) As Integer
-            Return Me.Adapter.Update(New Global.System.Data.DataRow() {dataRow})
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataRows() As Global.System.Data.DataRow) As Integer
-            Return Me.Adapter.Update(dataRows)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_IDCxP As String, ByVal Original_IDCOMPRA As String, ByVal Original_IDPRODUCTO As String, ByVal Original_CANTIDAD As Global.System.Nullable(Of Integer)) As Integer
-            If (Original_IDCxP Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_IDCxP")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_IDCxP,String)
-            End If
-            If (Original_IDCOMPRA Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_IDCOMPRA,String)
-            End If
-            If (Original_IDPRODUCTO Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_IDPRODUCTO,String)
-            End If
-            If (Original_CANTIDAD.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_CANTIDAD.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(6).Value = Global.System.DBNull.Value
-            End If
-            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
-            If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
-                        <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.DeleteCommand.Connection.Open
-            End If
-            Try 
-                Dim returnValue As Integer = Me.Adapter.DeleteCommand.ExecuteNonQuery
-                Return returnValue
-            Finally
-                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.DeleteCommand.Connection.Close
-                End If
-            End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal IDCxP As String, ByVal IDCOMPRA As String, ByVal IDPRODUCTO As String, ByVal CANTIDAD As Global.System.Nullable(Of Integer)) As Integer
-            If (IDCxP Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("IDCxP")
-            Else
-                Me.Adapter.InsertCommand.Parameters(0).Value = CType(IDCxP,String)
-            End If
-            If (IDCOMPRA Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(1).Value = CType(IDCOMPRA,String)
-            End If
-            If (IDPRODUCTO Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(2).Value = CType(IDPRODUCTO,String)
-            End If
-            If (CANTIDAD.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(3).Value = CType(CANTIDAD.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
-            End If
-            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
-            If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
-                        <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.InsertCommand.Connection.Open
-            End If
-            Try 
-                Dim returnValue As Integer = Me.Adapter.InsertCommand.ExecuteNonQuery
-                Return returnValue
-            Finally
-                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.InsertCommand.Connection.Close
-                End If
-            End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal IDCxP As String, ByVal IDCOMPRA As String, ByVal IDPRODUCTO As String, ByVal CANTIDAD As Global.System.Nullable(Of Integer), ByVal Original_IDCxP As String, ByVal Original_IDCOMPRA As String, ByVal Original_IDPRODUCTO As String, ByVal Original_CANTIDAD As Global.System.Nullable(Of Integer)) As Integer
-            If (IDCxP Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("IDCxP")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(IDCxP,String)
-            End If
-            If (IDCOMPRA Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(IDCOMPRA,String)
-            End If
-            If (IDPRODUCTO Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(IDPRODUCTO,String)
-            End If
-            If (CANTIDAD.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(CANTIDAD.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
-            End If
-            If (Original_IDCxP Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_IDCxP")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_IDCxP,String)
-            End If
-            If (Original_IDCOMPRA Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_IDCOMPRA,String)
-            End If
-            If (Original_IDPRODUCTO Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_IDPRODUCTO,String)
-            End If
-            If (Original_CANTIDAD.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_CANTIDAD.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
-            End If
-            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
-            If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
-                        <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.UpdateCommand.Connection.Open
-            End If
-            Try 
-                Dim returnValue As Integer = Me.Adapter.UpdateCommand.ExecuteNonQuery
-                Return returnValue
-            Finally
-                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.UpdateCommand.Connection.Close
-                End If
-            End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal IDCOMPRA As String, ByVal IDPRODUCTO As String, ByVal CANTIDAD As Global.System.Nullable(Of Integer), ByVal Original_IDCxP As String, ByVal Original_IDCOMPRA As String, ByVal Original_IDPRODUCTO As String, ByVal Original_CANTIDAD As Global.System.Nullable(Of Integer)) As Integer
-            Return Me.Update(Original_IDCxP, IDCOMPRA, IDPRODUCTO, CANTIDAD, Original_IDCxP, Original_IDCOMPRA, Original_IDPRODUCTO, Original_CANTIDAD)
+        Public Overloads Overridable Function Update(ByVal IDCLIENTE As String, ByVal IDCAJA As String, ByVal IMPORTE As Global.System.Nullable(Of Decimal), ByVal FECHA As String, ByVal Original_IDCOMPRA As String, ByVal Original_IDCLIENTE As String, ByVal Original_IDCAJA As String, ByVal Original_IMPORTE As Global.System.Nullable(Of Decimal), ByVal Original_FECHA As String) As Integer
+            Return Me.Update(Original_IDCOMPRA, IDCLIENTE, IDCAJA, IMPORTE, FECHA, Original_IDCOMPRA, Original_IDCLIENTE, Original_IDCAJA, Original_IMPORTE, Original_FECHA)
         End Function
     End Class
     
@@ -6411,6 +6047,251 @@ Namespace SupermercadoDataSetTableAdapters
                     ByVal Original_HORARIO As String,  _
                     ByVal Original_SALARIO_MENSUAL As String) As Integer
             Return Me.Update(Original_IDEMPLEADO, IDTIPO, IDSUPER, DNI, NOMBRE, EDAD, TELEFONO, HORARIO, SALARIO_MENSUAL, Original_IDEMPLEADO, Original_IDTIPO, Original_IDSUPER, Original_DNI, Original_NOMBRE, Original_EDAD, Original_TELEFONO, Original_HORARIO, Original_SALARIO_MENSUAL)
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the connection and commands used to retrieve and save data.
+    '''</summary>
+    <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
+     Global.System.ComponentModel.ToolboxItem(true),  _
+     Global.System.ComponentModel.DataObjectAttribute(true),  _
+     Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
+     Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+    Partial Public Class LINEASTableAdapter
+        Inherits Global.System.ComponentModel.Component
+        
+        Private WithEvents _adapter As Global.System.Data.OleDb.OleDbDataAdapter
+        
+        Private _connection As Global.System.Data.OleDb.OleDbConnection
+        
+        Private _transaction As Global.System.Data.OleDb.OleDbTransaction
+        
+        Private _commandCollection() As Global.System.Data.OleDb.OleDbCommand
+        
+        Private _clearBeforeFill As Boolean
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.ClearBeforeFill = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.OleDb.OleDbDataAdapter
+            Get
+                If (Me._adapter Is Nothing) Then
+                    Me.InitAdapter
+                End If
+                Return Me._adapter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Friend Property Connection() As Global.System.Data.OleDb.OleDbConnection
+            Get
+                If (Me._connection Is Nothing) Then
+                    Me.InitConnection
+                End If
+                Return Me._connection
+            End Get
+            Set
+                Me._connection = value
+                If (Not (Me.Adapter.InsertCommand) Is Nothing) Then
+                    Me.Adapter.InsertCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.DeleteCommand) Is Nothing) Then
+                    Me.Adapter.DeleteCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.UpdateCommand) Is Nothing) Then
+                    Me.Adapter.UpdateCommand.Connection = value
+                End If
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    If (Not (Me.CommandCollection(i)) Is Nothing) Then
+                        CType(Me.CommandCollection(i),Global.System.Data.OleDb.OleDbCommand).Connection = value
+                    End If
+                    i = (i + 1)
+                Loop
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Friend Property Transaction() As Global.System.Data.OleDb.OleDbTransaction
+            Get
+                Return Me._transaction
+            End Get
+            Set
+                Me._transaction = value
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    Me.CommandCollection(i).Transaction = Me._transaction
+                    i = (i + 1)
+                Loop
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.DeleteCommand) Is Nothing)) Then
+                    Me.Adapter.DeleteCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.InsertCommand) Is Nothing)) Then
+                    Me.Adapter.InsertCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.UpdateCommand) Is Nothing)) Then
+                    Me.Adapter.UpdateCommand.Transaction = Me._transaction
+                End If
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.OleDb.OleDbCommand()
+            Get
+                If (Me._commandCollection Is Nothing) Then
+                    Me.InitCommandCollection
+                End If
+                Return Me._commandCollection
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property ClearBeforeFill() As Boolean
+            Get
+                Return Me._clearBeforeFill
+            End Get
+            Set
+                Me._clearBeforeFill = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Private Sub InitAdapter()
+            Me._adapter = New Global.System.Data.OleDb.OleDbDataAdapter()
+            Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
+            tableMapping.SourceTable = "Table"
+            tableMapping.DataSetTable = "LINEAS"
+            tableMapping.ColumnMappings.Add("IDCOMPRA", "IDCOMPRA")
+            tableMapping.ColumnMappings.Add("IDPRODUCTO", "IDPRODUCTO")
+            tableMapping.ColumnMappings.Add("CANTIDAD", "CANTIDAD")
+            Me._adapter.TableMappings.Add(tableMapping)
+            Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
+            Me._adapter.InsertCommand.Connection = Me.Connection
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `LINEAS` (`IDCOMPRA`, `IDPRODUCTO`, `CANTIDAD`) VALUES (?, ?, ?)"
+            Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IDCOMPRA", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IDCOMPRA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IDPRODUCTO", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IDPRODUCTO", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CANTIDAD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CANTIDAD", Global.System.Data.DataRowVersion.Current, false, Nothing))
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Private Sub InitConnection()
+            Me._connection = New Global.System.Data.OleDb.OleDbConnection()
+            Me._connection.ConnectionString = Global.Datos.My.MySettings.Default.SupermercadoConnectionString
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Private Sub InitCommandCollection()
+            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(0).Connection = Me.Connection
+            Me._commandCollection(0).CommandText = "SELECT IDCOMPRA, IDPRODUCTO, CANTIDAD FROM LINEAS"
+            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
+        Public Overloads Overridable Function Fill(ByVal dataTable As SupermercadoDataSet.LINEASDataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
+        Public Overloads Overridable Function GetData() As SupermercadoDataSet.LINEASDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As SupermercadoDataSet.LINEASDataTable = New SupermercadoDataSet.LINEASDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataTable As SupermercadoDataSet.LINEASDataTable) As Integer
+            Return Me.Adapter.Update(dataTable)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataSet As SupermercadoDataSet) As Integer
+            Return Me.Adapter.Update(dataSet, "LINEAS")
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRow As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(New Global.System.Data.DataRow() {dataRow})
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRows() As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(dataRows)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
+        Public Overloads Overridable Function Insert(ByVal IDCOMPRA As String, ByVal IDPRODUCTO As String, ByVal CANTIDAD As Global.System.Nullable(Of Integer)) As Integer
+            If (IDCOMPRA Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(0).Value = CType(IDCOMPRA,String)
+            End If
+            If (IDPRODUCTO Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(IDPRODUCTO,String)
+            End If
+            If (CANTIDAD.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(CANTIDAD.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
+            If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.InsertCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.InsertCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.InsertCommand.Connection.Close
+                End If
+            End Try
         End Function
     End Class
     
@@ -7612,9 +7493,9 @@ Namespace SupermercadoDataSetTableAdapters
         
         Private _cOMPRASTableAdapter As COMPRASTableAdapter
         
-        Private _cOMPRASxPRODUCTOSTableAdapter As COMPRASxPRODUCTOSTableAdapter
-        
         Private _eMPLEADOSTableAdapter As EMPLEADOSTableAdapter
+        
+        Private _lINEASTableAdapter As LINEASTableAdapter
         
         Private _pRODUCTOSTableAdapter As PRODUCTOSTableAdapter
         
@@ -7684,12 +7565,12 @@ Namespace SupermercadoDataSetTableAdapters
          Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
             "a", "System.Drawing.Design.UITypeEditor")>  _
-        Public Property COMPRASxPRODUCTOSTableAdapter() As COMPRASxPRODUCTOSTableAdapter
+        Public Property EMPLEADOSTableAdapter() As EMPLEADOSTableAdapter
             Get
-                Return Me._cOMPRASxPRODUCTOSTableAdapter
+                Return Me._eMPLEADOSTableAdapter
             End Get
             Set
-                Me._cOMPRASxPRODUCTOSTableAdapter = value
+                Me._eMPLEADOSTableAdapter = value
             End Set
         End Property
         
@@ -7698,12 +7579,12 @@ Namespace SupermercadoDataSetTableAdapters
          Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
             "a", "System.Drawing.Design.UITypeEditor")>  _
-        Public Property EMPLEADOSTableAdapter() As EMPLEADOSTableAdapter
+        Public Property LINEASTableAdapter() As LINEASTableAdapter
             Get
-                Return Me._eMPLEADOSTableAdapter
+                Return Me._lINEASTableAdapter
             End Get
             Set
-                Me._eMPLEADOSTableAdapter = value
+                Me._lINEASTableAdapter = value
             End Set
         End Property
         
@@ -7780,13 +7661,13 @@ Namespace SupermercadoDataSetTableAdapters
                             AndAlso (Not (Me._cOMPRASTableAdapter.Connection) Is Nothing)) Then
                     Return Me._cOMPRASTableAdapter.Connection
                 End If
-                If ((Not (Me._cOMPRASxPRODUCTOSTableAdapter) Is Nothing)  _
-                            AndAlso (Not (Me._cOMPRASxPRODUCTOSTableAdapter.Connection) Is Nothing)) Then
-                    Return Me._cOMPRASxPRODUCTOSTableAdapter.Connection
-                End If
                 If ((Not (Me._eMPLEADOSTableAdapter) Is Nothing)  _
                             AndAlso (Not (Me._eMPLEADOSTableAdapter.Connection) Is Nothing)) Then
                     Return Me._eMPLEADOSTableAdapter.Connection
+                End If
+                If ((Not (Me._lINEASTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._lINEASTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._lINEASTableAdapter.Connection
                 End If
                 If ((Not (Me._pRODUCTOSTableAdapter) Is Nothing)  _
                             AndAlso (Not (Me._pRODUCTOSTableAdapter.Connection) Is Nothing)) Then
@@ -7822,10 +7703,10 @@ Namespace SupermercadoDataSetTableAdapters
                 If (Not (Me._cOMPRASTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
-                If (Not (Me._cOMPRASxPRODUCTOSTableAdapter) Is Nothing) Then
+                If (Not (Me._eMPLEADOSTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
-                If (Not (Me._eMPLEADOSTableAdapter) Is Nothing) Then
+                If (Not (Me._lINEASTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
                 If (Not (Me._pRODUCTOSTableAdapter) Is Nothing) Then
@@ -7875,21 +7756,21 @@ Namespace SupermercadoDataSetTableAdapters
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
-            If (Not (Me._cOMPRASxPRODUCTOSTableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet.COMPRASxPRODUCTOS.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
-                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
-                If ((Not (updatedRows) Is Nothing)  _
-                            AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._cOMPRASxPRODUCTOSTableAdapter.Update(updatedRows))
-                    allChangedRows.AddRange(updatedRows)
-                End If
-            End If
             If (Not (Me._eMPLEADOSTableAdapter) Is Nothing) Then
                 Dim updatedRows() As Global.System.Data.DataRow = dataSet.EMPLEADOS.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
                 updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
                 If ((Not (updatedRows) Is Nothing)  _
                             AndAlso (0 < updatedRows.Length)) Then
                     result = (result + Me._eMPLEADOSTableAdapter.Update(updatedRows))
+                    allChangedRows.AddRange(updatedRows)
+                End If
+            End If
+            If (Not (Me._lINEASTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.LINEAS.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
+                If ((Not (updatedRows) Is Nothing)  _
+                            AndAlso (0 < updatedRows.Length)) Then
+                    result = (result + Me._lINEASTableAdapter.Update(updatedRows))
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
@@ -7954,19 +7835,19 @@ Namespace SupermercadoDataSetTableAdapters
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
-            If (Not (Me._cOMPRASxPRODUCTOSTableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet.COMPRASxPRODUCTOS.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
-                If ((Not (addedRows) Is Nothing)  _
-                            AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._cOMPRASxPRODUCTOSTableAdapter.Update(addedRows))
-                    allAddedRows.AddRange(addedRows)
-                End If
-            End If
             If (Not (Me._eMPLEADOSTableAdapter) Is Nothing) Then
                 Dim addedRows() As Global.System.Data.DataRow = dataSet.EMPLEADOS.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
                 If ((Not (addedRows) Is Nothing)  _
                             AndAlso (0 < addedRows.Length)) Then
                     result = (result + Me._eMPLEADOSTableAdapter.Update(addedRows))
+                    allAddedRows.AddRange(addedRows)
+                End If
+            End If
+            If (Not (Me._lINEASTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.LINEAS.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+                If ((Not (addedRows) Is Nothing)  _
+                            AndAlso (0 < addedRows.Length)) Then
+                    result = (result + Me._lINEASTableAdapter.Update(addedRows))
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
@@ -8028,19 +7909,19 @@ Namespace SupermercadoDataSetTableAdapters
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
+            If (Not (Me._lINEASTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.LINEAS.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+                If ((Not (deletedRows) Is Nothing)  _
+                            AndAlso (0 < deletedRows.Length)) Then
+                    result = (result + Me._lINEASTableAdapter.Update(deletedRows))
+                    allChangedRows.AddRange(deletedRows)
+                End If
+            End If
             If (Not (Me._eMPLEADOSTableAdapter) Is Nothing) Then
                 Dim deletedRows() As Global.System.Data.DataRow = dataSet.EMPLEADOS.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
                             AndAlso (0 < deletedRows.Length)) Then
                     result = (result + Me._eMPLEADOSTableAdapter.Update(deletedRows))
-                    allChangedRows.AddRange(deletedRows)
-                End If
-            End If
-            If (Not (Me._cOMPRASxPRODUCTOSTableAdapter) Is Nothing) Then
-                Dim deletedRows() As Global.System.Data.DataRow = dataSet.COMPRASxPRODUCTOS.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
-                If ((Not (deletedRows) Is Nothing)  _
-                            AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._cOMPRASxPRODUCTOSTableAdapter.Update(deletedRows))
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
@@ -8124,13 +8005,13 @@ Namespace SupermercadoDataSetTableAdapters
                 Throw New Global.System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi"& _ 
                         "sma cadena de conexión.")
             End If
-            If ((Not (Me._cOMPRASxPRODUCTOSTableAdapter) Is Nothing)  _
-                        AndAlso (Me.MatchTableAdapterConnection(Me._cOMPRASxPRODUCTOSTableAdapter.Connection) = false)) Then
+            If ((Not (Me._eMPLEADOSTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._eMPLEADOSTableAdapter.Connection) = false)) Then
                 Throw New Global.System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi"& _ 
                         "sma cadena de conexión.")
             End If
-            If ((Not (Me._eMPLEADOSTableAdapter) Is Nothing)  _
-                        AndAlso (Me.MatchTableAdapterConnection(Me._eMPLEADOSTableAdapter.Connection) = false)) Then
+            If ((Not (Me._lINEASTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._lINEASTableAdapter.Connection) = false)) Then
                 Throw New Global.System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi"& _ 
                         "sma cadena de conexión.")
             End If
@@ -8208,15 +8089,6 @@ Namespace SupermercadoDataSetTableAdapters
                         adaptersWithAcceptChangesDuringUpdate.Add(Me._cOMPRASTableAdapter.Adapter)
                     End If
                 End If
-                If (Not (Me._cOMPRASxPRODUCTOSTableAdapter) Is Nothing) Then
-                    revertConnections.Add(Me._cOMPRASxPRODUCTOSTableAdapter, Me._cOMPRASxPRODUCTOSTableAdapter.Connection)
-                    Me._cOMPRASxPRODUCTOSTableAdapter.Connection = CType(workConnection,Global.System.Data.OleDb.OleDbConnection)
-                    Me._cOMPRASxPRODUCTOSTableAdapter.Transaction = CType(workTransaction,Global.System.Data.OleDb.OleDbTransaction)
-                    If Me._cOMPRASxPRODUCTOSTableAdapter.Adapter.AcceptChangesDuringUpdate Then
-                        Me._cOMPRASxPRODUCTOSTableAdapter.Adapter.AcceptChangesDuringUpdate = false
-                        adaptersWithAcceptChangesDuringUpdate.Add(Me._cOMPRASxPRODUCTOSTableAdapter.Adapter)
-                    End If
-                End If
                 If (Not (Me._eMPLEADOSTableAdapter) Is Nothing) Then
                     revertConnections.Add(Me._eMPLEADOSTableAdapter, Me._eMPLEADOSTableAdapter.Connection)
                     Me._eMPLEADOSTableAdapter.Connection = CType(workConnection,Global.System.Data.OleDb.OleDbConnection)
@@ -8224,6 +8096,15 @@ Namespace SupermercadoDataSetTableAdapters
                     If Me._eMPLEADOSTableAdapter.Adapter.AcceptChangesDuringUpdate Then
                         Me._eMPLEADOSTableAdapter.Adapter.AcceptChangesDuringUpdate = false
                         adaptersWithAcceptChangesDuringUpdate.Add(Me._eMPLEADOSTableAdapter.Adapter)
+                    End If
+                End If
+                If (Not (Me._lINEASTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._lINEASTableAdapter, Me._lINEASTableAdapter.Connection)
+                    Me._lINEASTableAdapter.Connection = CType(workConnection,Global.System.Data.OleDb.OleDbConnection)
+                    Me._lINEASTableAdapter.Transaction = CType(workTransaction,Global.System.Data.OleDb.OleDbTransaction)
+                    If Me._lINEASTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._lINEASTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._lINEASTableAdapter.Adapter)
                     End If
                 End If
                 If (Not (Me._pRODUCTOSTableAdapter) Is Nothing) Then
@@ -8325,13 +8206,13 @@ Namespace SupermercadoDataSetTableAdapters
                     Me._cOMPRASTableAdapter.Connection = CType(revertConnections(Me._cOMPRASTableAdapter),Global.System.Data.OleDb.OleDbConnection)
                     Me._cOMPRASTableAdapter.Transaction = Nothing
                 End If
-                If (Not (Me._cOMPRASxPRODUCTOSTableAdapter) Is Nothing) Then
-                    Me._cOMPRASxPRODUCTOSTableAdapter.Connection = CType(revertConnections(Me._cOMPRASxPRODUCTOSTableAdapter),Global.System.Data.OleDb.OleDbConnection)
-                    Me._cOMPRASxPRODUCTOSTableAdapter.Transaction = Nothing
-                End If
                 If (Not (Me._eMPLEADOSTableAdapter) Is Nothing) Then
                     Me._eMPLEADOSTableAdapter.Connection = CType(revertConnections(Me._eMPLEADOSTableAdapter),Global.System.Data.OleDb.OleDbConnection)
                     Me._eMPLEADOSTableAdapter.Transaction = Nothing
+                End If
+                If (Not (Me._lINEASTableAdapter) Is Nothing) Then
+                    Me._lINEASTableAdapter.Connection = CType(revertConnections(Me._lINEASTableAdapter),Global.System.Data.OleDb.OleDbConnection)
+                    Me._lINEASTableAdapter.Transaction = Nothing
                 End If
                 If (Not (Me._pRODUCTOSTableAdapter) Is Nothing) Then
                     Me._pRODUCTOSTableAdapter.Connection = CType(revertConnections(Me._pRODUCTOSTableAdapter),Global.System.Data.OleDb.OleDbConnection)

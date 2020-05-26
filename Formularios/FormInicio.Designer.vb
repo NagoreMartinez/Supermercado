@@ -25,6 +25,7 @@ Partial Class FormInicio
         Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.ButtonCompras = New System.Windows.Forms.Button()
         Me.ButtonProductos = New System.Windows.Forms.Button()
         Me.ButtonClientes = New System.Windows.Forms.Button()
         Me.ButtonEmpleados = New System.Windows.Forms.Button()
@@ -75,6 +76,20 @@ Partial Class FormInicio
         Me.CLIENTESTableAdapter = New Formularios.SupermercadoDataSetTableAdapters.CLIENTESTableAdapter()
         Me.PRODUCTOSTableAdapter = New Formularios.SupermercadoDataSetTableAdapters.PRODUCTOSTableAdapter()
         Me.EMPLEADOSTableAdapter = New Formularios.SupermercadoDataSetTableAdapters.EMPLEADOSTableAdapter()
+        Me.PanelCompras = New System.Windows.Forms.Panel()
+        Me.BuscarCompra = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.COMPRASBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.COMPRASTableAdapter = New Formularios.SupermercadoDataSetTableAdapters.COMPRASTableAdapter()
+        Me.COMPRASBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.dgvCompras = New System.Windows.Forms.DataGridView()
+        Me.SupermercadoDataSet1 = New Formularios.SupermercadoDataSet()
+        Me.COMPRASBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.IDCOMPRADataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IDCLIENTEDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IDCAJADataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IMPORTEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FECHADataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         Me.PanelEmpleados.SuspendLayout()
         CType(Me.dgvEmpleados, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -86,13 +101,19 @@ Partial Class FormInicio
         Me.PanelProductos.SuspendLayout()
         CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PRODUCTOSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelCompras.SuspendLayout()
+        CType(Me.COMPRASBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.COMPRASBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvCompras, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SupermercadoDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.COMPRASBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(360, 9)
+        Me.Label1.Location = New System.Drawing.Point(365, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(84, 29)
         Me.Label1.TabIndex = 0
@@ -101,6 +122,7 @@ Partial Class FormInicio
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Panel1.Controls.Add(Me.ButtonCompras)
         Me.Panel1.Controls.Add(Me.ButtonProductos)
         Me.Panel1.Controls.Add(Me.ButtonClientes)
         Me.Panel1.Controls.Add(Me.ButtonEmpleados)
@@ -110,11 +132,22 @@ Partial Class FormInicio
         Me.Panel1.Size = New System.Drawing.Size(825, 116)
         Me.Panel1.TabIndex = 1
         '
+        'ButtonCompras
+        '
+        Me.ButtonCompras.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.ButtonCompras.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonCompras.Location = New System.Drawing.Point(642, 53)
+        Me.ButtonCompras.Name = "ButtonCompras"
+        Me.ButtonCompras.Size = New System.Drawing.Size(156, 36)
+        Me.ButtonCompras.TabIndex = 3
+        Me.ButtonCompras.Text = "VENTAS"
+        Me.ButtonCompras.UseVisualStyleBackColor = False
+        '
         'ButtonProductos
         '
         Me.ButtonProductos.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.ButtonProductos.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonProductos.Location = New System.Drawing.Point(594, 53)
+        Me.ButtonProductos.Location = New System.Drawing.Point(442, 53)
         Me.ButtonProductos.Name = "ButtonProductos"
         Me.ButtonProductos.Size = New System.Drawing.Size(156, 36)
         Me.ButtonProductos.TabIndex = 2
@@ -125,7 +158,7 @@ Partial Class FormInicio
         '
         Me.ButtonClientes.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.ButtonClientes.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonClientes.Location = New System.Drawing.Point(331, 53)
+        Me.ButtonClientes.Location = New System.Drawing.Point(227, 53)
         Me.ButtonClientes.Name = "ButtonClientes"
         Me.ButtonClientes.Size = New System.Drawing.Size(156, 36)
         Me.ButtonClientes.TabIndex = 2
@@ -136,7 +169,7 @@ Partial Class FormInicio
         '
         Me.ButtonEmpleados.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.ButtonEmpleados.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonEmpleados.Location = New System.Drawing.Point(52, 53)
+        Me.ButtonEmpleados.Location = New System.Drawing.Point(19, 53)
         Me.ButtonEmpleados.Name = "ButtonEmpleados"
         Me.ButtonEmpleados.Size = New System.Drawing.Size(156, 36)
         Me.ButtonEmpleados.TabIndex = 1
@@ -519,11 +552,104 @@ Partial Class FormInicio
         '
         Me.EMPLEADOSTableAdapter.ClearBeforeFill = True
         '
+        'PanelCompras
+        '
+        Me.PanelCompras.Controls.Add(Me.dgvCompras)
+        Me.PanelCompras.Controls.Add(Me.BuscarCompra)
+        Me.PanelCompras.Controls.Add(Me.Label5)
+        Me.PanelCompras.Location = New System.Drawing.Point(26, 146)
+        Me.PanelCompras.Name = "PanelCompras"
+        Me.PanelCompras.Size = New System.Drawing.Size(786, 423)
+        Me.PanelCompras.TabIndex = 5
+        '
+        'BuscarCompra
+        '
+        Me.BuscarCompra.Location = New System.Drawing.Point(533, 53)
+        Me.BuscarCompra.Name = "BuscarCompra"
+        Me.BuscarCompra.Size = New System.Drawing.Size(207, 20)
+        Me.BuscarCompra.TabIndex = 2
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(33, 48)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(427, 24)
+        Me.Label5.TabIndex = 1
+        Me.Label5.Text = "Buscar venta (introduzca el ID del cliente o fecha):"
+        '
+        'COMPRASBindingSource
+        '
+        Me.COMPRASBindingSource.DataMember = "COMPRAS"
+        Me.COMPRASBindingSource.DataSource = Me.SupermercadoDataSet
+        '
+        'COMPRASTableAdapter
+        '
+        Me.COMPRASTableAdapter.ClearBeforeFill = True
+        '
+        'COMPRASBindingSource1
+        '
+        Me.COMPRASBindingSource1.DataMember = "COMPRAS"
+        Me.COMPRASBindingSource1.DataSource = Me.SupermercadoDataSet
+        '
+        'dgvCompras
+        '
+        Me.dgvCompras.AutoGenerateColumns = False
+        Me.dgvCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvCompras.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDCOMPRADataGridViewTextBoxColumn, Me.IDCLIENTEDataGridViewTextBoxColumn1, Me.IDCAJADataGridViewTextBoxColumn, Me.IMPORTEDataGridViewTextBoxColumn, Me.FECHADataGridViewTextBoxColumn})
+        Me.dgvCompras.DataSource = Me.COMPRASBindingSource2
+        Me.dgvCompras.Location = New System.Drawing.Point(73, 142)
+        Me.dgvCompras.Name = "dgvCompras"
+        Me.dgvCompras.Size = New System.Drawing.Size(550, 194)
+        Me.dgvCompras.TabIndex = 3
+        '
+        'SupermercadoDataSet1
+        '
+        Me.SupermercadoDataSet1.DataSetName = "SupermercadoDataSet"
+        Me.SupermercadoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'COMPRASBindingSource2
+        '
+        Me.COMPRASBindingSource2.DataMember = "COMPRAS"
+        Me.COMPRASBindingSource2.DataSource = Me.SupermercadoDataSet1
+        '
+        'IDCOMPRADataGridViewTextBoxColumn
+        '
+        Me.IDCOMPRADataGridViewTextBoxColumn.DataPropertyName = "IDCOMPRA"
+        Me.IDCOMPRADataGridViewTextBoxColumn.HeaderText = "IDCOMPRA"
+        Me.IDCOMPRADataGridViewTextBoxColumn.Name = "IDCOMPRADataGridViewTextBoxColumn"
+        '
+        'IDCLIENTEDataGridViewTextBoxColumn1
+        '
+        Me.IDCLIENTEDataGridViewTextBoxColumn1.DataPropertyName = "IDCLIENTE"
+        Me.IDCLIENTEDataGridViewTextBoxColumn1.HeaderText = "IDCLIENTE"
+        Me.IDCLIENTEDataGridViewTextBoxColumn1.Name = "IDCLIENTEDataGridViewTextBoxColumn1"
+        '
+        'IDCAJADataGridViewTextBoxColumn
+        '
+        Me.IDCAJADataGridViewTextBoxColumn.DataPropertyName = "IDCAJA"
+        Me.IDCAJADataGridViewTextBoxColumn.HeaderText = "IDCAJA"
+        Me.IDCAJADataGridViewTextBoxColumn.Name = "IDCAJADataGridViewTextBoxColumn"
+        '
+        'IMPORTEDataGridViewTextBoxColumn
+        '
+        Me.IMPORTEDataGridViewTextBoxColumn.DataPropertyName = "IMPORTE"
+        Me.IMPORTEDataGridViewTextBoxColumn.HeaderText = "IMPORTE"
+        Me.IMPORTEDataGridViewTextBoxColumn.Name = "IMPORTEDataGridViewTextBoxColumn"
+        '
+        'FECHADataGridViewTextBoxColumn
+        '
+        Me.FECHADataGridViewTextBoxColumn.DataPropertyName = "FECHA"
+        Me.FECHADataGridViewTextBoxColumn.HeaderText = "FECHA"
+        Me.FECHADataGridViewTextBoxColumn.Name = "FECHADataGridViewTextBoxColumn"
+        '
         'FormInicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(825, 600)
+        Me.Controls.Add(Me.PanelCompras)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PanelProductos)
         Me.Controls.Add(Me.PanelEmpleados)
@@ -545,6 +671,13 @@ Partial Class FormInicio
         Me.PanelProductos.PerformLayout()
         CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PRODUCTOSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelCompras.ResumeLayout(False)
+        Me.PanelCompras.PerformLayout()
+        CType(Me.COMPRASBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.COMPRASBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvCompras, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SupermercadoDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.COMPRASBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -601,4 +734,19 @@ Partial Class FormInicio
     Friend WithEvents HORARIODataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents SALARIOMENSUALDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents buttonPedir As Button
+    Friend WithEvents ButtonCompras As Button
+    Friend WithEvents PanelCompras As Panel
+    Friend WithEvents COMPRASBindingSource As BindingSource
+    Friend WithEvents COMPRASTableAdapter As SupermercadoDataSetTableAdapters.COMPRASTableAdapter
+    Friend WithEvents BuscarCompra As TextBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents COMPRASBindingSource1 As BindingSource
+    Friend WithEvents dgvCompras As DataGridView
+    Friend WithEvents SupermercadoDataSet1 As SupermercadoDataSet
+    Friend WithEvents COMPRASBindingSource2 As BindingSource
+    Friend WithEvents IDCOMPRADataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IDCLIENTEDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents IDCAJADataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IMPORTEDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents FECHADataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class
