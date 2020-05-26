@@ -3,10 +3,18 @@ Imports Funciones
 
 Public Class EditarProductos
     Dim obP As New FProductos
-    Public Sub New(p As CProducto)
+
+    Public Sub New()
 
         ' Esta llamada es exigida por el diseñador.
         InitializeComponent()
+
+        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
+
+    End Sub
+    Public Sub New(p As CProducto)
+
+        Me.New()
 
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
         txtIDP.Text = p.idProducto

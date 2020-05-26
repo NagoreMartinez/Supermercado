@@ -20,8 +20,8 @@ Public Class Clientes
             MessageBox.Show("Ha ocurrido un error.")
         End If
 
-        Dim formClientes As FormInicio = CType(Owner, FormInicio)
-        formClientes.listarClientes()
+        'Dim formClientes As FormInicio = CType(Owner, FormInicio)
+        'formClientes.listarClientes()
 
         Close()
 

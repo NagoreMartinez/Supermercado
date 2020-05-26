@@ -32,7 +32,7 @@ Public Class EditarCliente
         Dim c = objC.ActualizarCliente(txtIDC.Text, txtIDS2.Text, txtDNI2.Text, txtNombre2.Text, txtTel2.Text)
 
         If c Then
-            MessageBox.Show("Se ha actualizado correctamente")
+            MessageBox.Show("Se ha actualizado el cliente correctamente")
         Else
             MessageBox.Show("Ha ocurrido un error")
         End If
@@ -42,5 +42,7 @@ Public Class EditarCliente
         Close()
     End Sub
 
+    Private Sub EditarCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
 End Class

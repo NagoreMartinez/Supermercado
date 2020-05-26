@@ -2,7 +2,9 @@
 Imports System.Data.OleDb
 Imports Clases
 
-Public Module DClientes
+Public Class DClientes
+
+
     Dim conectado As New DConexion
 
     ' Listar los clientes
@@ -113,5 +115,5 @@ Public Module DClientes
         Return ok
     End Function
 
-End Module
+End Class
 

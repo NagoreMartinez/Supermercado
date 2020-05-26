@@ -3,41 +3,38 @@ Imports Clases
 
 Public Class FProductos
 
+    Dim obP As New DProductos
+
     ' Funcion que devuelve la lista de productos
     Public Function ListaProductos() As DataTable
-        Return DProductos.QryListarProductos()
+        Return obP.QryListarProductos()
     End Function
 
-    ' Generar un producto
-    Public Function GenerarProducto(row As DataRow)
-        Dim producto As New CProducto(row)
-        Return producto
+    ' Obtener producto por filtro
+    Public Function ObtenerPorductosByFiltro(f As String) As DataTable
+        Return obP.QryByFiltro(f)
     End Function
 
     ' Insertar un producto
     Public Function InsertProducto(idProducto As String, nombre As String, precio As Double, fechaCaducidad As String)
         Dim p As New CProducto(idProducto, nombre, precio, fechaCaducidad)
 
-        Dim insP = DProductos.CmdInsert(p)
+        Dim insP = obP.CmdInsert(p)
         Return insP
     End Function
 
-    ' Obtener producto por filtro
-    Public Function ObtenerPorductosByFiltro(f As String) As DataTable
-        Return DProductos.QryByFiltro(f)
-    End Function
 
     ' Actualizar un producto 
-    Public Function ActualizarProducto(idProducto As String, nombre As String, precio As Double, fechaCaducidad As String) As Integer
+    Public Function ActualizarProducto(idProducto As String, nombre As String, precio As Double, fechaCaducidad As String)
         Dim p As New CProducto(idProducto, nombre, precio, fechaCaducidad)
 
-        Dim upP = DProductos.CmdUpdate(p)
+        Dim upP = obP.CmdUpdate(p)
         Return upP
     End Function
 
     ' Borrar un producto 
     Public Function EliminiarProducto(id As String)
-        Return DProductos.CmdDelete(id)
+        Return obP.CmdDelete(id)
     End Function
 
 

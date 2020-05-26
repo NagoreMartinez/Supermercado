@@ -136,7 +136,7 @@ Partial Class Productos
         Me.Label1.TabIndex = 49
         Me.Label1.Text = "ID Producto"
         '
-        'FormProductos
+        'Productos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -151,7 +151,7 @@ Partial Class Productos
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "FormProductos"
+        Me.Name = "Productos"
         Me.Text = "Nuevo producto"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

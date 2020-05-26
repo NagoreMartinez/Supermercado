@@ -17,9 +17,9 @@ Public Class FormInicio
         Me.PRODUCTOSTableAdapter.Fill(Me.SupermercadoDataSet.PRODUCTOS)
         'TODO: esta línea de código carga datos en la tabla 'SupermercadoDataSet.CLIENTES' Puede moverla o quitarla según sea necesario.
         Me.CLIENTESTableAdapter.Fill(Me.SupermercadoDataSet.CLIENTES)
-        QryListarEmpleados()
-        QryListarClientes()
-        QryListarProductos()
+        listarEmpleado()
+        listarClientes()
+        listarProductos()
         PanelEmpleados.Show()
         PanelClientes.Hide()
         PanelProductos.Hide()
@@ -103,7 +103,7 @@ Public Class FormInicio
             formBEmpleado.ShowDialog()
 
         Else
-            MessageBox.Show("Sleccione una fila para borrar el perfil")
+            MessageBox.Show("SEleccione una fila para borrar el perfil")
         End If
     End Sub
 
@@ -204,7 +204,7 @@ Public Class FormInicio
             AddOwnedForm(formEProducto)
             formEProducto.ShowDialog()
         Else
-            MessageBox.Show("Selecione una fila para poder editar los datos")
+            MessageBox.Show("Seleccione una fila para poder editar los datos")
         End If
     End Sub
 
@@ -220,11 +220,11 @@ Public Class FormInicio
             formBProducto.ShowDialog()
 
         Else
-            MessageBox.Show("Sleccione una fila para borrar el perfil")
+            MessageBox.Show("Seleccione una fila para borrar el perfil")
         End If
     End Sub
 
-    Private Sub dgvEmpleados_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
 
-    End Sub
+
+
 End Class

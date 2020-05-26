@@ -23,8 +23,8 @@ Public Class Empleados
             MessageBox.Show("Ha ocurrido un error.")
         End If
 
-        Dim formEmpleados As FormInicio = CType(Owner, FormInicio)
-        formEmpleados.listarEmpleado()
+        'Dim formEmpleados As FormInicio = CType(Owner, FormInicio)
+        'formEmpleados.listarEmpleado()
 
         Close()
 

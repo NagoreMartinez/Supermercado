@@ -5,12 +5,8 @@ Public Class Productos
     Dim obP As FProductos
 
     Private Sub buttonGuardar3_Click(sender As Object, e As EventArgs) Handles buttonGuardar3.Click
-        Dim idP = txtIDP.Text
-        Dim nombre = txtNombre3.Text
-        Dim precio = txtPrecio.Text
-        Dim fCad = txtFCad.Text
 
-        Dim insert = obP.InsertProducto(idP, nombre, precio, fCad)
+        Dim insert = obP.InsertProducto(txtIDP.Text, txtNombre3.Text, txtPrecio.Text, txtFCad.Text)
 
         If insert Then
             MessageBox.Show("Producto agregado correctamente.")
@@ -18,11 +14,12 @@ Public Class Productos
             MessageBox.Show("Ha ocurrido un error.")
         End If
 
-        Dim formProductos As FormInicio = CType(Owner, FormInicio)
-        formProductos.listarProductos()
+        'Dim formProductos As FormInicio = CType(Owner, FormInicio)
+        'formProductos.listarProductos()
 
         Close()
 
     End Sub
+
 
 End Class

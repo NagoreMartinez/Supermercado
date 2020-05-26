@@ -33,11 +33,11 @@ Public Class EditarEmpleado
     ' Guardar cambios
     Private Sub buttonGuardar1_Click(sender As Object, e As EventArgs) Handles buttonGuardar1.Click
 
-        Dim em = obE.ActualizarEmpleado(txtIDE.Text, txtIDT.Text, txtIDS.Text, txtDNI.Text,
-                                             txtNombre.Text, txtEdad.Text, txtTel.Text, txtHorario.Text, txtSalario.Text)
+        Dim em = obE.ActualizarEmpleado(txtIDE.Text, txtIDT.Text, txtIDS.Text, txtDNI.Text, txtNombre.Text,
+                                        txtEdad.Text, txtTel.Text, txtHorario.Text, txtSalario.Text)
 
         If em Then
-            MessageBox.Show("Se ha actualizado correctamente")
+            MessageBox.Show("Se ha actualizado el empleado correctamente")
         Else
             MessageBox.Show("Ha ocurrido un error")
         End If

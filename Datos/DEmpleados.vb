@@ -2,7 +2,7 @@
 Imports System.Data.OleDb
 Imports Clases
 
-Public Module DEmpleados
+Public Class DEmpleados
 
     Dim conectado As New DConexion
 
@@ -126,4 +126,4 @@ Public Module DEmpleados
         Return ok
     End Function
 
-End Module
+End Class
