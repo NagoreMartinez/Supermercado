@@ -47,7 +47,6 @@ Public Class FormInicio
     ' LISTENERS  EMPLEADOS
 
     ' Listar empleados
-
     Sub listarEmpleado()
         dgvEmpleados.DataSource = Empleados.ListaEmpleados()
     End Sub
@@ -87,7 +86,7 @@ Public Class FormInicio
             AddOwnedForm(formEEmpleado)
             formEEmpleado.ShowDialog()
         Else
-            MessageBox.Show("Selecione una fila para poder editar el perfil")
+            MessageBox.Show("Seleccione una fila para poder editar el perfil")
         End If
     End Sub
 
@@ -103,7 +102,7 @@ Public Class FormInicio
             formBEmpleado.ShowDialog()
 
         Else
-            MessageBox.Show("SEleccione una fila para borrar el perfil")
+            MessageBox.Show("Seleccione una fila para borrar el perfil")
         End If
     End Sub
 
@@ -116,7 +115,7 @@ Public Class FormInicio
     End Sub
 
     ' Buscar cliente
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub BuscarCliente_TextChanged(sender As Object, e As EventArgs) Handles BuscarCliente.TextChanged
         dgvClientes.DataSource = Clientes.ObtenerClientesByFiltro(BuscarCliente.Text)
     End Sub
 
@@ -146,7 +145,7 @@ Public Class FormInicio
             AddOwnedForm(formECliente)
             formECliente.ShowDialog()
         Else
-            MessageBox.Show("Selecione una fila para poder editar el perfil")
+            MessageBox.Show("Seleccione una fila para poder editar el perfil")
         End If
     End Sub
 
@@ -220,11 +219,33 @@ Public Class FormInicio
             formBProducto.ShowDialog()
 
         Else
-            MessageBox.Show("Seleccione una fila para borrar el perfil")
+            MessageBox.Show("Seleccione una fila para borrar los datos")
         End If
     End Sub
 
+    'Pedir producto
+    Private Sub buttonPedir_Click(sender As Object, e As EventArgs) Handles buttonPedir.Click
+        pedirProducto()
+    End Sub
 
+    Sub pedirProducto()
 
+        If dgvProductos.SelectedRows.Count = 0 Then
+            Dim c As Integer
+            Dim row = dgvProductos.CurrentRow
+            Dim IdProducto = row.Cells(0).Value.ToString
+            Dim nombre = row.Cells(1).Value.ToString
+            Dim precio = row.Cells(2).Value.ToString
+            Dim fechaCaducidad = row.Cells(3).Value.ToString
 
+            Dim p As New CProducto(IdProducto, nombre, precio, fechaCaducidad)
+
+            c = InputBox("Introduzca la cantidad")
+
+            MessageBox.Show("Se ha efectuado el pedido")
+        Else
+            MessageBox.Show("Seleccione una fila para poder realizar el pedido")
+        End If
+
+    End Sub
 End Class
