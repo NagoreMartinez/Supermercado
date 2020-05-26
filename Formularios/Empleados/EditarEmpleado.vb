@@ -18,13 +18,13 @@ Public Class EditarEmpleado
 
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
         txtIDE.Text = e.idEmpleado
-        txtIDT.Text = e.idTipo
+        cbT.SelectedItem = e.idTipo
         txtIDS.Text = e.idSuper
         txtDNI.Text = e.dni
         txtNombre.Text = e.nombre
         txtEdad.Text = e.edad
         txtTel.Text = e.telefono
-        txtHorario.Text = e.horario
+        cbHorario.SelectedItem = e.horario
         txtSalario.Text = e.salario
 
     End Sub
@@ -33,8 +33,8 @@ Public Class EditarEmpleado
     ' Guardar cambios
     Private Sub buttonGuardar1_Click(sender As Object, e As EventArgs) Handles buttonGuardar1.Click
 
-        Dim em = obE.ActualizarEmpleado(txtIDE.Text, txtIDT.Text, txtIDS.Text, txtDNI.Text, txtNombre.Text,
-                                        txtEdad.Text, txtTel.Text, txtHorario.Text, txtSalario.Text)
+        Dim em = obE.ActualizarEmpleado(txtIDE.Text, cbT.SelectedItem, txtIDS.Text, txtDNI.Text, txtNombre.Text,
+                                        txtEdad.Text, txtTel.Text, cbHorario.SelectedItem, txtSalario.Text)
 
         If em Then
             MessageBox.Show("Se ha actualizado el empleado correctamente")
@@ -47,5 +47,7 @@ Public Class EditarEmpleado
         Close()
     End Sub
 
+    Private Sub EditarEmpleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
 End Class

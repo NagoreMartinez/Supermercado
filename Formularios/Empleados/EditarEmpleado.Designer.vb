@@ -36,14 +36,14 @@ Partial Class EditarEmpleado
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.txtIDT = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.txtHorario = New System.Windows.Forms.TextBox()
         Me.txtSalario = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.txtTel = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.cbT = New System.Windows.Forms.ComboBox()
+        Me.cbHorario = New System.Windows.Forms.ComboBox()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -168,18 +168,11 @@ Partial Class EditarEmpleado
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(445, 51)
+        Me.Label7.Location = New System.Drawing.Point(464, 52)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(95, 24)
+        Me.Label7.Size = New System.Drawing.Size(73, 24)
         Me.Label7.TabIndex = 25
-        Me.Label7.Text = "ID Puesto "
-        '
-        'txtIDT
-        '
-        Me.txtIDT.Location = New System.Drawing.Point(553, 56)
-        Me.txtIDT.Name = "txtIDT"
-        Me.txtIDT.Size = New System.Drawing.Size(88, 20)
-        Me.txtIDT.TabIndex = 26
+        Me.Label7.Text = "Puesto "
         '
         'Label8
         '
@@ -200,13 +193,6 @@ Partial Class EditarEmpleado
         Me.Label9.Size = New System.Drawing.Size(67, 24)
         Me.Label9.TabIndex = 28
         Me.Label9.Text = "Salario"
-        '
-        'txtHorario
-        '
-        Me.txtHorario.Location = New System.Drawing.Point(148, 564)
-        Me.txtHorario.Name = "txtHorario"
-        Me.txtHorario.Size = New System.Drawing.Size(108, 20)
-        Me.txtHorario.TabIndex = 29
         '
         'txtSalario
         '
@@ -240,19 +226,37 @@ Partial Class EditarEmpleado
         Me.Label10.TabIndex = 52
         Me.Label10.Text = "Teléfono"
         '
+        'cbT
+        '
+        Me.cbT.FormattingEnabled = True
+        Me.cbT.Items.AddRange(New Object() {"A", "J", "CH", "CJ", "CR", "R", "P", "PC"})
+        Me.cbT.Location = New System.Drawing.Point(570, 57)
+        Me.cbT.Name = "cbT"
+        Me.cbT.Size = New System.Drawing.Size(121, 21)
+        Me.cbT.TabIndex = 54
+        '
+        'cbHorario
+        '
+        Me.cbHorario.FormattingEnabled = True
+        Me.cbHorario.Items.AddRange(New Object() {"06:00-13:30", "13:30-21:00"})
+        Me.cbHorario.Location = New System.Drawing.Point(146, 564)
+        Me.cbHorario.Name = "cbHorario"
+        Me.cbHorario.Size = New System.Drawing.Size(121, 21)
+        Me.cbHorario.TabIndex = 55
+        '
         'EditarEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 697)
+        Me.Controls.Add(Me.cbHorario)
+        Me.Controls.Add(Me.cbT)
         Me.Controls.Add(Me.txtTel)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.txtSalario)
-        Me.Controls.Add(Me.txtHorario)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.txtIDT)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.buttonGuardar1)
@@ -289,12 +293,12 @@ Partial Class EditarEmpleado
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents txtIDT As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents txtHorario As TextBox
     Friend WithEvents txtSalario As TextBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents txtTel As TextBox
     Friend WithEvents Label10 As Label
+    Friend WithEvents cbT As ComboBox
+    Friend WithEvents cbHorario As ComboBox
 End Class

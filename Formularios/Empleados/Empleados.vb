@@ -13,8 +13,8 @@ Public Class Empleados
 
     Private Sub buttonGuardar1_Click(sender As Object, e As EventArgs) Handles buttonGuardar1.Click
 
-        Dim insert = obE.InsertEmpleado(txtIDE.Text, txtIDT.Text, txtIDS.Text, txtDNI.Text, txtNombre.Text,
-                                        txtEdad.Text, txtTel.Text, txtHorario.Text, txtSalario.Text)
+        Dim insert = obE.InsertEmpleado(txtIDE.Text, cbT.SelectedItem, txtIDS.Text, txtDNI.Text, txtNombre.Text,
+                                        txtEdad.Text, txtTel.Text, cbHorario.SelectedItem, txtSalario.Text)
 
         If insert Then
             MessageBox.Show("Empleado agregado correctamente.")
@@ -22,11 +22,12 @@ Public Class Empleados
             MessageBox.Show("Ha ocurrido un error.")
         End If
 
-        'Dim formEmpleados As FormInicio = CType(Owner, FormInicio)
-        'formEmpleados.listarEmpleado()
+        Dim formEmpleados As FormInicio = CType(Owner, FormInicio)
+        formEmpleados.listarEmpleado()
 
         Close()
 
     End Sub
+
 
 End Class

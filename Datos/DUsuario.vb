@@ -30,8 +30,8 @@ Public Class DUsuario
             Dim cmd = conn.CreateCommand
             cmd.CommandText = "INSERT INTO USUARIOS 
                  (IDUSUARIO, USUARIO, CONTRASEÑA) VALUES 
-                 (@idusuario, @usuario, @contras´ña)"
-            cmd.Parameters.AddWithValue("@idusuario", u.idUsuario)
+                 (@idUsuario, @usuario, @contraseña)"
+            cmd.Parameters.AddWithValue("@idUsuario", u.idUsuario)
             cmd.Parameters.AddWithValue("@usuario", u.usuario)
             cmd.Parameters.AddWithValue("@contraseña", u.contraseña)
             cmd.ExecuteNonQuery()

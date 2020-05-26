@@ -45,7 +45,7 @@ Public Class DEmpleados
         Try
             Dim cmd = conn.CreateCommand
             cmd.CommandText = "INSERT INTO EMPLEADOS 
-                 (IDEMPLEADO, IDTIPO, IDSUPER, DNI, NOMBRE, EDAD, TELEFONO, HORARIO, SALARIO) VALUES 
+                 (IDEMPLEADO, IDTIPO, IDSUPER, DNI, NOMBRE, EDAD, TELEFONO, HORARIO, SALARIO MENSUAL) VALUES 
                  (@idEmpleado, @idTipo, @idSuper, @dni, @nombre, @edad, @telefono, @horario, @salario)"
             cmd.Parameters.AddWithValue("@idEmpleado", e.idEmpleado)
             cmd.Parameters.AddWithValue("@idTipo", e.idTipo)
@@ -84,7 +84,7 @@ Public Class DEmpleados
                 EDAD = @edad,
                 TELEFONO = @telefono,
                 HORARIO = @horario, 
-                SALARIO = @salario
+                SALARIO MENSUAL = @salario
                 WHERE IDEMPLEADO = @idEmpleado"
             cmd.Parameters.AddWithValue("@idEmpleado", e.idEmpleado)
             cmd.Parameters.AddWithValue("@idTipo", e.idTipo)

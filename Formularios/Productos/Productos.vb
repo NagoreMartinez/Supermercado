@@ -19,8 +19,8 @@ Public Class Productos
             MessageBox.Show("Ha ocurrido un error.")
         End If
 
-        'Dim formProductos As FormInicio = CType(Owner, FormInicio)
-        'formProductos.listarProductos()
+        Dim formProductos As FormInicio = CType(Owner, FormInicio)
+        formProductos.listarProductos()
 
         Close()
 

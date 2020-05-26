@@ -36,7 +36,6 @@ Public Class DProductos
         Return table
     End Function
 
-
     'Insertar nuevo producto
     Public Function CmdInsert(p As CProducto)
         Dim ok = False
@@ -45,7 +44,7 @@ Public Class DProductos
         Try
             Dim cmd = conn.CreateCommand
             cmd.CommandText = "INSERT INTO PRODUCTOS 
-                 (IDPRODUCTO, NOMBRE, PRECIO, FECHACAD) VALUES 
+                 (IDPRODUCTO, NOMBRE, PRECIO, FECHA CADUCIDAD) VALUES 
                  (@idProducto, @nombre, @precio, @fechaCad)"
             cmd.Parameters.AddWithValue("@idProducto", p.idProducto)
             cmd.Parameters.AddWithValue("@nombre", p.nombre)
