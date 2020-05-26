@@ -1,12 +1,12 @@
 ﻿Public Class CUsuario
     Private idU As String
     Private us As String
-    Private pw As String
+    Private password As String
 
-    Public Sub New(idusuario As String, usuario As String, pw As String)
+    Public Sub New(idusuario As String, usuario As String, contraseña As String)
         idU = idusuario
         us = usuario
-        pw = pw
+        password = contraseña
     End Sub
 
     Public ReadOnly Property idUsuario As String
@@ -24,7 +24,7 @@
 
     Public ReadOnly Property contraseña As String
         Get
-            Return pw
+            Return password
         End Get
     End Property
 End Class
