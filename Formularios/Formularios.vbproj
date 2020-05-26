@@ -6,11 +6,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{DABA7648-3A6C-43DC-8DE2-B93FC765F141}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Formularios.My.MyApplication</StartupObject>
+    <StartupObject>Formularios.FormLogin</StartupObject>
     <RootNamespace>Formularios</RootNamespace>
     <AssemblyName>Formularios</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>WindowsForms</MyType>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
