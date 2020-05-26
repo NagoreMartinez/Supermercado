@@ -126,4 +126,20 @@ Public Class DEmpleados
         Return ok
     End Function
 
+    ' Coger ultimo empleado
+    Function QryUltEmpleado() As DataRow
+        Dim query = "SELECT * FROM EMPLEADOS AS E, (SELECT Max(IDEMPLEADO) AS ULTIMO FROM EMPLEADOS) AS U WHERE E.IDEMPLEADO LIKE U.ULTIMO"
+        Dim conn = conectado.getConnection()
+        conn.Open()
+        Dim sqlCommand = New OleDbCommand(query, conn)
+        Dim table = New DataTable()
+        Dim executeReader = sqlCommand.ExecuteReader()
+        table.Load(executeReader)
+        sqlCommand.Dispose()
+        conn.Close()
+        Dim row = table.Select.FirstOrDefault()
+        Return row
+    End Function
+
+
 End Class

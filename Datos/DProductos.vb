@@ -112,4 +112,19 @@ Public Class DProductos
     End Function
 
 
+    ' Coger ultimo producto
+    Function QryUltProducto() As DataRow
+        Dim query = "SELECT * FROM PRODUCTOS AS P, (SELECT Max(IDPRODUCTO) AS ULTIMO FROM PRODUCTOS) AS U WHERE P.IDPRODUCTO LIKE U.ULTIMO"
+        Dim conn = conectado.getConnection()
+        conn.Open()
+        Dim sqlCommand = New OleDbCommand(query, conn)
+        Dim table = New DataTable()
+        Dim executeReader = sqlCommand.ExecuteReader()
+        table.Load(executeReader)
+        sqlCommand.Dispose()
+        conn.Close()
+        Dim row = table.Select.FirstOrDefault()
+        Return row
+    End Function
+
 End Class

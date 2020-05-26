@@ -39,7 +39,7 @@
         e = row("EDAD")
         tel = row("TELEFONO")
         hora = row("HORARIO")
-        sal = row("SALARIO")
+        sal = row("SALARIO MENSUAL")
     End Sub
 
     ' Getters
@@ -73,7 +73,7 @@
         End Get
     End Property
 
-    Public ReadOnly Property edad As String
+    Public ReadOnly Property edad As Integer
         Get
             Return e
         End Get

@@ -2,7 +2,12 @@
 
 Public Class Productos
 
-    Dim obP As FProductos
+    Dim obP As New FProductos
+
+    Private Sub Productos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim idProducto As String = obP.crearIDP()
+        txtIDP.Text = idProducto
+    End Sub
 
     Private Sub buttonGuardar3_Click(sender As Object, e As EventArgs) Handles buttonGuardar3.Click
 

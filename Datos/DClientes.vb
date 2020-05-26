@@ -115,5 +115,21 @@ Public Class DClientes
         Return ok
     End Function
 
+    ' Coger último cliente
+    Function QryUltCliente() As DataRow
+        Dim query = "SELECT * FROM CLIENTES AS C, (SELECT Max(IDCLIENTE) AS ULTIMO FROM CLIENTES) AS U WHERE C.IDCLIENTE LIKE U.ULTIMO"
+        Dim conn = conectado.getConnection()
+        conn.Open()
+        Dim sqlCommand = New OleDbCommand(query, conn)
+        Dim table = New DataTable()
+        Dim executeReader = sqlCommand.ExecuteReader()
+        table.Load(executeReader)
+        sqlCommand.Dispose()
+        conn.Close()
+        Dim row = table.Select.FirstOrDefault()
+        Return row
+    End Function
+
+
 End Class
 

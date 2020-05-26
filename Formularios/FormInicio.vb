@@ -1,5 +1,4 @@
 ﻿Imports Funciones
-Imports Datos
 Imports Clases
 Public Class FormInicio
 
@@ -233,12 +232,12 @@ Public Class FormInicio
         If dgvProductos.SelectedRows.Count = 0 Then
             Dim c As Integer
             Dim row = dgvProductos.CurrentRow
-            Dim IdProducto = row.Cells(0).Value.ToString
+            Dim idProducto = row.Cells(0).Value.ToString
             Dim nombre = row.Cells(1).Value.ToString
             Dim precio = row.Cells(2).Value.ToString
             Dim fechaCaducidad = row.Cells(3).Value.ToString
 
-            Dim p As New CProducto(IdProducto, nombre, precio, fechaCaducidad)
+            Dim p As New CProducto(idProducto, nombre, precio, fechaCaducidad)
 
             c = InputBox("Introduzca la cantidad")
 

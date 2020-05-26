@@ -37,5 +37,35 @@ Public Class FProductos
         Return obP.CmdDelete(id)
     End Function
 
+    ' Coger el ultimo producto
+    Public Function idUltProducto()
+        Dim row = obP.QryUltProducto()
+        Dim ult As New CProducto(row)
+        Return ult.idProducto
+    End Function
+
+    ' Crear id automático
+    Public Function crearIDP()
+        Dim idUlt As String = idUltProducto()
+        Dim letra As Char = idUlt.Substring(0, 1)
+        Dim num As Integer = idUlt.Substring(1, idUlt.Length - 1)
+        Dim nuevoID As String
+
+        If num < 999 Then
+            num = num + 1
+            nuevoID = letra + num.ToString().PadLeft(3, "0")
+        Else
+            letra = Chr(Asc(letra) + 1)
+            nuevoID = letra + 1.ToString().PadLeft(3, "0")
+        End If
+        Return nuevoID
+    End Function
+
+    ' Id fijo para el idSuper
+    Public Function idFijoSuper()
+        Dim idS As String
+        idS = "S001"
+        Return idS
+    End Function
 
 End Class
