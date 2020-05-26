@@ -30,16 +30,6 @@ Partial Class FormInicio
         Me.ButtonClientes = New System.Windows.Forms.Button()
         Me.ButtonEmpleados = New System.Windows.Forms.Button()
         Me.PanelEmpleados = New System.Windows.Forms.Panel()
-        Me.dgvEmpleados = New System.Windows.Forms.DataGridView()
-        Me.IDEMPLEADODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IDTIPODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IDSUPERDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DNIDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NOMBREDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EDADDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TELEFONODataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.HORARIODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SALARIOMENSUALDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EMPLEADOSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SupermercadoDataSet = New Formularios.SupermercadoDataSet()
         Me.EliminarEmpleado = New System.Windows.Forms.Button()
@@ -62,11 +52,6 @@ Partial Class FormInicio
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PanelProductos = New System.Windows.Forms.Panel()
         Me.buttonPedir = New System.Windows.Forms.Button()
-        Me.dgvProductos = New System.Windows.Forms.DataGridView()
-        Me.IDPRODUCTODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NOMBREDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PRECIODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FECHACADUCIDADDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PRODUCTOSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EliminarProducto = New System.Windows.Forms.Button()
         Me.EditarPProducto = New System.Windows.Forms.Button()
@@ -77,36 +62,57 @@ Partial Class FormInicio
         Me.PRODUCTOSTableAdapter = New Formularios.SupermercadoDataSetTableAdapters.PRODUCTOSTableAdapter()
         Me.EMPLEADOSTableAdapter = New Formularios.SupermercadoDataSetTableAdapters.EMPLEADOSTableAdapter()
         Me.PanelCompras = New System.Windows.Forms.Panel()
+        Me.COMPRASBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SupermercadoDataSet1 = New Formularios.SupermercadoDataSet()
         Me.BuscarCompra = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.COMPRASBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.COMPRASTableAdapter = New Formularios.SupermercadoDataSetTableAdapters.COMPRASTableAdapter()
         Me.COMPRASBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.dgvCompras = New System.Windows.Forms.DataGridView()
-        Me.SupermercadoDataSet1 = New Formularios.SupermercadoDataSet()
-        Me.COMPRASBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.IDCOMPRADataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IDCLIENTEDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IDCAJADataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IMPORTEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FECHADataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.COMPRASBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.dgvProductos = New System.Windows.Forms.DataGridView()
+        Me.PRODUCTOSBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.IDPRODUCTODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NOMBREDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PRECIODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FECHACADDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dgvEmpleados = New System.Windows.Forms.DataGridView()
+        Me.EMPLEADOSBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.IDEMPLEADODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IDTIPODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IDSUPERDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DNIDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NOMBREDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EDADDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TELEFONODataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.HORARIODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SALARIODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         Me.PanelEmpleados.SuspendLayout()
-        CType(Me.dgvEmpleados, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EMPLEADOSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SupermercadoDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelClientes.SuspendLayout()
         CType(Me.dgvClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CLIENTESBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelProductos.SuspendLayout()
-        CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PRODUCTOSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelCompras.SuspendLayout()
+        CType(Me.COMPRASBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SupermercadoDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.COMPRASBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.COMPRASBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvCompras, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SupermercadoDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.COMPRASBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.COMPRASBindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PRODUCTOSBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvEmpleados, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EMPLEADOSBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -188,71 +194,6 @@ Partial Class FormInicio
         Me.PanelEmpleados.Name = "PanelEmpleados"
         Me.PanelEmpleados.Size = New System.Drawing.Size(812, 389)
         Me.PanelEmpleados.TabIndex = 2
-        '
-        'dgvEmpleados
-        '
-        Me.dgvEmpleados.AutoGenerateColumns = False
-        Me.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvEmpleados.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDEMPLEADODataGridViewTextBoxColumn, Me.IDTIPODataGridViewTextBoxColumn, Me.IDSUPERDataGridViewTextBoxColumn1, Me.DNIDataGridViewTextBoxColumn1, Me.NOMBREDataGridViewTextBoxColumn2, Me.EDADDataGridViewTextBoxColumn, Me.TELEFONODataGridViewTextBoxColumn1, Me.HORARIODataGridViewTextBoxColumn, Me.SALARIOMENSUALDataGridViewTextBoxColumn})
-        Me.dgvEmpleados.DataSource = Me.EMPLEADOSBindingSource
-        Me.dgvEmpleados.Location = New System.Drawing.Point(39, 80)
-        Me.dgvEmpleados.Name = "dgvEmpleados"
-        Me.dgvEmpleados.Size = New System.Drawing.Size(726, 221)
-        Me.dgvEmpleados.TabIndex = 7
-        '
-        'IDEMPLEADODataGridViewTextBoxColumn
-        '
-        Me.IDEMPLEADODataGridViewTextBoxColumn.DataPropertyName = "IDEMPLEADO"
-        Me.IDEMPLEADODataGridViewTextBoxColumn.HeaderText = "IDEMPLEADO"
-        Me.IDEMPLEADODataGridViewTextBoxColumn.Name = "IDEMPLEADODataGridViewTextBoxColumn"
-        '
-        'IDTIPODataGridViewTextBoxColumn
-        '
-        Me.IDTIPODataGridViewTextBoxColumn.DataPropertyName = "IDTIPO"
-        Me.IDTIPODataGridViewTextBoxColumn.HeaderText = "IDTIPO"
-        Me.IDTIPODataGridViewTextBoxColumn.Name = "IDTIPODataGridViewTextBoxColumn"
-        '
-        'IDSUPERDataGridViewTextBoxColumn1
-        '
-        Me.IDSUPERDataGridViewTextBoxColumn1.DataPropertyName = "IDSUPER"
-        Me.IDSUPERDataGridViewTextBoxColumn1.HeaderText = "IDSUPER"
-        Me.IDSUPERDataGridViewTextBoxColumn1.Name = "IDSUPERDataGridViewTextBoxColumn1"
-        '
-        'DNIDataGridViewTextBoxColumn1
-        '
-        Me.DNIDataGridViewTextBoxColumn1.DataPropertyName = "DNI"
-        Me.DNIDataGridViewTextBoxColumn1.HeaderText = "DNI"
-        Me.DNIDataGridViewTextBoxColumn1.Name = "DNIDataGridViewTextBoxColumn1"
-        '
-        'NOMBREDataGridViewTextBoxColumn2
-        '
-        Me.NOMBREDataGridViewTextBoxColumn2.DataPropertyName = "NOMBRE"
-        Me.NOMBREDataGridViewTextBoxColumn2.HeaderText = "NOMBRE"
-        Me.NOMBREDataGridViewTextBoxColumn2.Name = "NOMBREDataGridViewTextBoxColumn2"
-        '
-        'EDADDataGridViewTextBoxColumn
-        '
-        Me.EDADDataGridViewTextBoxColumn.DataPropertyName = "EDAD"
-        Me.EDADDataGridViewTextBoxColumn.HeaderText = "EDAD"
-        Me.EDADDataGridViewTextBoxColumn.Name = "EDADDataGridViewTextBoxColumn"
-        '
-        'TELEFONODataGridViewTextBoxColumn1
-        '
-        Me.TELEFONODataGridViewTextBoxColumn1.DataPropertyName = "TELEFONO"
-        Me.TELEFONODataGridViewTextBoxColumn1.HeaderText = "TELEFONO"
-        Me.TELEFONODataGridViewTextBoxColumn1.Name = "TELEFONODataGridViewTextBoxColumn1"
-        '
-        'HORARIODataGridViewTextBoxColumn
-        '
-        Me.HORARIODataGridViewTextBoxColumn.DataPropertyName = "HORARIO"
-        Me.HORARIODataGridViewTextBoxColumn.HeaderText = "HORARIO"
-        Me.HORARIODataGridViewTextBoxColumn.Name = "HORARIODataGridViewTextBoxColumn"
-        '
-        'SALARIOMENSUALDataGridViewTextBoxColumn
-        '
-        Me.SALARIOMENSUALDataGridViewTextBoxColumn.DataPropertyName = "SALARIO MENSUAL"
-        Me.SALARIOMENSUALDataGridViewTextBoxColumn.HeaderText = "SALARIO MENSUAL"
-        Me.SALARIOMENSUALDataGridViewTextBoxColumn.Name = "SALARIOMENSUALDataGridViewTextBoxColumn"
         '
         'EMPLEADOSBindingSource
         '
@@ -426,8 +367,8 @@ Partial Class FormInicio
         '
         'PanelProductos
         '
-        Me.PanelProductos.Controls.Add(Me.buttonPedir)
         Me.PanelProductos.Controls.Add(Me.dgvProductos)
+        Me.PanelProductos.Controls.Add(Me.buttonPedir)
         Me.PanelProductos.Controls.Add(Me.EliminarProducto)
         Me.PanelProductos.Controls.Add(Me.EditarPProducto)
         Me.PanelProductos.Controls.Add(Me.NuevoProducto)
@@ -448,42 +389,6 @@ Partial Class FormInicio
         Me.buttonPedir.TabIndex = 15
         Me.buttonPedir.Text = "Pedir"
         Me.buttonPedir.UseVisualStyleBackColor = False
-        '
-        'dgvProductos
-        '
-        Me.dgvProductos.AllowUserToOrderColumns = True
-        Me.dgvProductos.AutoGenerateColumns = False
-        Me.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvProductos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDPRODUCTODataGridViewTextBoxColumn, Me.NOMBREDataGridViewTextBoxColumn1, Me.PRECIODataGridViewTextBoxColumn, Me.FECHACADUCIDADDataGridViewTextBoxColumn})
-        Me.dgvProductos.DataSource = Me.PRODUCTOSBindingSource
-        Me.dgvProductos.Location = New System.Drawing.Point(181, 84)
-        Me.dgvProductos.Name = "dgvProductos"
-        Me.dgvProductos.Size = New System.Drawing.Size(455, 214)
-        Me.dgvProductos.TabIndex = 14
-        '
-        'IDPRODUCTODataGridViewTextBoxColumn
-        '
-        Me.IDPRODUCTODataGridViewTextBoxColumn.DataPropertyName = "IDPRODUCTO"
-        Me.IDPRODUCTODataGridViewTextBoxColumn.HeaderText = "IDPRODUCTO"
-        Me.IDPRODUCTODataGridViewTextBoxColumn.Name = "IDPRODUCTODataGridViewTextBoxColumn"
-        '
-        'NOMBREDataGridViewTextBoxColumn1
-        '
-        Me.NOMBREDataGridViewTextBoxColumn1.DataPropertyName = "NOMBRE"
-        Me.NOMBREDataGridViewTextBoxColumn1.HeaderText = "NOMBRE"
-        Me.NOMBREDataGridViewTextBoxColumn1.Name = "NOMBREDataGridViewTextBoxColumn1"
-        '
-        'PRECIODataGridViewTextBoxColumn
-        '
-        Me.PRECIODataGridViewTextBoxColumn.DataPropertyName = "PRECIO"
-        Me.PRECIODataGridViewTextBoxColumn.HeaderText = "PRECIO"
-        Me.PRECIODataGridViewTextBoxColumn.Name = "PRECIODataGridViewTextBoxColumn"
-        '
-        'FECHACADUCIDADDataGridViewTextBoxColumn
-        '
-        Me.FECHACADUCIDADDataGridViewTextBoxColumn.DataPropertyName = "FECHA CADUCIDAD"
-        Me.FECHACADUCIDADDataGridViewTextBoxColumn.HeaderText = "FECHA CADUCIDAD"
-        Me.FECHACADUCIDADDataGridViewTextBoxColumn.Name = "FECHACADUCIDADDataGridViewTextBoxColumn"
         '
         'PRODUCTOSBindingSource
         '
@@ -562,6 +467,16 @@ Partial Class FormInicio
         Me.PanelCompras.Size = New System.Drawing.Size(786, 423)
         Me.PanelCompras.TabIndex = 5
         '
+        'COMPRASBindingSource2
+        '
+        Me.COMPRASBindingSource2.DataMember = "COMPRAS"
+        Me.COMPRASBindingSource2.DataSource = Me.SupermercadoDataSet1
+        '
+        'SupermercadoDataSet1
+        '
+        Me.SupermercadoDataSet1.DataSetName = "SupermercadoDataSet"
+        Me.SupermercadoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'BuscarCompra
         '
         Me.BuscarCompra.Location = New System.Drawing.Point(533, 53)
@@ -598,21 +513,11 @@ Partial Class FormInicio
         Me.dgvCompras.AutoGenerateColumns = False
         Me.dgvCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvCompras.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDCOMPRADataGridViewTextBoxColumn, Me.IDCLIENTEDataGridViewTextBoxColumn1, Me.IDCAJADataGridViewTextBoxColumn, Me.IMPORTEDataGridViewTextBoxColumn, Me.FECHADataGridViewTextBoxColumn})
-        Me.dgvCompras.DataSource = Me.COMPRASBindingSource2
-        Me.dgvCompras.Location = New System.Drawing.Point(73, 142)
+        Me.dgvCompras.DataSource = Me.COMPRASBindingSource3
+        Me.dgvCompras.Location = New System.Drawing.Point(114, 120)
         Me.dgvCompras.Name = "dgvCompras"
-        Me.dgvCompras.Size = New System.Drawing.Size(550, 194)
+        Me.dgvCompras.Size = New System.Drawing.Size(541, 221)
         Me.dgvCompras.TabIndex = 3
-        '
-        'SupermercadoDataSet1
-        '
-        Me.SupermercadoDataSet1.DataSetName = "SupermercadoDataSet"
-        Me.SupermercadoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'COMPRASBindingSource2
-        '
-        Me.COMPRASBindingSource2.DataMember = "COMPRAS"
-        Me.COMPRASBindingSource2.DataSource = Me.SupermercadoDataSet1
         '
         'IDCOMPRADataGridViewTextBoxColumn
         '
@@ -644,23 +549,137 @@ Partial Class FormInicio
         Me.FECHADataGridViewTextBoxColumn.HeaderText = "FECHA"
         Me.FECHADataGridViewTextBoxColumn.Name = "FECHADataGridViewTextBoxColumn"
         '
+        'COMPRASBindingSource3
+        '
+        Me.COMPRASBindingSource3.DataMember = "COMPRAS"
+        Me.COMPRASBindingSource3.DataSource = Me.SupermercadoDataSet
+        '
+        'dgvProductos
+        '
+        Me.dgvProductos.AutoGenerateColumns = False
+        Me.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvProductos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDPRODUCTODataGridViewTextBoxColumn, Me.NOMBREDataGridViewTextBoxColumn1, Me.PRECIODataGridViewTextBoxColumn, Me.FECHACADDataGridViewTextBoxColumn})
+        Me.dgvProductos.DataSource = Me.PRODUCTOSBindingSource1
+        Me.dgvProductos.Location = New System.Drawing.Point(142, 94)
+        Me.dgvProductos.Name = "dgvProductos"
+        Me.dgvProductos.Size = New System.Drawing.Size(443, 214)
+        Me.dgvProductos.TabIndex = 16
+        '
+        'PRODUCTOSBindingSource1
+        '
+        Me.PRODUCTOSBindingSource1.DataMember = "PRODUCTOS"
+        Me.PRODUCTOSBindingSource1.DataSource = Me.SupermercadoDataSet
+        '
+        'IDPRODUCTODataGridViewTextBoxColumn
+        '
+        Me.IDPRODUCTODataGridViewTextBoxColumn.DataPropertyName = "IDPRODUCTO"
+        Me.IDPRODUCTODataGridViewTextBoxColumn.HeaderText = "IDPRODUCTO"
+        Me.IDPRODUCTODataGridViewTextBoxColumn.Name = "IDPRODUCTODataGridViewTextBoxColumn"
+        '
+        'NOMBREDataGridViewTextBoxColumn1
+        '
+        Me.NOMBREDataGridViewTextBoxColumn1.DataPropertyName = "NOMBRE"
+        Me.NOMBREDataGridViewTextBoxColumn1.HeaderText = "NOMBRE"
+        Me.NOMBREDataGridViewTextBoxColumn1.Name = "NOMBREDataGridViewTextBoxColumn1"
+        '
+        'PRECIODataGridViewTextBoxColumn
+        '
+        Me.PRECIODataGridViewTextBoxColumn.DataPropertyName = "PRECIO"
+        Me.PRECIODataGridViewTextBoxColumn.HeaderText = "PRECIO"
+        Me.PRECIODataGridViewTextBoxColumn.Name = "PRECIODataGridViewTextBoxColumn"
+        '
+        'FECHACADDataGridViewTextBoxColumn
+        '
+        Me.FECHACADDataGridViewTextBoxColumn.DataPropertyName = "FECHACAD"
+        Me.FECHACADDataGridViewTextBoxColumn.HeaderText = "FECHACAD"
+        Me.FECHACADDataGridViewTextBoxColumn.Name = "FECHACADDataGridViewTextBoxColumn"
+        '
+        'dgvEmpleados
+        '
+        Me.dgvEmpleados.AutoGenerateColumns = False
+        Me.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvEmpleados.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDEMPLEADODataGridViewTextBoxColumn, Me.IDTIPODataGridViewTextBoxColumn, Me.IDSUPERDataGridViewTextBoxColumn1, Me.DNIDataGridViewTextBoxColumn1, Me.NOMBREDataGridViewTextBoxColumn2, Me.EDADDataGridViewTextBoxColumn, Me.TELEFONODataGridViewTextBoxColumn1, Me.HORARIODataGridViewTextBoxColumn, Me.SALARIODataGridViewTextBoxColumn})
+        Me.dgvEmpleados.DataSource = Me.EMPLEADOSBindingSource1
+        Me.dgvEmpleados.Location = New System.Drawing.Point(42, 86)
+        Me.dgvEmpleados.Name = "dgvEmpleados"
+        Me.dgvEmpleados.Size = New System.Drawing.Size(723, 206)
+        Me.dgvEmpleados.TabIndex = 7
+        '
+        'EMPLEADOSBindingSource1
+        '
+        Me.EMPLEADOSBindingSource1.DataMember = "EMPLEADOS"
+        Me.EMPLEADOSBindingSource1.DataSource = Me.SupermercadoDataSet
+        '
+        'IDEMPLEADODataGridViewTextBoxColumn
+        '
+        Me.IDEMPLEADODataGridViewTextBoxColumn.DataPropertyName = "IDEMPLEADO"
+        Me.IDEMPLEADODataGridViewTextBoxColumn.HeaderText = "IDEMPLEADO"
+        Me.IDEMPLEADODataGridViewTextBoxColumn.Name = "IDEMPLEADODataGridViewTextBoxColumn"
+        '
+        'IDTIPODataGridViewTextBoxColumn
+        '
+        Me.IDTIPODataGridViewTextBoxColumn.DataPropertyName = "IDTIPO"
+        Me.IDTIPODataGridViewTextBoxColumn.HeaderText = "IDTIPO"
+        Me.IDTIPODataGridViewTextBoxColumn.Name = "IDTIPODataGridViewTextBoxColumn"
+        '
+        'IDSUPERDataGridViewTextBoxColumn1
+        '
+        Me.IDSUPERDataGridViewTextBoxColumn1.DataPropertyName = "IDSUPER"
+        Me.IDSUPERDataGridViewTextBoxColumn1.HeaderText = "IDSUPER"
+        Me.IDSUPERDataGridViewTextBoxColumn1.Name = "IDSUPERDataGridViewTextBoxColumn1"
+        '
+        'DNIDataGridViewTextBoxColumn1
+        '
+        Me.DNIDataGridViewTextBoxColumn1.DataPropertyName = "DNI"
+        Me.DNIDataGridViewTextBoxColumn1.HeaderText = "DNI"
+        Me.DNIDataGridViewTextBoxColumn1.Name = "DNIDataGridViewTextBoxColumn1"
+        '
+        'NOMBREDataGridViewTextBoxColumn2
+        '
+        Me.NOMBREDataGridViewTextBoxColumn2.DataPropertyName = "NOMBRE"
+        Me.NOMBREDataGridViewTextBoxColumn2.HeaderText = "NOMBRE"
+        Me.NOMBREDataGridViewTextBoxColumn2.Name = "NOMBREDataGridViewTextBoxColumn2"
+        '
+        'EDADDataGridViewTextBoxColumn
+        '
+        Me.EDADDataGridViewTextBoxColumn.DataPropertyName = "EDAD"
+        Me.EDADDataGridViewTextBoxColumn.HeaderText = "EDAD"
+        Me.EDADDataGridViewTextBoxColumn.Name = "EDADDataGridViewTextBoxColumn"
+        '
+        'TELEFONODataGridViewTextBoxColumn1
+        '
+        Me.TELEFONODataGridViewTextBoxColumn1.DataPropertyName = "TELEFONO"
+        Me.TELEFONODataGridViewTextBoxColumn1.HeaderText = "TELEFONO"
+        Me.TELEFONODataGridViewTextBoxColumn1.Name = "TELEFONODataGridViewTextBoxColumn1"
+        '
+        'HORARIODataGridViewTextBoxColumn
+        '
+        Me.HORARIODataGridViewTextBoxColumn.DataPropertyName = "HORARIO"
+        Me.HORARIODataGridViewTextBoxColumn.HeaderText = "HORARIO"
+        Me.HORARIODataGridViewTextBoxColumn.Name = "HORARIODataGridViewTextBoxColumn"
+        '
+        'SALARIODataGridViewTextBoxColumn
+        '
+        Me.SALARIODataGridViewTextBoxColumn.DataPropertyName = "SALARIO"
+        Me.SALARIODataGridViewTextBoxColumn.HeaderText = "SALARIO"
+        Me.SALARIODataGridViewTextBoxColumn.Name = "SALARIODataGridViewTextBoxColumn"
+        '
         'FormInicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(825, 600)
-        Me.Controls.Add(Me.PanelCompras)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.PanelClientes)
+        Me.Controls.Add(Me.PanelCompras)
         Me.Controls.Add(Me.PanelProductos)
         Me.Controls.Add(Me.PanelEmpleados)
-        Me.Controls.Add(Me.PanelClientes)
         Me.Name = "FormInicio"
         Me.Text = "Inicio"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.PanelEmpleados.ResumeLayout(False)
         Me.PanelEmpleados.PerformLayout()
-        CType(Me.dgvEmpleados, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EMPLEADOSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SupermercadoDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelClientes.ResumeLayout(False)
@@ -669,15 +688,19 @@ Partial Class FormInicio
         CType(Me.CLIENTESBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelProductos.ResumeLayout(False)
         Me.PanelProductos.PerformLayout()
-        CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PRODUCTOSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelCompras.ResumeLayout(False)
         Me.PanelCompras.PerformLayout()
+        CType(Me.COMPRASBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SupermercadoDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.COMPRASBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.COMPRASBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvCompras, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SupermercadoDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.COMPRASBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.COMPRASBindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PRODUCTOSBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvEmpleados, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EMPLEADOSBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -713,25 +736,12 @@ Partial Class FormInicio
     Friend WithEvents DNIDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NOMBREDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents TELEFONODataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents dgvProductos As DataGridView
     Friend WithEvents PRODUCTOSBindingSource As BindingSource
     Friend WithEvents PRODUCTOSTableAdapter As SupermercadoDataSetTableAdapters.PRODUCTOSTableAdapter
-    Friend WithEvents IDPRODUCTODataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents NOMBREDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents PRECIODataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents FECHACADUCIDADDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents EditarPCliente As Button
-    Friend WithEvents dgvEmpleados As DataGridView
     Friend WithEvents EMPLEADOSBindingSource As BindingSource
     Friend WithEvents EMPLEADOSTableAdapter As SupermercadoDataSetTableAdapters.EMPLEADOSTableAdapter
-    Friend WithEvents IDEMPLEADODataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents IDTIPODataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents IDSUPERDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DNIDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents NOMBREDataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents EDADDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TELEFONODataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents HORARIODataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents SALARIOMENSUALDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents buttonPedir As Button
     Friend WithEvents ButtonCompras As Button
@@ -741,12 +751,30 @@ Partial Class FormInicio
     Friend WithEvents BuscarCompra As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents COMPRASBindingSource1 As BindingSource
-    Friend WithEvents dgvCompras As DataGridView
     Friend WithEvents SupermercadoDataSet1 As SupermercadoDataSet
     Friend WithEvents COMPRASBindingSource2 As BindingSource
+    Friend WithEvents dgvCompras As DataGridView
     Friend WithEvents IDCOMPRADataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents IDCLIENTEDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents IDCAJADataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents IMPORTEDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents FECHADataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents COMPRASBindingSource3 As BindingSource
+    Friend WithEvents dgvProductos As DataGridView
+    Friend WithEvents IDPRODUCTODataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NOMBREDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents PRECIODataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents FECHACADDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PRODUCTOSBindingSource1 As BindingSource
+    Friend WithEvents dgvEmpleados As DataGridView
+    Friend WithEvents IDEMPLEADODataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IDTIPODataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IDSUPERDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DNIDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents NOMBREDataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents EDADDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TELEFONODataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents HORARIODataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SALARIODataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EMPLEADOSBindingSource1 As BindingSource
 End Class

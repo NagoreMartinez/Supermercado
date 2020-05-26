@@ -16,7 +16,7 @@ Public Class FormLogin
             FormInicio.ShowDialog()
             Close()
         Else
-            MessageBox.Show("El nombre de usuaio o la contraseña son incorrectos")
+            MessageBox.Show("El nombre de usuario o la contraseña son incorrectos")
         End If
 
     End Sub

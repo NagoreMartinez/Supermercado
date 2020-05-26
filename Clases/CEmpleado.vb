@@ -39,7 +39,7 @@
         e = row("EDAD")
         tel = row("TELEFONO")
         hora = row("HORARIO")
-        sal = row("SALARIO MENSUAL")
+        sal = row("SALARIO")
     End Sub
 
     ' Getters

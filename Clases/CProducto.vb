@@ -23,7 +23,7 @@
         idP = row("IDPRODUCTO")
         nom = row("NOMBRE")
         p = row("PRECIO")
-        fCad = row("FECHA CADUCIDAD")
+        fCad = row("FECHACAD")
     End Sub
 
     ' Getters

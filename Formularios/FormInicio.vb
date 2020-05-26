@@ -10,8 +10,6 @@ Public Class FormInicio
 
     Private Sub FormInicio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'SupermercadoDataSet1.COMPRAS' Puede moverla o quitarla según sea necesario.
-        Me.COMPRASTableAdapter.Fill(Me.SupermercadoDataSet1.COMPRAS)
-        'TODO: esta línea de código carga datos en la tabla 'SupermercadoDataSet.COMPRAS' Puede moverla o quitarla según sea necesario.
         Me.COMPRASTableAdapter.Fill(Me.SupermercadoDataSet.COMPRAS)
         'TODO: esta línea de código carga datos en la tabla 'SupermercadoDataSet.EMPLEADOS' Puede moverla o quitarla según sea necesario.
         Me.EMPLEADOSTableAdapter.Fill(Me.SupermercadoDataSet.EMPLEADOS)
