@@ -11,9 +11,9 @@ Public Class Productos
 
     Private Sub buttonGuardar3_Click(sender As Object, e As EventArgs) Handles buttonGuardar3.Click
 
-        Dim insert = obP.InsertProducto(txtIDP.Text, txtNombre3.Text, txtPrecio.Text, txtFCad.Text)
+        Dim i = obP.InsertProducto(txtIDP.Text, txtNombre3.Text, txtPrecio.Text, txtFCad.Text)
 
-        If insert Then
+        If i Then
             MessageBox.Show("Producto agregado correctamente.")
         Else
             MessageBox.Show("Ha ocurrido un error.")

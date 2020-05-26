@@ -13,9 +13,9 @@ Public Class Clientes
 
     Private Sub buttonGuardar2_Click(sender As Object, e As EventArgs) Handles buttonGuardar2.Click
 
-        Dim insert = obC.InsertarCliente(txtIDC.Text, txtIDS2.Text, txtDNI2.Text, txtNombre2.Text, txtTel2.Text)
+        Dim i = obC.InsertarCliente(txtIDC.Text, txtIDS2.Text, txtDNI2.Text, txtNombre2.Text, txtTel2.Text)
 
-        If insert Then
+        If i Then
             MessageBox.Show("Cliente agregado correctamente.")
         Else
             MessageBox.Show("Ha ocurrido un error.")

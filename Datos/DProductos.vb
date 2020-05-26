@@ -23,10 +23,11 @@ Public Class DProductos
     'Buscar por filtro
     Public Function QryByFiltro(filtro As String) As DataTable
         Dim query = "SELECT * FROM PRODUCTOS
-                        WHERE NOMBRE LIKE @nombre"
+                        WHERE IDPRODUCTO LIKE @idProducto OR NOMBRE LIKE @nombre"
         Dim conn = conectado.getConnection()
         conn.Open()
         Dim sqlCommand = New OleDbCommand(query, conn)
+        sqlCommand.Parameters.AddWithValue("@idProducto", filtro + "%")
         sqlCommand.Parameters.AddWithValue("@nombre", filtro + "%")
         Dim table = New DataTable()
         Dim executeReader = sqlCommand.ExecuteReader()
@@ -44,7 +45,7 @@ Public Class DProductos
         Try
             Dim cmd = conn.CreateCommand
             cmd.CommandText = "INSERT INTO PRODUCTOS 
-                 (IDPRODUCTO, NOMBRE, PRECIO, FECHA CADUCIDAD) VALUES 
+                 (IDPRODUCTO, NOMBRE, PRECIO, FECHACAD) VALUES 
                  (@idProducto, @nombre, @precio, @fechaCad)"
             cmd.Parameters.AddWithValue("@idProducto", p.idProducto)
             cmd.Parameters.AddWithValue("@nombre", p.nombre)
@@ -73,7 +74,7 @@ Public Class DProductos
                 IDPRODUCTO =@idProducto,
                 NOMBRE = @nombre,
                 PRECIO = @precio,
-                FECHA CADUCIDAD = @fechaCad
+                FECHACAD = @fechaCad
                 WHERE IDPRODUCTO = @idProducto"
             cmd.Parameters.AddWithValue("@idProducto", p.idProducto)
             cmd.Parameters.AddWithValue("@nombre", p.nombre)

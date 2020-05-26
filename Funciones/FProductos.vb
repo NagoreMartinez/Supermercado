@@ -61,11 +61,5 @@ Public Class FProductos
         Return nuevoID
     End Function
 
-    ' Id fijo para el idSuper
-    Public Function idFijoSuper()
-        Dim idS As String
-        idS = "S001"
-        Return idS
-    End Function
 
 End Class

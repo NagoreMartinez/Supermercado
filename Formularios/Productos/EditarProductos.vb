@@ -2,14 +2,13 @@
 Imports Funciones
 
 Public Class EditarProductos
+
     Dim obP As New FProductos
 
     Public Sub New()
 
         ' Esta llamada es exigida por el diseñador.
         InitializeComponent()
-
-        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
 
     End Sub
     Public Sub New(p As CProducto)
@@ -24,13 +23,12 @@ Public Class EditarProductos
 
     End Sub
 
-
     ' Guardar cambios
     Private Sub buttonGuardar3_Click(sender As Object, e As EventArgs) Handles buttonGuardar3.Click
 
-        Dim p = obP.ActualizarProducto(txtIDP.Text, txtNombre3.Text, txtPrecio.Text, txtFCad.Text)
+        Dim pr = obP.ActualizarProducto(txtIDP.Text, txtNombre3.Text, txtPrecio.Text, txtFCad.Text)
 
-        If p Then
+        If pr Then
             MessageBox.Show("Se ha actualizado correctamente")
         Else
             MessageBox.Show("Ha ocurrido un error")

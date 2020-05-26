@@ -10,12 +10,11 @@ Public Class FormInicio
     Private Sub FormInicio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'SupermercadoDataSet.EMPLEADOS' Puede moverla o quitarla según sea necesario.
         Me.EMPLEADOSTableAdapter.Fill(Me.SupermercadoDataSet.EMPLEADOS)
-        'TODO: esta línea de código carga datos en la tabla 'SupermercadoDataSet.EMPLEADOS' Puede moverla o quitarla según sea necesario.
-        Me.EMPLEADOSTableAdapter.Fill(Me.SupermercadoDataSet.EMPLEADOS)
         'TODO: esta línea de código carga datos en la tabla 'SupermercadoDataSet.PRODUCTOS' Puede moverla o quitarla según sea necesario.
         Me.PRODUCTOSTableAdapter.Fill(Me.SupermercadoDataSet.PRODUCTOS)
         'TODO: esta línea de código carga datos en la tabla 'SupermercadoDataSet.CLIENTES' Puede moverla o quitarla según sea necesario.
         Me.CLIENTESTableAdapter.Fill(Me.SupermercadoDataSet.CLIENTES)
+
         listarEmpleado()
         listarClientes()
         listarProductos()
@@ -75,10 +74,10 @@ Public Class FormInicio
             Dim idSuper = row.Cells(2).Value.ToString
             Dim dni = row.Cells(3).Value.ToString
             Dim nombre = row.Cells(4).Value.ToString
-            Dim edad = row.Cells(5).Value.ToString
+            Dim edad As Integer = row.Cells(5).Value.ToString
             Dim telefono = row.Cells(6).Value.ToString
             Dim horario = row.Cells(7).Value.ToString
-            Dim salario = row.Cells(8).Value.ToString
+            Dim salario As Double = row.Cells(8).Value.ToString
 
             Dim e As New CEmpleado(idEmpleado, idTipo, idSuper, dni, nombre, edad, telefono, horario, salario)
             Dim formEEmpleado As New EditarEmpleado(e)
@@ -194,7 +193,7 @@ Public Class FormInicio
             Dim row = dgvProductos.CurrentRow
             Dim idProducto = row.Cells(0).Value.ToString
             Dim nombre = row.Cells(1).Value.ToString
-            Dim precio = row.Cells(2).Value.ToString
+            Dim precio As Double = row.Cells(2).Value.ToString
             Dim fechaCaducidad = row.Cells(3).Value.ToString
 
             Dim p As New CProducto(idProducto, nombre, precio, fechaCaducidad)
@@ -241,7 +240,7 @@ Public Class FormInicio
 
             c = InputBox("Introduzca la cantidad")
 
-            MessageBox.Show("Se ha efectuado el pedido")
+            MessageBox.Show("Se ha efectuado el pedido del producto")
         Else
             MessageBox.Show("Seleccione una fila para poder realizar el pedido")
         End If

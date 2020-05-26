@@ -2,6 +2,7 @@
 Imports Funciones
 
 Public Class EditarEmpleado
+
     Dim obE As New FEmpleados
 
     Public Sub New()
@@ -9,9 +10,8 @@ Public Class EditarEmpleado
         ' Esta llamada es exigida por el diseñador.
         InitializeComponent()
 
-        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
-
     End Sub
+
     Public Sub New(e As CEmpleado)
 
         Me.New
@@ -33,11 +33,11 @@ Public Class EditarEmpleado
     ' Guardar cambios
     Private Sub buttonGuardar1_Click(sender As Object, e As EventArgs) Handles buttonGuardar1.Click
 
-        Dim em = obE.ActualizarEmpleado(txtIDE.Text, cbT.SelectedItem, txtIDS.Text, txtDNI.Text, txtNombre.Text,
+        Dim emp = obE.ActualizarEmpleado(txtIDE.Text, cbT.SelectedItem, txtIDS.Text, txtDNI.Text, txtNombre.Text,
                                         txtEdad.Text, txtTel.Text, cbHorario.SelectedItem, txtSalario.Text)
 
-        If em Then
-            MessageBox.Show("Se ha actualizado el empleado correctamente")
+        If emp Then
+            MessageBox.Show("Perfil de empleado editado correctamente")
         Else
             MessageBox.Show("Ha ocurrido un error")
         End If
@@ -47,7 +47,5 @@ Public Class EditarEmpleado
         Close()
     End Sub
 
-    Private Sub EditarEmpleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-    End Sub
 End Class
