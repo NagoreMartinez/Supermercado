@@ -1,10 +1,10 @@
 ﻿Public Class CProducto
 
     ' Atributos
-    Public idP As String
-    Public nom As String
-    Public p As Double
-    Public fCad As String
+    Private idP As String
+    Private nom As String
+    Private p As Double
+    Private fCad As String
 
     ' Constructora por defecto
     Public Sub New()

@@ -1,15 +1,15 @@
 ﻿Public Class CEmpleado
 
     ' Atributos
-    Public idE As String
-    Public idT As String
-    Public idS As String
-    Public d As String
-    Public nom As String
-    Public e As Integer
-    Public tel As String
-    Public hora As String
-    Public sal As Double
+    Private idE As String
+    Private idT As String
+    Private idS As String
+    Private d As String
+    Private nom As String
+    Private e As Integer
+    Private tel As String
+    Private hora As String
+    Private sal As Double
 
     ' Constructora por defecto
     Public Sub New()

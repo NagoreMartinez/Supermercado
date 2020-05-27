@@ -1,11 +1,11 @@
 ﻿Public Class CCliente
 
     ' Atributos
-    Public idC As String
-    Public idS As String
-    Public d As String
-    Public nom As String
-    Public tel As String
+    Private idC As String
+    Private idS As String
+    Private d As String
+    Private nom As String
+    Private tel As String
 
     ' Constructora por defecto
     Public Sub New()
