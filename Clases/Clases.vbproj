@@ -78,6 +78,7 @@
     <Compile Include="CCompras.vb" />
     <Compile Include="CEmpleado.vb" />
     <Compile Include="CLineas.vb" />
+    <Compile Include="CPedidos.vb" />
     <Compile Include="CProducto.vb" />
     <Compile Include="CUsuario.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

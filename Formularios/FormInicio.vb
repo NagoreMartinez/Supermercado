@@ -6,6 +6,7 @@ Public Class FormInicio
     Dim Empleados As New FEmpleados
     Dim Productos As New FProductos
     Dim Compras As New FCompras
+    Dim Pedidos As New FPedidos
 
 
     Private Sub FormInicio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -276,5 +277,6 @@ Public Class FormInicio
     Private Sub BuscarCompras_TextChanged(sender As Object, e As EventArgs) Handles BuscarCompra.TextChanged
         dgvCompras.DataSource = Compras.ObtenerComprasByFiltro(BuscarCompra.Text)
     End Sub
+
 
 End Class

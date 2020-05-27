@@ -79,6 +79,7 @@
     <Compile Include="FClientes.vb" />
     <Compile Include="FCompras.vb" />
     <Compile Include="FEmpleados.vb" />
+    <Compile Include="FPedidos.vb" />
     <Compile Include="FProductos.vb" />
     <Compile Include="FUsuario.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
