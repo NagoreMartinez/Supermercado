@@ -81,7 +81,6 @@
     <Compile Include="DCompras.vb" />
     <Compile Include="DConexion.vb" />
     <Compile Include="DEmpleados.vb" />
-    <Compile Include="DPedidos.vb" />
     <Compile Include="DProductos.vb" />
     <Compile Include="DUsuario.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

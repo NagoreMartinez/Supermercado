@@ -1,5 +1,0 @@
-﻿1>------ Operación Compilar iniciada: proyecto: Datos, configuración: Debug Any CPU ------
-1>  Datos -> E:\Base de Datos\Ev 3\PROYECTO\VISUAL STUDIO\Supermercado\Datos\bin\Debug\Datos.dll
-2>------ Operación Compilar iniciada: proyecto: Formularios, configuración: Debug Any CPU ------
-2>  Formularios -> E:\Base de Datos\Ev 3\PROYECTO\VISUAL STUDIO\Supermercado\Formularios\bin\Debug\Formularios.exe
-========== Compilar: 2 correctos, 0 incorrectos, 3 actualizados, 0 omitidos ==========
