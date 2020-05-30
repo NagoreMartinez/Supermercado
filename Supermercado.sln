@@ -28,6 +28,11 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Formularios", "Formularios\
 		{AF26017A-BB0D-4C54-B3DD-266F29EBE6D9} = {AF26017A-BB0D-4C54-B3DD-266F29EBE6D9}
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentacion", "Documentacion", "{AA5694E5-F393-4050-A35C-006E555A543B}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\DOCUMENTACION\Nagore_DocumentacionProyectoBBDD.pdf = ..\..\DOCUMENTACION\Nagore_DocumentacionProyectoBBDD.pdf
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,6 +65,7 @@ Global
 		{B581F636-09FC-42A6-B6B0-5764769C1972} = {CE974ECF-B10B-4421-B286-FE8D93A2F76B}
 		{AF26017A-BB0D-4C54-B3DD-266F29EBE6D9} = {CE974ECF-B10B-4421-B286-FE8D93A2F76B}
 		{DABA7648-3A6C-43DC-8DE2-B93FC765F141} = {CE974ECF-B10B-4421-B286-FE8D93A2F76B}
+		{AA5694E5-F393-4050-A35C-006E555A543B} = {CE974ECF-B10B-4421-B286-FE8D93A2F76B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E8E87034-B952-4ED7-82B9-74E296E82A6E}
